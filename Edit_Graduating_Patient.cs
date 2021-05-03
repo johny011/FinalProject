@@ -30,6 +30,7 @@ namespace Final_project
         {
             DB.Insert_Update_Delete("update patientAdmission set checkoutDate=convert(date,'" + dateOut.Value.Day.ToString() + "-"
                 + dateOut.Value.Month.ToString() + "-" + dateOut.Value.Year.ToString() + "',105)");
+            MessageBox.Show("تم تعديل معلومات المريض");
         }
     }
 }
