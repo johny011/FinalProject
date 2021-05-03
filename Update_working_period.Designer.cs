@@ -32,15 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_working_period));
             this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.periodnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.situationidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dayAndDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workPeriodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet11 = new Final_project.hospitallDataSet11();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.working_period_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.working_period = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workPeriodsTableAdapter = new Final_project.hospitallDataSet11TableAdapters.WorkPeriodsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workPeriodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet11)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,19 +76,55 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.working_period_NO,
-            this.working_period,
-            this.staff,
-            this.situation,
-            this.date});
+            this.periodnumberDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn,
+            this.situationidDataGridViewTextBoxColumn,
+            this.dayAndDateDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.workPeriodsBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 24;
+            // 
+            // periodnumberDataGridViewTextBoxColumn
+            // 
+            this.periodnumberDataGridViewTextBoxColumn.DataPropertyName = "periodnumber";
+            this.periodnumberDataGridViewTextBoxColumn.HeaderText = "periodnumber";
+            this.periodnumberDataGridViewTextBoxColumn.Name = "periodnumberDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // situationidDataGridViewTextBoxColumn
+            // 
+            this.situationidDataGridViewTextBoxColumn.DataPropertyName = "Situationid";
+            this.situationidDataGridViewTextBoxColumn.HeaderText = "Situationid";
+            this.situationidDataGridViewTextBoxColumn.Name = "situationidDataGridViewTextBoxColumn";
+            // 
+            // dayAndDateDataGridViewTextBoxColumn
+            // 
+            this.dayAndDateDataGridViewTextBoxColumn.DataPropertyName = "DayAndDate";
+            this.dayAndDateDataGridViewTextBoxColumn.HeaderText = "DayAndDate";
+            this.dayAndDateDataGridViewTextBoxColumn.Name = "dayAndDateDataGridViewTextBoxColumn";
+            // 
+            // workPeriodsBindingSource
+            // 
+            this.workPeriodsBindingSource.DataMember = "WorkPeriods";
+            this.workPeriodsBindingSource.DataSource = this.hospitallDataSet11;
+            // 
+            // hospitallDataSet11
+            // 
+            this.hospitallDataSet11.DataSetName = "hospitallDataSet11";
+            this.hospitallDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuElipse1
             // 
@@ -127,35 +167,11 @@
             this.btn_add.Size = new System.Drawing.Size(211, 66);
             this.btn_add.TabIndex = 25;
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // working_period_NO
+            // workPeriodsTableAdapter
             // 
-            this.working_period_NO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.working_period_NO.FillWeight = 200F;
-            this.working_period_NO.HeaderText = "رقم فترة العمل";
-            this.working_period_NO.Name = "working_period_NO";
-            this.working_period_NO.ReadOnly = true;
-            // 
-            // working_period
-            // 
-            this.working_period.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.working_period.HeaderText = "فترات العمل";
-            this.working_period.Name = "working_period";
-            // 
-            // staff
-            // 
-            this.staff.HeaderText = "الكادر";
-            this.staff.Name = "staff";
-            // 
-            // situation
-            // 
-            this.situation.HeaderText = "الوضع ";
-            this.situation.Name = "situation";
-            // 
-            // date
-            // 
-            this.date.HeaderText = "التاريخ";
-            this.date.Name = "date";
+            this.workPeriodsTableAdapter.ClearBeforeFill = true;
             // 
             // Update_working_period
             // 
@@ -166,7 +182,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Update_working_period";
             this.Text = "Update_working_period";
+            this.Load += new System.EventHandler(this.Update_working_period_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workPeriodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet11)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -179,10 +198,12 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
-        private System.Windows.Forms.DataGridViewTextBoxColumn working_period_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn working_period;
-        private System.Windows.Forms.DataGridViewTextBoxColumn staff;
-        private System.Windows.Forms.DataGridViewTextBoxColumn situation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private hospitallDataSet11 hospitallDataSet11;
+        private System.Windows.Forms.BindingSource workPeriodsBindingSource;
+        private hospitallDataSet11TableAdapters.WorkPeriodsTableAdapter workPeriodsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn periodnumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn situationidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dayAndDateDataGridViewTextBoxColumn;
     }
 }

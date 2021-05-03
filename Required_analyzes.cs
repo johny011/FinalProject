@@ -16,5 +16,10 @@ namespace Final_project
         {
             InitializeComponent();
         }
+
+        private void btn_Request_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = DB.DataTable("select paname,R.Admissionid,Analysisname from patient Pt,RequiredAnalysis R,Analyzes A,patientAdmission PA  where R.Admissionid=" + int.Parse(txt_Admissionid.Text) + " and R.Analysisnumber=A.Analysisnumber and PA.panumber=Pt.panumber"); 
+        }
     }
 }

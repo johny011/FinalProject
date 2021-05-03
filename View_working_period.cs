@@ -15,15 +15,14 @@ namespace Final_project
         public View_working_period()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DB.DataTable("select * from WorkPeriods");
-            dataGridView1.DataSource = DB.DataTable("select * from TheStaff");
-            dataGridView1.Columns[0].HeaderText = "رقم فترة العمل";
-            dataGridView1.Columns[1].HeaderText = "";
-            dataGridView1.Columns[2].HeaderText = "";
-            dataGridView1.Columns[3].HeaderText = "";
-            dataGridView1.Columns[4].HeaderText = "";
-            dataGridView1.Columns[5].HeaderText = "";
-            dataGridView1.Columns[6].HeaderText = "";
+            
+        }
+
+        private void View_working_period_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hospitallDataSet24.WorkPeriods' table. You can move, or remove it, as needed.
+            this.workPeriodsTableAdapter.Fill(this.hospitallDataSet24.WorkPeriods);
+
         }
     }
 }

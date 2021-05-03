@@ -16,9 +16,13 @@ namespace Final_project
         {
             InitializeComponent();
             dataGridView1.DataSource = DB.DataTable("select * from Room");
-            dataGridView1.Columns[0].HeaderText = "رقم الغرفة";
-            dataGridView1.Columns[1].HeaderText = "نوع الغرفة";
-            dataGridView1.Columns[2].HeaderText = "رقم القسم";
+            
+        }
+        public View_room(string dept)
+        {
+            InitializeComponent();
+            dataGridView1.DataSource = DB.DataTable("select * from Room where deptid=(select deptid from dept where deptname='"+dept+"')");
+
         }
     }
 }

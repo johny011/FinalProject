@@ -31,13 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_room));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.combox_room_type = new System.Windows.Forms.ComboBox();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.combox_section = new System.Windows.Forms.ComboBox();
+            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet15 = new Final_project.hospitallDataSet15();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.deptTableAdapter = new Final_project.hospitallDataSet15TableAdapters.DeptTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet15)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,6 +57,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(427, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 24);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "نوع الغرفة";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(462, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 24);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "القسم";
             // 
             // combox_room_type
             // 
@@ -88,7 +113,7 @@
             this.btn_add.IdleFillColor = System.Drawing.Color.White;
             this.btn_add.IdleForecolor = System.Drawing.Color.Black;
             this.btn_add.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_add.Location = new System.Drawing.Point(281, 370);
+            this.btn_add.Location = new System.Drawing.Point(281, 351);
             this.btn_add.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(220, 66);
@@ -100,39 +125,36 @@
             // 
             this.combox_section.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combox_section.BackColor = System.Drawing.Color.White;
+            this.combox_section.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.deptBindingSource, "deptid", true));
+            this.combox_section.DataSource = this.deptBindingSource;
+            this.combox_section.DisplayMember = "deptname";
             this.combox_section.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_section.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combox_section.FormattingEnabled = true;
             this.combox_section.Location = new System.Drawing.Point(281, 83);
             this.combox_section.Name = "combox_section";
             this.combox_section.Size = new System.Drawing.Size(220, 27);
-            this.combox_section.Sorted = true;
             this.combox_section.TabIndex = 24;
+            this.combox_section.ValueMember = "deptid";
+            // 
+            // deptBindingSource
+            // 
+            this.deptBindingSource.DataMember = "Dept";
+            this.deptBindingSource.DataSource = this.hospitallDataSet15;
+            // 
+            // hospitallDataSet15
+            // 
+            this.hospitallDataSet15.DataSetName = "hospitallDataSet15";
+            this.hospitallDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 0;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // label1
+            // deptTableAdapter
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(462, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 24);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "القسم";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(427, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 24);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "نوع الغرفة";
+            this.deptTableAdapter.ClearBeforeFill = true;
             // 
             // Add_room
             // 
@@ -143,8 +165,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_room";
             this.Text = "Add_room";
+            this.Load += new System.EventHandler(this.Add_room_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet15)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,5 +183,8 @@
         private System.Windows.Forms.ComboBox combox_section;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private hospitallDataSet15 hospitallDataSet15;
+        private System.Windows.Forms.BindingSource deptBindingSource;
+        private hospitallDataSet15TableAdapters.DeptTableAdapter deptTableAdapter;
     }
 }

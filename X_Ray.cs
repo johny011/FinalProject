@@ -93,17 +93,16 @@ namespace Final_project
             currentButton.BackColor = panel_title.BackColor;
             currentButton.ForeColor = Color.White;
         }
-
         private void btn_add_radiograph_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);
-            ChildForm(new Required_X_ray());
+            ChildForm(new Send_Picture());
         }
 
         private void btn_add_X_ray_result_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+             ActiveBtn(sender);
+            ChildForm(new Requierd_X_Ray());
         }
 
         private void btn_update_X_ray_Click(object sender, EventArgs e)
@@ -128,6 +127,18 @@ namespace Final_project
         {
             ActiveBtn(sender);
             ChildForm(new Add_work_staff());
+        }
+
+        private void btn_add_picture_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new Add_Picture());
+        }
+
+        private void btn_edit_picture_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new Update_Picture());
         }
     }
 }

@@ -32,12 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_department));
             this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.deptidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deptnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet4 = new Final_project.hospitallDataSet4();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.department_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.department_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deptTableAdapter = new Final_project.hospitallDataSet4TableAdapters.DeptTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet4)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,19 +71,46 @@
             this.btn_delete.Size = new System.Drawing.Size(211, 66);
             this.btn_delete.TabIndex = 26;
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.department_NO,
-            this.department_name});
+            this.deptidDataGridViewTextBoxColumn,
+            this.deptnameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.deptBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 24;
+            // 
+            // deptidDataGridViewTextBoxColumn
+            // 
+            this.deptidDataGridViewTextBoxColumn.DataPropertyName = "deptid";
+            this.deptidDataGridViewTextBoxColumn.HeaderText = "deptid";
+            this.deptidDataGridViewTextBoxColumn.Name = "deptidDataGridViewTextBoxColumn";
+            this.deptidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deptnameDataGridViewTextBoxColumn
+            // 
+            this.deptnameDataGridViewTextBoxColumn.DataPropertyName = "deptname";
+            this.deptnameDataGridViewTextBoxColumn.HeaderText = "deptname";
+            this.deptnameDataGridViewTextBoxColumn.Name = "deptnameDataGridViewTextBoxColumn";
+            // 
+            // deptBindingSource
+            // 
+            this.deptBindingSource.DataMember = "Dept";
+            this.deptBindingSource.DataSource = this.hospitallDataSet4;
+            // 
+            // hospitallDataSet4
+            // 
+            this.hospitallDataSet4.DataSetName = "hospitallDataSet4";
+            this.hospitallDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuElipse1
             // 
@@ -121,20 +153,11 @@
             this.btn_add.Size = new System.Drawing.Size(211, 66);
             this.btn_add.TabIndex = 25;
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // department_NO
+            // deptTableAdapter
             // 
-            this.department_NO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.department_NO.FillWeight = 200F;
-            this.department_NO.HeaderText = "رقم القسم";
-            this.department_NO.Name = "department_NO";
-            this.department_NO.ReadOnly = true;
-            // 
-            // department_name
-            // 
-            this.department_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.department_name.HeaderText = "اسم القسم";
-            this.department_name.Name = "department_name";
+            this.deptTableAdapter.ClearBeforeFill = true;
             // 
             // Update_department
             // 
@@ -145,7 +168,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Update_department";
             this.Text = "Update_department";
+            this.Load += new System.EventHandler(this.Update_department_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -158,7 +184,10 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
-        private System.Windows.Forms.DataGridViewTextBoxColumn department_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn department_name;
+        private hospitallDataSet4 hospitallDataSet4;
+        private System.Windows.Forms.BindingSource deptBindingSource;
+        private hospitallDataSet4TableAdapters.DeptTableAdapter deptTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deptidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deptnameDataGridViewTextBoxColumn;
     }
 }

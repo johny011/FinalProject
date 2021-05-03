@@ -33,9 +33,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.hospitallDataSet33 = new Final_project.hospitallDataSet33();
+            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.deptTableAdapter = new Final_project.hospitallDataSet33TableAdapters.DeptTableAdapter();
+            this.deptidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deptnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,9 +65,15 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.deptidDataGridViewTextBoxColumn,
+            this.deptnameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.deptBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -72,6 +85,33 @@
             this.bunifuElipse1.ElipseRadius = 0;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // hospitallDataSet33
+            // 
+            this.hospitallDataSet33.DataSetName = "hospitallDataSet33";
+            this.hospitallDataSet33.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // deptBindingSource
+            // 
+            this.deptBindingSource.DataMember = "Dept";
+            this.deptBindingSource.DataSource = this.hospitallDataSet33;
+            // 
+            // deptTableAdapter
+            // 
+            this.deptTableAdapter.ClearBeforeFill = true;
+            // 
+            // deptidDataGridViewTextBoxColumn
+            // 
+            this.deptidDataGridViewTextBoxColumn.DataPropertyName = "deptid";
+            this.deptidDataGridViewTextBoxColumn.HeaderText = "deptid";
+            this.deptidDataGridViewTextBoxColumn.Name = "deptidDataGridViewTextBoxColumn";
+            this.deptidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deptnameDataGridViewTextBoxColumn
+            // 
+            this.deptnameDataGridViewTextBoxColumn.DataPropertyName = "deptname";
+            this.deptnameDataGridViewTextBoxColumn.HeaderText = "deptname";
+            this.deptnameDataGridViewTextBoxColumn.Name = "deptnameDataGridViewTextBoxColumn";
+            // 
             // View_department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,9 +121,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "View_department";
             this.Text = "View_department";
+            this.Load += new System.EventHandler(this.View_department_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,5 +137,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private hospitallDataSet33 hospitallDataSet33;
+        private System.Windows.Forms.BindingSource deptBindingSource;
+        private hospitallDataSet33TableAdapters.DeptTableAdapter deptTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deptidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deptnameDataGridViewTextBoxColumn;
     }
 }

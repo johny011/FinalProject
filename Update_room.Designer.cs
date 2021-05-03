@@ -31,30 +31,93 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_room));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet7 = new Final_project.hospitallDataSet7();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet6 = new Final_project.hospitallDataSet6();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.الرقم = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.department = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.type_room = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.roomTableAdapter = new Final_project.hospitallDataSet6TableAdapters.RoomTableAdapter();
+            this.deptTableAdapter = new Final_project.hospitallDataSet7TableAdapters.DeptTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet6)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.الرقم,
-            this.department,
-            this.type_room});
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dataGridView1.DataSource = this.roomBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 24;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "roomid";
+            this.dataGridViewTextBoxColumn3.HeaderText = "roomid";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "roomtype";
+            this.dataGridViewTextBoxColumn4.HeaderText = "roomtype";
+            this.dataGridViewTextBoxColumn4.Items.AddRange(new object[] {
+            "for patient",
+            "for process"});
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "deptid";
+            this.dataGridViewTextBoxColumn5.DataSource = this.deptBindingSource;
+            this.dataGridViewTextBoxColumn5.DisplayMember = "deptname";
+            this.dataGridViewTextBoxColumn5.HeaderText = "deptid";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn5.ValueMember = "deptid";
+            // 
+            // deptBindingSource
+            // 
+            this.deptBindingSource.DataMember = "Dept";
+            this.deptBindingSource.DataSource = this.hospitallDataSet7;
+            // 
+            // hospitallDataSet7
+            // 
+            this.hospitallDataSet7.DataSetName = "hospitallDataSet7";
+            this.hospitallDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.hospitallDataSet6;
+            // 
+            // hospitallDataSet6
+            // 
+            this.hospitallDataSet6.DataSetName = "hospitallDataSet6";
+            this.hospitallDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuElipse1
             // 
@@ -97,6 +160,7 @@
             this.btn_delete.Size = new System.Drawing.Size(211, 66);
             this.btn_delete.TabIndex = 26;
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_add
             // 
@@ -123,24 +187,15 @@
             this.btn_add.Size = new System.Drawing.Size(211, 66);
             this.btn_add.TabIndex = 25;
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // الرقم
+            // roomTableAdapter
             // 
-            this.الرقم.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.الرقم.FillWeight = 200F;
-            this.الرقم.HeaderText = "رقم الغرفة";
-            this.الرقم.Name = "الرقم";
-            this.الرقم.ReadOnly = true;
+            this.roomTableAdapter.ClearBeforeFill = true;
             // 
-            // department
+            // deptTableAdapter
             // 
-            this.department.HeaderText = "القسم";
-            this.department.Name = "department";
-            // 
-            // type_room
-            // 
-            this.type_room.HeaderText = "نوع الغرفة";
-            this.type_room.Name = "type_room";
+            this.deptTableAdapter.ClearBeforeFill = true;
             // 
             // Update_room
             // 
@@ -151,7 +206,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Update_room";
             this.Text = "Update_room";
+            this.Load += new System.EventHandler(this.Update_room_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet6)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -164,8 +224,20 @@
         private System.Windows.Forms.Panel panel1;
         public Bunifu.Framework.UI.BunifuThinButton2 btn_delete;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
-        private System.Windows.Forms.DataGridViewTextBoxColumn الرقم;
-        private System.Windows.Forms.DataGridViewComboBoxColumn department;
-        private System.Windows.Forms.DataGridViewComboBoxColumn type_room;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomtypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn deptidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn deptDataGridViewTextBoxColumn;
+        private hospitallDataSet6 hospitallDataSet6;
+        private System.Windows.Forms.BindingSource roomBindingSource;
+        private hospitallDataSet6TableAdapters.RoomTableAdapter roomTableAdapter;
+        private hospitallDataSet7 hospitallDataSet7;
+        private System.Windows.Forms.BindingSource deptBindingSource;
+        private hospitallDataSet7TableAdapters.DeptTableAdapter deptTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;
     }
 }

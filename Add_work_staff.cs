@@ -19,29 +19,31 @@ namespace Final_project
         public Add_work_staff()
         {
             InitializeComponent();
-            DB.Fillcombo("select * from Typee", ref DB.TypeId, ref combox_typeid);
-            DB.Fillcombo("select * from Dept where deptid<>0 ", ref DB.DeptId, ref combox_deptid);
+            
         }
 
         private void btn_add_Click(object sender, EventArgs e)
-        { 
-            int Type = GetId(DB.TypeId, combox_typeid);
-           int Dept= GetId(DB.DeptId, combox_deptid);
-             DB.Insert_Update_Delete("insert into TheStaff (Sname,Fathername,mothername,TheIdNumber,typeid,deptid)values('"+txt_name.Text+"','" +
-                 txt_father_name.Text+"','"+txt_mother_name.Text+"','"+txt_NO_number.Text+"',"+Type+","+Dept+")");
-        }
-        private int GetId(Dictionary<int,string> dic,ComboBox combo)
         {
-            int ID=0;
-            foreach (var x in dic)
-            {
-                if (x.Value == combo.Text)
-                {
-                    ID = x.Key;
-                }
-            }
-            return ID;
+
+             DB.Insert_Update_Delete("insert into TheStaff (Sname,Fathername,mothername,TheIdNumber,typeid,deptid)values('"+txt_name.Text+"','" +
+                 txt_father_name.Text+"','"+txt_mother_name.Text+"','"+txt_NO_number.Text+"',"+int.Parse(combox_typeid.SelectedValue.ToString())+","+int.Parse(combox_deptid.SelectedValue.ToString())+")");
+            
+            
         }
-        
+
+        private void combox_deptid_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add_work_staff_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hospitallDataSet18.Dept' table. You can move, or remove it, as needed.
+            this.deptTableAdapter.Fill(this.hospitallDataSet18.Dept);
+            // TODO: This line of code loads data into the 'hospitallDataSet17.Typee' table. You can move, or remove it, as needed.
+            this.typeeTableAdapter.Fill(this.hospitallDataSet17.Typee);
+            
+
+        }
     }
 }

@@ -21,10 +21,9 @@ namespace Final_project
         public Login()
         {
             InitializeComponent();
-            DB.FillDic("select * from dept where deptid<>0",ref DB.DeptId);
-            DB.FillDic("select * from Typee" ,ref DB.TypeId);
         }
-        Main_admin admin = new Main_admin();
+        
+        
         
         private void exitBtn_Click(object sender, EventArgs e)
         {
@@ -43,34 +42,68 @@ namespace Final_project
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        private void btn_login_Click(object sender, EventArgs e)
+        private string Select(string txt)
         {
             SqlConnection connection = new SqlConnection(DB.con);
-            SqlCommand command = new SqlCommand("select deptid from users where username='" + txt_user_name.Text+"' and passeword='"+txt_password.Text+"';",connection);
+            SqlCommand command = new SqlCommand(txt, connection);
             connection.Open();
             var query = command.ExecuteReader();
-            string resquery="";
+            string resquery = "";
             if (query.Read())
             {
                 resquery = query[0].ToString();
+                return resquery;
             }
-            if (resquery == "0")
+            return "";
+            
+        }
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+             int login= DB.DataTable("select * from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';").Rows.Count;
+            if (login == 1)
             {
-                
-                admin.ShowDialog();
-                
-               
+                string resquery = Select("select form from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';");
+                if (resquery == "IT")
+                {
+                    Main_admin admin = new Main_admin();
+                    this.Hide();
+                    admin.ShowDialog();
+                    this.Close();
+                }
+                else if (resquery == "MainResiption")
+                {
+                    General_reception general_Reception = new General_reception();
+                    this.Hide();
+                    general_Reception.ShowDialog();
+                    this.Close();
+                }
+                else if (resquery == "xray")
+                {
+                    X_Ray x_Ray = new X_Ray();
+                    this.Hide();
+                    x_Ray.ShowDialog();
+                    this.Close();
+                }
+                else if (resquery == "analyze")
+                {
+                    Laboratory x_Ray = new Laboratory();
+                    this.Hide();
+                    x_Ray.ShowDialog();
+                    this.Close();
+                }
+                else 
+                {
+                    Private_reception private_Reception;
+                    private_Reception = new Private_reception(resquery);
+                    this.Hide();
+                    private_Reception.ShowDialog();
+                    this.Close();
+                }
             }
-            else if(resquery=="")
-            {
-                MessageBox.Show("تحقق من اسم المستخدم وكلمة المرور وأعد المحاولة ثانية");
-            }
-            else 
-            {
-                MessageBox.Show("user");
-            }
-            connection.Close();
+            else
+            
+                MessageBox.Show("تحقق من اسم المستخدم وكلمة المرور");
+            
         }
 
         private void panel_title_MouseDown(object sender, MouseEventArgs e)
@@ -91,6 +124,16 @@ namespace Final_project
         private void panel_title_MouseUp(object sender, MouseEventArgs e)
         {
             move = 0;
+        }
+
+        private void txt_user_name_OnValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txt_user_name_Validating(object sender, CancelEventArgs e)
+        {
+            
         }
     }
 }

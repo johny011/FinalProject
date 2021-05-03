@@ -33,14 +33,25 @@
             this.DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passewordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet2 = new Final_project.hospitallDataSet2();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.usersTableAdapter = new Final_project.hospitallDataSet2TableAdapters.usersTableAdapter();
+            this.hospitallDataSet3 = new Final_project.hospitallDataSet3();
+            this.deptTableAdapter = new Final_project.hospitallDataSet3TableAdapters.DeptTableAdapter();
+            this.hospitallDataSet21 = new Final_project.hospitallDataSet21();
+            this.deptTableAdapter1 = new Final_project.hospitallDataSet21TableAdapters.DeptTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet21)).BeginInit();
             this.SuspendLayout();
             // 
             // DeleteBtn
@@ -68,6 +79,7 @@
             this.DeleteBtn.Size = new System.Drawing.Size(211, 66);
             this.DeleteBtn.TabIndex = 26;
             this.DeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // btn_add
             // 
@@ -98,18 +110,61 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.useridDataGridViewTextBoxColumn,
+            this.passewordDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.formDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.usersBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 24;
+            // 
+            // useridDataGridViewTextBoxColumn
+            // 
+            this.useridDataGridViewTextBoxColumn.DataPropertyName = "userid";
+            this.useridDataGridViewTextBoxColumn.HeaderText = "userid";
+            this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
+            this.useridDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passewordDataGridViewTextBoxColumn
+            // 
+            this.passewordDataGridViewTextBoxColumn.DataPropertyName = "passeword";
+            this.passewordDataGridViewTextBoxColumn.HeaderText = "passeword";
+            this.passewordDataGridViewTextBoxColumn.Name = "passewordDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // formDataGridViewTextBoxColumn
+            // 
+            this.formDataGridViewTextBoxColumn.DataPropertyName = "form";
+            this.formDataGridViewTextBoxColumn.DataSource = this.usersBindingSource;
+            this.formDataGridViewTextBoxColumn.DisplayMember = "form";
+            this.formDataGridViewTextBoxColumn.HeaderText = "form";
+            this.formDataGridViewTextBoxColumn.Name = "formDataGridViewTextBoxColumn";
+            this.formDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.formDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.formDataGridViewTextBoxColumn.ValueMember = "form";
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.hospitallDataSet2;
+            // 
+            // hospitallDataSet2
+            // 
+            this.hospitallDataSet2.DataSetName = "hospitallDataSet2";
+            this.hospitallDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuElipse1
             // 
@@ -127,25 +182,27 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 2;
             // 
-            // Column1
+            // usersTableAdapter
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // Column2
+            // hospitallDataSet3
             // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
+            this.hospitallDataSet3.DataSetName = "hospitallDataSet3";
+            this.hospitallDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Column3
+            // deptTableAdapter
             // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
+            this.deptTableAdapter.ClearBeforeFill = true;
             // 
-            // Column4
+            // hospitallDataSet21
             // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
+            this.hospitallDataSet21.DataSetName = "hospitallDataSet21";
+            this.hospitallDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // deptTableAdapter1
+            // 
+            this.deptTableAdapter1.ClearBeforeFill = true;
             // 
             // Update_account
             // 
@@ -156,8 +213,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Update_account";
             this.Text = "Update_account";
+            this.Load += new System.EventHandler(this.Update_account_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet2)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet21)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,9 +231,16 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column4;
+        private hospitallDataSet2 hospitallDataSet2;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private hospitallDataSet2TableAdapters.usersTableAdapter usersTableAdapter;
+        private hospitallDataSet3 hospitallDataSet3;
+        private hospitallDataSet3TableAdapters.DeptTableAdapter deptTableAdapter;
+        private hospitallDataSet21 hospitallDataSet21;
+        private hospitallDataSet21TableAdapters.DeptTableAdapter deptTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passewordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn formDataGridViewTextBoxColumn;
     }
 }

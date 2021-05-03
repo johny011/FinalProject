@@ -31,28 +31,59 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_period));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.periodnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thePeriodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timePeriodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet5 = new Final_project.hospitallDataSet5();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.period_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.period_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timePeriodsTableAdapter = new Final_project.hospitallDataSet5TableAdapters.TimePeriodsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timePeriodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet5)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.period_NO,
-            this.period_time});
+            this.periodnumberDataGridViewTextBoxColumn,
+            this.thePeriodDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.timePeriodsBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 24;
+            // 
+            // periodnumberDataGridViewTextBoxColumn
+            // 
+            this.periodnumberDataGridViewTextBoxColumn.DataPropertyName = "periodnumber";
+            this.periodnumberDataGridViewTextBoxColumn.HeaderText = "periodnumber";
+            this.periodnumberDataGridViewTextBoxColumn.Name = "periodnumberDataGridViewTextBoxColumn";
+            this.periodnumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // thePeriodDataGridViewTextBoxColumn
+            // 
+            this.thePeriodDataGridViewTextBoxColumn.DataPropertyName = "ThePeriod";
+            this.thePeriodDataGridViewTextBoxColumn.HeaderText = "ThePeriod";
+            this.thePeriodDataGridViewTextBoxColumn.Name = "thePeriodDataGridViewTextBoxColumn";
+            // 
+            // timePeriodsBindingSource
+            // 
+            this.timePeriodsBindingSource.DataMember = "TimePeriods";
+            this.timePeriodsBindingSource.DataSource = this.hospitallDataSet5;
+            // 
+            // hospitallDataSet5
+            // 
+            this.hospitallDataSet5.DataSetName = "hospitallDataSet5";
+            this.hospitallDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuElipse1
             // 
@@ -95,6 +126,7 @@
             this.DeleteBtn.Size = new System.Drawing.Size(211, 66);
             this.DeleteBtn.TabIndex = 26;
             this.DeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // btn_add
             // 
@@ -121,20 +153,11 @@
             this.btn_add.Size = new System.Drawing.Size(211, 66);
             this.btn_add.TabIndex = 25;
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // period_NO
+            // timePeriodsTableAdapter
             // 
-            this.period_NO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.period_NO.FillWeight = 200F;
-            this.period_NO.HeaderText = "رقم الفترة ";
-            this.period_NO.Name = "period_NO";
-            this.period_NO.ReadOnly = true;
-            // 
-            // period_time
-            // 
-            this.period_time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.period_time.HeaderText = "وقت الفترة ";
-            this.period_time.Name = "period_time";
+            this.timePeriodsTableAdapter.ClearBeforeFill = true;
             // 
             // Update_period
             // 
@@ -145,7 +168,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Update_period";
             this.Text = "Update_period";
+            this.Load += new System.EventHandler(this.Update_period_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timePeriodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet5)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -158,7 +184,10 @@
         private System.Windows.Forms.Panel panel1;
         public Bunifu.Framework.UI.BunifuThinButton2 DeleteBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
-        private System.Windows.Forms.DataGridViewTextBoxColumn period_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn period_time;
+        private hospitallDataSet5 hospitallDataSet5;
+        private System.Windows.Forms.BindingSource timePeriodsBindingSource;
+        private hospitallDataSet5TableAdapters.TimePeriodsTableAdapter timePeriodsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn periodnumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thePeriodDataGridViewTextBoxColumn;
     }
 }

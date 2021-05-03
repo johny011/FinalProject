@@ -15,38 +15,40 @@ namespace Final_project
 {
     public partial class Add_account : Form
     {
-        Dictionary<int, string> Dept = new Dictionary<int, string>();
+        
         public Add_account()
         {
             InitializeComponent();
-            DB.Fillcombo("select * from Dept where deptid<>0", ref Dept, ref combox_deptid);
+            
         }
         
-        private int GetId(Dictionary<int, string> dic, ComboBox combo)
-        {
-            int ID = 0;
-            foreach (var x in dic)
-            {
-                if (x.Value == combo.Text)
-                {
-                    ID = x.Key;
-                }
-            }
-            return ID;
-        }
+        
         private void btn_add_Click(object sender, EventArgs e)
         {
             int count = DB.DataTable("select * from المستخدمين where username='" + txt_user_name.Text + "'").Rows.Count;
             if(count==0)
             {
-                DB.Insert_Update_Delete("insert into المستخدمين (username,passeword,deptid)values ('" + txt_user_name.Text + "','" + txt_password.Text + "'," + GetId(Dept, combox_deptid) + ")");
+                DB.Insert_Update_Delete("insert into المستخدمين (username,passeword,form)values ('" + txt_user_name.Text + "','" + txt_password.Text + "','" + combox_deptid.SelectedValue.ToString() + "')");
             }
             else
             {
                 MessageBox.Show("قم بتغيير اسم المستخدم");
             }
             
+            
         }
+
+        private void Add_account_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hospitallDataSet20.Dept' table. You can move, or remove it, as needed.
+            this.deptTableAdapter.Fill(this.hospitallDataSet20.Dept);
+            // TODO: This line of code loads data into the 'hospitallDataSet19.Dept' table. You can move, or remove it, as needed.
+            
+            // TODO: This line of code loads data into the 'hospitallDataSet14.Dept' table. You can move, or remove it, as needed.
+            
+
+        }
+
         
     }
 }

@@ -31,23 +31,23 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_pation));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txt_place = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_NO_number = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_father_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_mother_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pation_NO = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txt_date = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txt_place = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.txt_place);
-            this.panel1.Controls.Add(this.txt_date);
-            this.panel1.Controls.Add(this.pation_NO);
             this.panel1.Controls.Add(this.btn_add);
             this.panel1.Controls.Add(this.txt_NO_number);
             this.panel1.Controls.Add(this.txt_father_name);
@@ -58,6 +58,49 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(627, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 24);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "تاريخ الميلاد";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(553, 138);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 27;
+            // 
+            // txt_place
+            // 
+            this.txt_place.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_place.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_place.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_place.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_place.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_place.HintText = "";
+            this.txt_place.isPassword = false;
+            this.txt_place.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_place.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_place.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_place.LineThickness = 4;
+            this.txt_place.Location = new System.Drawing.Point(6, 98);
+            this.txt_place.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_place.Name = "txt_place";
+            this.txt_place.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_place.Size = new System.Drawing.Size(220, 60);
+            this.txt_place.TabIndex = 26;
+            this.txt_place.Text = "مكان الإقامة";
+            this.txt_place.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_add
             // 
@@ -78,12 +121,13 @@
             this.btn_add.IdleFillColor = System.Drawing.Color.White;
             this.btn_add.IdleForecolor = System.Drawing.Color.Black;
             this.btn_add.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_add.Location = new System.Drawing.Point(287, 345);
+            this.btn_add.Location = new System.Drawing.Point(278, 300);
             this.btn_add.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(211, 66);
             this.btn_add.TabIndex = 22;
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // txt_NO_number
             // 
@@ -98,7 +142,7 @@
             this.txt_NO_number.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_NO_number.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_NO_number.LineThickness = 4;
-            this.txt_NO_number.Location = new System.Drawing.Point(288, 99);
+            this.txt_NO_number.Location = new System.Drawing.Point(279, 98);
             this.txt_NO_number.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_NO_number.Name = "txt_NO_number";
             this.txt_NO_number.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -120,7 +164,7 @@
             this.txt_father_name.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_father_name.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_father_name.LineThickness = 4;
-            this.txt_father_name.Location = new System.Drawing.Point(15, 14);
+            this.txt_father_name.Location = new System.Drawing.Point(278, 13);
             this.txt_father_name.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_father_name.Name = "txt_father_name";
             this.txt_father_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -142,7 +186,7 @@
             this.txt_mother_name.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_mother_name.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_mother_name.LineThickness = 4;
-            this.txt_mother_name.Location = new System.Drawing.Point(565, 99);
+            this.txt_mother_name.Location = new System.Drawing.Point(6, 13);
             this.txt_mother_name.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_mother_name.Name = "txt_mother_name";
             this.txt_mother_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -164,7 +208,7 @@
             this.txt_name.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_name.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_name.LineThickness = 4;
-            this.txt_name.Location = new System.Drawing.Point(288, 14);
+            this.txt_name.Location = new System.Drawing.Point(533, 13);
             this.txt_name.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_name.Name = "txt_name";
             this.txt_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -178,73 +222,6 @@
             this.bunifuElipse1.ElipseRadius = 0;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // pation_NO
-            // 
-            this.pation_NO.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pation_NO.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pation_NO.Enabled = false;
-            this.pation_NO.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pation_NO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pation_NO.HintForeColor = System.Drawing.Color.Empty;
-            this.pation_NO.HintText = "";
-            this.pation_NO.isPassword = false;
-            this.pation_NO.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pation_NO.LineIdleColor = System.Drawing.Color.Gray;
-            this.pation_NO.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pation_NO.LineThickness = 4;
-            this.pation_NO.Location = new System.Drawing.Point(565, 14);
-            this.pation_NO.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.pation_NO.Name = "pation_NO";
-            this.pation_NO.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.pation_NO.Size = new System.Drawing.Size(220, 60);
-            this.pation_NO.TabIndex = 24;
-            this.pation_NO.Text = "رقم المريض";
-            this.pation_NO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_date
-            // 
-            this.txt_date.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_date.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_date.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_date.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_date.HintText = "";
-            this.txt_date.isPassword = false;
-            this.txt_date.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_date.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_date.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_date.LineThickness = 4;
-            this.txt_date.Location = new System.Drawing.Point(287, 210);
-            this.txt_date.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_date.Name = "txt_date";
-            this.txt_date.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_date.Size = new System.Drawing.Size(220, 60);
-            this.txt_date.TabIndex = 25;
-            this.txt_date.Text = "تاريخ الميلاد ";
-            this.txt_date.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_place
-            // 
-            this.txt_place.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_place.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_place.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_place.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_place.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_place.HintText = "";
-            this.txt_place.isPassword = false;
-            this.txt_place.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_place.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_place.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_place.LineThickness = 4;
-            this.txt_place.Location = new System.Drawing.Point(15, 99);
-            this.txt_place.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_place.Name = "txt_place";
-            this.txt_place.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_place.Size = new System.Drawing.Size(220, 60);
-            this.txt_place.TabIndex = 26;
-            this.txt_place.Text = "مكان الإقامة";
-            this.txt_place.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Add_pation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +232,7 @@
             this.Name = "Add_pation";
             this.Text = "Add_pation";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -269,7 +247,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_name;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_place;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_date;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox pation_NO;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

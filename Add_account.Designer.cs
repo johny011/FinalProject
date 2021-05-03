@@ -32,12 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_account));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.combox_deptid = new System.Windows.Forms.ComboBox();
+            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet20 = new Final_project.hospitallDataSet20();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_user_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.combox_deptid = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.deptTableAdapter = new Final_project.hospitallDataSet20TableAdapters.DeptTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet20)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -58,6 +63,46 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(459, 265);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 24);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "القسم";
+            // 
+            // combox_deptid
+            // 
+            this.combox_deptid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.combox_deptid.BackColor = System.Drawing.Color.White;
+            this.combox_deptid.DataSource = this.deptBindingSource;
+            this.combox_deptid.DisplayMember = "deptname";
+            this.combox_deptid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_deptid.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combox_deptid.FormattingEnabled = true;
+            this.combox_deptid.Location = new System.Drawing.Point(278, 309);
+            this.combox_deptid.Name = "combox_deptid";
+            this.combox_deptid.Size = new System.Drawing.Size(220, 27);
+            this.combox_deptid.TabIndex = 23;
+            this.combox_deptid.ValueMember = "deptname";
+            // 
+            // deptBindingSource
+            // 
+            this.deptBindingSource.DataMember = "Dept";
+            this.deptBindingSource.DataSource = this.hospitallDataSet20;
+            // 
+            // hospitallDataSet20
+            // 
+            this.hospitallDataSet20.DataSetName = "hospitallDataSet20";
+            this.hospitallDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btn_add
             // 
             this.btn_add.ActiveBorderThickness = 1;
@@ -65,7 +110,8 @@
             this.btn_add.ActiveFillColor = System.Drawing.Color.Silver;
             this.btn_add.ActiveForecolor = System.Drawing.Color.White;
             this.btn_add.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_add.BackColor = System.Drawing.SystemColors.Control;
             this.btn_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add.BackgroundImage")));
             this.btn_add.ButtonText = "إضافة";
@@ -87,7 +133,9 @@
             // 
             // txt_password
             // 
-            this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_password.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -109,7 +157,9 @@
             // 
             // txt_user_name
             // 
-            this.txt_user_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_user_name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_user_name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_user_name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -129,28 +179,9 @@
             this.txt_user_name.Text = "اسم المستخدم";
             this.txt_user_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // combox_deptid
+            // deptTableAdapter
             // 
-            this.combox_deptid.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combox_deptid.BackColor = System.Drawing.Color.White;
-            this.combox_deptid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combox_deptid.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combox_deptid.FormattingEnabled = true;
-            this.combox_deptid.Location = new System.Drawing.Point(278, 304);
-            this.combox_deptid.Name = "combox_deptid";
-            this.combox_deptid.Size = new System.Drawing.Size(220, 27);
-            this.combox_deptid.Sorted = true;
-            this.combox_deptid.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(459, 265);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 24);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "القسم";
+            this.deptTableAdapter.ClearBeforeFill = true;
             // 
             // Add_account
             // 
@@ -161,8 +192,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_account";
             this.Text = "Add_account";
+            this.Load += new System.EventHandler(this.Add_account_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet20)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,5 +210,8 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_user_name;
         private System.Windows.Forms.ComboBox combox_deptid;
         private System.Windows.Forms.Label label1;
+        private hospitallDataSet20 hospitallDataSet20;
+        private System.Windows.Forms.BindingSource deptBindingSource;
+        private hospitallDataSet20TableAdapters.DeptTableAdapter deptTableAdapter;
     }
 }

@@ -15,9 +15,14 @@ namespace Final_project
         public View_department()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DB.DataTable("select * from dept");
-            dataGridView1.Columns[0].HeaderText = "رقم القسم";
-            dataGridView1.Columns[1].HeaderText = "اسم القسم";
+            
+        }
+
+        private void View_department_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hospitallDataSet33.Dept' table. You can move, or remove it, as needed.
+            this.deptTableAdapter.Fill(this.hospitallDataSet33.Dept);
+
         }
     }
 }

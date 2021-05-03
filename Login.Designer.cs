@@ -150,6 +150,8 @@
             this.txt_user_name.TabIndex = 18;
             this.txt_user_name.Text = "اسم المستخدم";
             this.txt_user_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_user_name.OnValueChanged += new System.EventHandler(this.txt_user_name_OnValueChanged);
+            this.txt_user_name.Validating += new System.ComponentModel.CancelEventHandler(this.txt_user_name_Validating);
             // 
             // txt_password
             // 

@@ -15,9 +15,11 @@ namespace Final_project
         int move;
         int movex;
         int movey;
-        public Private_reception()
+        string dept;
+        public Private_reception(string x)
         {
             InitializeComponent();
+            dept = x;
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -96,26 +98,74 @@ namespace Final_project
         }
         private void update_entrance_patient_Click_1(object sender, EventArgs e)
         {
+            Edit_Graduating_Patient edit_Graduating_Patient = new Edit_Graduating_Patient(dept);
             ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+            ChildForm(edit_Graduating_Patient);
         }
 
         private void view_info_patient_Click(object sender, EventArgs e)
         {
+            View_Patient view_Patient = new View_Patient(dept);
             ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+            ChildForm(view_Patient);
         }
 
         private void view_entrance_patient_Click(object sender, EventArgs e)
         {
+            View_Login_Record view_Login_Record = new View_Login_Record(dept);
             ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+            ChildForm(view_Login_Record);
         }
 
         private void search_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+            ChildForm(new Search_Patient());
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            Add_login_record login_Record = new Add_login_record(dept);
+             ActiveBtn(sender);
+             ChildForm(login_Record);
+           
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new Request_X_ray());
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new Result_picture());
+        }
+
+        private void search_patientAdmission_Click(object sender, EventArgs e)
+        {
+            int deptid = int.Parse(DB.SelectToGetOneValue("select deptid from dept where deptname='" + dept + "'"));
+            ActiveBtn(sender);
+            ChildForm(new Search_Admission(deptid));
+        }
+
+        private void btn_request_analyzes_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new Request_Analyzes());
+        }
+
+        private void btn_result_analyzes_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new Result_Analyzes());
+        }
+
+        private void btn_view_rooms_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new View_room(dept));
         }
     }
 

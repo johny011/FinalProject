@@ -101,40 +101,32 @@ namespace Final_project
             ChildForm(new Add_pation());
         }
 
-        private void add_entrance_patient_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new Add_login_record());
-        }
+        
 
         private void update_info_patient_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+            ChildForm(new Update_Patient());
         }
 
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
-        }
+        
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+            ChildForm(new View_Patient());
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+            ChildForm(new View_Login_Record());
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)   
         {
             ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+            ChildForm(new Search_Patient());
         }
     }
 }

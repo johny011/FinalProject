@@ -16,5 +16,17 @@ namespace Final_project
         {
             InitializeComponent();
         }
+
+        private void Update_working_period_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hospitallDataSet11.WorkPeriods' table. You can move, or remove it, as needed.
+            this.workPeriodsTableAdapter.Fill(this.hospitallDataSet11.WorkPeriods);
+
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

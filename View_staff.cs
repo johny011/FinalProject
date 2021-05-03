@@ -15,14 +15,16 @@ namespace Final_project
         public View_staff()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DB.DataTable("select * from TheStaff");
-            dataGridView1.Columns[0].HeaderText = "رقم العامل";
-            dataGridView1.Columns[1].HeaderText = "اسم العامل";
-            dataGridView1.Columns[2].HeaderText = "اسم الاب";
-            dataGridView1.Columns[3].HeaderText = "اسم الام";
-            dataGridView1.Columns[4].HeaderText = "الرقم الوطني";
-            dataGridView1.Columns[5].HeaderText = "رقم النوع";
-            dataGridView1.Columns[6].HeaderText = "رقم القسم";
+           
+        }
+
+        private void View_staff_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hospitallDataSet23.Dept' table. You can move, or remove it, as needed.
+            this.deptTableAdapter.Fill(this.hospitallDataSet23.Dept);
+            // TODO: This line of code loads data into the 'hospitallDataSet22.TheStaff' table. You can move, or remove it, as needed.
+            this.theStaffTableAdapter.Fill(this.hospitallDataSet22.TheStaff);
+
         }
     }
 }

@@ -125,11 +125,7 @@ namespace Final_project
             ChildForm(new Add_room());
         }
 
-        private void btn_add_department_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new Add_section());
-        }
+        
 
         private void btn_add_working_period_Click(object sender, EventArgs e)
         {

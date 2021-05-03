@@ -16,11 +16,14 @@ namespace Final_project
         public View_account()
         {
             InitializeComponent();
-            dataGridView1.DataSource=DB.DataTable("select * from users");
-            dataGridView1.Columns[0].HeaderText = "رقم الحساب";
-            dataGridView1.Columns[1].HeaderText = " كلمة المرور"; 
-            dataGridView1.Columns[2].HeaderText = "اسم المستخدم";
-            dataGridView1.Columns[3].HeaderText = "رقم القسم";
+            
+        }
+
+        private void View_account_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hospitallDataSet32.users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.hospitallDataSet32.users);
+
         }
     }
 }

@@ -21,23 +21,11 @@ namespace Final_project
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-
-            foreach(DataGridViewRow gr in dataGridView1.Rows)
+            for(int i=0 ; i < dataGridView1.RowCount-1;i++)
             {
-                try
-                {
-                    if (gr.Cells[1].Value.ToString() != null)
-                    {
+                DataGridViewRow gr = dataGridView1.Rows[i];       
                         DB.Insert_Update_Delete("insert into TimePeriods (ThePeriod) values ('" + gr.Cells[1].Value.ToString() + "');");
-                    }
-                }
-                catch
-                {
-
-                }
             }
-            
-            
         }
     }
 }

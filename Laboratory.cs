@@ -99,13 +99,13 @@ namespace Final_project
         private void btn_add_analyz_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);
-            ChildForm(new Required_analyzes());
+            ChildForm(new Send_Analyzes());
         }
 
         private void btn_add_result_of_an_analysis_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);
-            ChildForm(new Add_work_staff());
+            ChildForm(new Required_analyzes());
         }
 
         private void btn_update_analyz_Click(object sender, EventArgs e)
@@ -130,6 +130,18 @@ namespace Final_project
         {
             ActiveBtn(sender);
             ChildForm(new Add_work_staff());
+        }
+
+        private void btn_Add_Analyzes_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new Add_Analyze());
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new Update_Analyzes());
         }
     }
 }
