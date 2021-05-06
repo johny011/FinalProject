@@ -73,6 +73,7 @@
             this.btn_delete.Size = new System.Drawing.Size(211, 66);
             this.btn_delete.TabIndex = 26;
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // dataGridView1
             // 

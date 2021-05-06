@@ -76,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include=".Designer.cs" />
+    <Compile Include="Accounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting.Designer.cs">
+      <DependentUpon>Accounting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add_account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>hospitallDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="hospitallDataSet40.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet40.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet42.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet43.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet43.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet44.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet44.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet45.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet45.xsd</DependentUpon>
+    </Compile>
     <Compile Include="hospitallDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -531,6 +567,9 @@
     <Compile Include="X_Ray.Designer.cs">
       <DependentUpon>X_Ray.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Accounting.resx">
+      <DependentUpon>Accounting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add_account.resx">
       <DependentUpon>Add_account.cs</DependentUpon>
     </EmbeddedResource>
@@ -1050,6 +1089,72 @@
     </None>
     <None Include="hospitallDataSet4.xss">
       <DependentUpon>hospitallDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet40.xsc">
+      <DependentUpon>hospitallDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet40.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet40.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet40.xss">
+      <DependentUpon>hospitallDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet41.xsc">
+      <DependentUpon>hospitallDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet41.xss">
+      <DependentUpon>hospitallDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet42.xsc">
+      <DependentUpon>hospitallDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet42.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet42.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet42.xss">
+      <DependentUpon>hospitallDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet43.xsc">
+      <DependentUpon>hospitallDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet43.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet43.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet43.xss">
+      <DependentUpon>hospitallDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet44.xsc">
+      <DependentUpon>hospitallDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet44.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet44.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet44.xss">
+      <DependentUpon>hospitallDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet45.xsc">
+      <DependentUpon>hospitallDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet45.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet45.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet45.xss">
+      <DependentUpon>hospitallDataSet45.xsd</DependentUpon>
     </None>
     <None Include="hospitallDataSet5.xsc">
       <DependentUpon>hospitallDataSet5.xsd</DependentUpon>
