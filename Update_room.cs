@@ -19,11 +19,10 @@ namespace Final_project
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-             for(int i=0;i<dataGridView1.RowCount;i++)
-             {
-                 DataGridViewRow gr = dataGridView1.Rows[i];
+             
+                 DataGridViewRow gr = dataGridView1.CurrentRow;
                  DB.Insert_Update_Delete("update room set roomtype='" + gr.Cells[1].Value.ToString() + "',deptid=" + int.Parse(gr.Cells[2].Value.ToString()) + " where roomid="+int.Parse(gr.Cells[0].Value.ToString())+"");
-             }
+             
         }
 
         private void btn_delete_Click(object sender, EventArgs e)

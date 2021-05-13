@@ -32,34 +32,34 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_working_period));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.lbl_situation = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.combox_situations = new System.Windows.Forms.ComboBox();
-            this.lbl_period = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.combox_period = new System.Windows.Forms.ComboBox();
-            this.hospitallDataSet43 = new Final_project.hospitallDataSet43();
-            this.typeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typeeTableAdapter = new Final_project.hospitallDataSet43TableAdapters.TypeeTableAdapter();
-            this.hospitallDataSet44 = new Final_project.hospitallDataSet44();
-            this.timePeriodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.timePeriodsTableAdapter = new Final_project.hospitallDataSet44TableAdapters.TimePeriodsTableAdapter();
-            this.hospitallDataSet45 = new Final_project.hospitallDataSet45();
-            this.theSituationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.theSituationTableAdapter = new Final_project.hospitallDataSet45TableAdapters.TheSituationTableAdapter();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lbl_situation = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.combox_situations = new System.Windows.Forms.ComboBox();
+            this.theSituationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet45 = new Final_project.hospitallDataSet45();
+            this.lbl_period = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.combox_period = new System.Windows.Forms.ComboBox();
+            this.timePeriodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet44 = new Final_project.hospitallDataSet44();
+            this.hospitallDataSet43 = new Final_project.hospitallDataSet43();
+            this.typeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typeeTableAdapter = new Final_project.hospitallDataSet43TableAdapters.TypeeTableAdapter();
+            this.timePeriodsTableAdapter = new Final_project.hospitallDataSet44TableAdapters.TimePeriodsTableAdapter();
+            this.theSituationTableAdapter = new Final_project.hospitallDataSet45TableAdapters.TheSituationTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timePeriodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timePeriodsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet45)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -87,121 +87,12 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
-            // btn_add
+            // dateTimePicker1
             // 
-            this.btn_add.ActiveBorderThickness = 1;
-            this.btn_add.ActiveCornerRadius = 20;
-            this.btn_add.ActiveFillColor = System.Drawing.Color.Silver;
-            this.btn_add.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_add.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_add.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add.BackgroundImage")));
-            this.btn_add.ButtonText = "إضافة";
-            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_add.ForeColor = System.Drawing.Color.Black;
-            this.btn_add.IdleBorderThickness = 1;
-            this.btn_add.IdleCornerRadius = 20;
-            this.btn_add.IdleFillColor = System.Drawing.Color.White;
-            this.btn_add.IdleForecolor = System.Drawing.Color.Black;
-            this.btn_add.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_add.Location = new System.Drawing.Point(285, 356);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(220, 66);
-            this.btn_add.TabIndex = 38;
-            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // lbl_situation
-            // 
-            this.lbl_situation.Location = new System.Drawing.Point(132, 23);
-            this.lbl_situation.Name = "lbl_situation";
-            this.lbl_situation.Size = new System.Drawing.Size(130, 56);
-            this.lbl_situation.TabIndex = 36;
-            this.lbl_situation.Text = "الوضع";
-            this.lbl_situation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // combox_situations
-            // 
-            this.combox_situations.BackColor = System.Drawing.Color.White;
-            this.combox_situations.DataSource = this.theSituationBindingSource;
-            this.combox_situations.DisplayMember = "TheSituation";
-            this.combox_situations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combox_situations.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combox_situations.FormattingEnabled = true;
-            this.combox_situations.Location = new System.Drawing.Point(72, 97);
-            this.combox_situations.Name = "combox_situations";
-            this.combox_situations.Size = new System.Drawing.Size(220, 27);
-            this.combox_situations.TabIndex = 35;
-            this.combox_situations.ValueMember = "Situationid";
-            // 
-            // lbl_period
-            // 
-            this.lbl_period.Location = new System.Drawing.Point(535, 23);
-            this.lbl_period.Name = "lbl_period";
-            this.lbl_period.Size = new System.Drawing.Size(130, 56);
-            this.lbl_period.TabIndex = 26;
-            this.lbl_period.Text = "الفترات الزمنية";
-            this.lbl_period.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // combox_period
-            // 
-            this.combox_period.BackColor = System.Drawing.Color.White;
-            this.combox_period.DataSource = this.timePeriodsBindingSource;
-            this.combox_period.DisplayMember = "ThePeriod";
-            this.combox_period.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combox_period.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combox_period.FormattingEnabled = true;
-            this.combox_period.Location = new System.Drawing.Point(486, 97);
-            this.combox_period.Name = "combox_period";
-            this.combox_period.Size = new System.Drawing.Size(220, 27);
-            this.combox_period.TabIndex = 24;
-            this.combox_period.ValueMember = "periodnumber";
-            this.combox_period.SelectedIndexChanged += new System.EventHandler(this.combox_period_SelectedIndexChanged);
-            // 
-            // hospitallDataSet43
-            // 
-            this.hospitallDataSet43.DataSetName = "hospitallDataSet43";
-            this.hospitallDataSet43.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // typeeBindingSource
-            // 
-            this.typeeBindingSource.DataMember = "Typee";
-            this.typeeBindingSource.DataSource = this.hospitallDataSet43;
-            // 
-            // typeeTableAdapter
-            // 
-            this.typeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // hospitallDataSet44
-            // 
-            this.hospitallDataSet44.DataSetName = "hospitallDataSet44";
-            this.hospitallDataSet44.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // timePeriodsBindingSource
-            // 
-            this.timePeriodsBindingSource.DataMember = "TimePeriods";
-            this.timePeriodsBindingSource.DataSource = this.hospitallDataSet44;
-            // 
-            // timePeriodsTableAdapter
-            // 
-            this.timePeriodsTableAdapter.ClearBeforeFill = true;
-            // 
-            // hospitallDataSet45
-            // 
-            this.hospitallDataSet45.DataSetName = "hospitallDataSet45";
-            this.hospitallDataSet45.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // theSituationBindingSource
-            // 
-            this.theSituationBindingSource.DataMember = "TheSituation";
-            this.theSituationBindingSource.DataSource = this.hospitallDataSet45;
-            // 
-            // theSituationTableAdapter
-            // 
-            this.theSituationTableAdapter.ClearBeforeFill = true;
+            this.dateTimePicker1.Location = new System.Drawing.Point(318, 313);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 45;
             // 
             // label4
             // 
@@ -260,12 +151,121 @@
             this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
             this.checkedListBox1.TabIndex = 39;
             // 
-            // dateTimePicker1
+            // btn_add
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(318, 313);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 45;
+            this.btn_add.ActiveBorderThickness = 1;
+            this.btn_add.ActiveCornerRadius = 20;
+            this.btn_add.ActiveFillColor = System.Drawing.Color.Silver;
+            this.btn_add.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_add.ActiveLineColor = System.Drawing.Color.White;
+            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_add.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add.BackgroundImage")));
+            this.btn_add.ButtonText = "إضافة";
+            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_add.ForeColor = System.Drawing.Color.Black;
+            this.btn_add.IdleBorderThickness = 1;
+            this.btn_add.IdleCornerRadius = 20;
+            this.btn_add.IdleFillColor = System.Drawing.Color.White;
+            this.btn_add.IdleForecolor = System.Drawing.Color.Black;
+            this.btn_add.IdleLineColor = System.Drawing.Color.Black;
+            this.btn_add.Location = new System.Drawing.Point(285, 356);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(220, 66);
+            this.btn_add.TabIndex = 38;
+            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // lbl_situation
+            // 
+            this.lbl_situation.Location = new System.Drawing.Point(132, 23);
+            this.lbl_situation.Name = "lbl_situation";
+            this.lbl_situation.Size = new System.Drawing.Size(130, 56);
+            this.lbl_situation.TabIndex = 36;
+            this.lbl_situation.Text = "الوضع";
+            this.lbl_situation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // combox_situations
+            // 
+            this.combox_situations.BackColor = System.Drawing.Color.White;
+            this.combox_situations.DataSource = this.theSituationBindingSource;
+            this.combox_situations.DisplayMember = "TheSituation";
+            this.combox_situations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_situations.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combox_situations.FormattingEnabled = true;
+            this.combox_situations.Location = new System.Drawing.Point(72, 97);
+            this.combox_situations.Name = "combox_situations";
+            this.combox_situations.Size = new System.Drawing.Size(220, 27);
+            this.combox_situations.TabIndex = 35;
+            this.combox_situations.ValueMember = "Situationid";
+            // 
+            // theSituationBindingSource
+            // 
+            this.theSituationBindingSource.DataMember = "TheSituation";
+            this.theSituationBindingSource.DataSource = this.hospitallDataSet45;
+            // 
+            // hospitallDataSet45
+            // 
+            this.hospitallDataSet45.DataSetName = "hospitallDataSet45";
+            this.hospitallDataSet45.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lbl_period
+            // 
+            this.lbl_period.Location = new System.Drawing.Point(535, 23);
+            this.lbl_period.Name = "lbl_period";
+            this.lbl_period.Size = new System.Drawing.Size(130, 56);
+            this.lbl_period.TabIndex = 26;
+            this.lbl_period.Text = "الفترات الزمنية";
+            this.lbl_period.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // combox_period
+            // 
+            this.combox_period.BackColor = System.Drawing.Color.White;
+            this.combox_period.DataSource = this.timePeriodsBindingSource;
+            this.combox_period.DisplayMember = "ThePeriod";
+            this.combox_period.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_period.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combox_period.FormattingEnabled = true;
+            this.combox_period.Location = new System.Drawing.Point(486, 97);
+            this.combox_period.Name = "combox_period";
+            this.combox_period.Size = new System.Drawing.Size(220, 27);
+            this.combox_period.TabIndex = 24;
+            this.combox_period.ValueMember = "periodnumber";
+            this.combox_period.SelectedIndexChanged += new System.EventHandler(this.combox_period_SelectedIndexChanged);
+            // 
+            // timePeriodsBindingSource
+            // 
+            this.timePeriodsBindingSource.DataMember = "TimePeriods";
+            this.timePeriodsBindingSource.DataSource = this.hospitallDataSet44;
+            // 
+            // hospitallDataSet44
+            // 
+            this.hospitallDataSet44.DataSetName = "hospitallDataSet44";
+            this.hospitallDataSet44.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hospitallDataSet43
+            // 
+            this.hospitallDataSet43.DataSetName = "hospitallDataSet43";
+            this.hospitallDataSet43.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // typeeBindingSource
+            // 
+            this.typeeBindingSource.DataMember = "Typee";
+            this.typeeBindingSource.DataSource = this.hospitallDataSet43;
+            // 
+            // typeeTableAdapter
+            // 
+            this.typeeTableAdapter.ClearBeforeFill = true;
+            // 
+            // timePeriodsTableAdapter
+            // 
+            this.timePeriodsTableAdapter.ClearBeforeFill = true;
+            // 
+            // theSituationTableAdapter
+            // 
+            this.theSituationTableAdapter.ClearBeforeFill = true;
             // 
             // Add_working_period
             // 
@@ -275,16 +275,16 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_working_period";
-            this.Text = "Add_working_period";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Add_working_period_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timePeriodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timePeriodsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet45)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

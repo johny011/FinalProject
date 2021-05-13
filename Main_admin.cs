@@ -157,12 +157,6 @@ namespace Final_project
             ChildForm(new Update_room());
         }
 
-        private void btn_update_department_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new Update_department());
-        }
-
         private void btn_update_working_period_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);

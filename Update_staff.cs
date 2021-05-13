@@ -22,14 +22,12 @@ namespace Final_project
         
         private void btn_add_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView1.RowCount ; i++)
-            {
-                DataGridViewRow gr = dataGridView1.Rows[i];
+                DataGridViewRow gr = dataGridView1.CurrentRow;
 
                 DB.Insert_Update_Delete("update TheStaff set Sname='" + gr.Cells[1].Value.ToString() + "', Fathername ='" + gr.Cells[2].Value.ToString() + "', mothername ='" + gr.Cells[3].Value.ToString() + "', TheIdNumber ='" + gr.Cells[4].Value.ToString() +
                                "', typeid =" + int.Parse(gr.Cells[5].Value.ToString()) + ",  deptid=" + int.Parse(gr.Cells[6].Value.ToString()) + "where id=" +
                                int.Parse(gr.Cells[0].Value.ToString()) + ";");
-            }
+            
             
         }
 

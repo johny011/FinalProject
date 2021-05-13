@@ -26,10 +26,9 @@ namespace Final_project
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            foreach(DataGridViewRow gr in dataGridView1.Rows)
-            {
+            DataGridViewRow gr = dataGridView1.CurrentRow;
                 DB.Insert_Update_Delete("update Analyzes set Analysisname='" + gr.Cells[1].Value.ToString() + "',price=" + int.Parse(gr.Cells[2].Value.ToString()) + " ,processing ='" + gr.Cells[3].Value.ToString() + "' where Analysisnumber=" + int.Parse(gr.Cells[0].Value.ToString()) + "");
-            }
+            
         }
     }
 }

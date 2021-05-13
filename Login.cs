@@ -22,14 +22,10 @@ namespace Final_project
         {
             InitializeComponent();
         }
-        
-        
-        
         private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void maxBtn_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
@@ -59,7 +55,7 @@ namespace Final_project
         }
         private bool validate(string textbox)
         {
-            if(textbox.IndexOf("--")!=-1|| textbox.IndexOf(" or ")!=-1|| textbox.IndexOf("'")!=-1)
+            if(textbox.IndexOf("--")!=-1|| textbox.IndexOf(" or ")!=-1|| textbox.IndexOf("'")!=-1|| textbox.IndexOf(";")!=-1)
             {
                 return false;
             }
@@ -71,13 +67,15 @@ namespace Final_project
         }
         private void btn_login_Click(object sender, EventArgs e)
         {
-            bool user= validate(txt_user_name.Text);
+            
+             bool user= validate(txt_user_name.Text);
              bool pass = validate(txt_password.Text);
              if (user==true && pass==true)
              {
                   int login= DB.DataTable("select * from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';").Rows.Count;
                  if (login == 1)
                  {
+                    
                      string resquery = Select("select form from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';");
                      if (resquery == "IT")
                      {
@@ -158,6 +156,11 @@ namespace Final_project
         }
 
         private void panel_title_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_login_Enter(object sender, EventArgs e)
         {
 
         }

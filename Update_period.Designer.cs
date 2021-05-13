@@ -38,7 +38,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_edit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.timePeriodsTableAdapter = new Final_project.hospitallDataSet5TableAdapters.TimePeriodsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timePeriodsBindingSource)).BeginInit();
@@ -51,6 +51,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.periodnumberDataGridViewTextBoxColumn,
@@ -93,7 +94,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.DeleteBtn);
-            this.panel1.Controls.Add(this.btn_add);
+            this.panel1.Controls.Add(this.btn_edit);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -128,32 +129,32 @@
             this.DeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
-            // btn_add
+            // btn_edit
             // 
-            this.btn_add.ActiveBorderThickness = 1;
-            this.btn_add.ActiveCornerRadius = 20;
-            this.btn_add.ActiveFillColor = System.Drawing.Color.Silver;
-            this.btn_add.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_add.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_add.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add.BackgroundImage")));
-            this.btn_add.ButtonText = "تعديل";
-            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_add.ForeColor = System.Drawing.Color.Black;
-            this.btn_add.IdleBorderThickness = 1;
-            this.btn_add.IdleCornerRadius = 20;
-            this.btn_add.IdleFillColor = System.Drawing.Color.White;
-            this.btn_add.IdleForecolor = System.Drawing.Color.Black;
-            this.btn_add.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_add.Location = new System.Drawing.Point(233, 379);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(211, 66);
-            this.btn_add.TabIndex = 25;
-            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            this.btn_edit.ActiveBorderThickness = 1;
+            this.btn_edit.ActiveCornerRadius = 20;
+            this.btn_edit.ActiveFillColor = System.Drawing.Color.Silver;
+            this.btn_edit.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_edit.ActiveLineColor = System.Drawing.Color.White;
+            this.btn_edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_edit.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_edit.BackgroundImage")));
+            this.btn_edit.ButtonText = "تعديل";
+            this.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_edit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_edit.ForeColor = System.Drawing.Color.Black;
+            this.btn_edit.IdleBorderThickness = 1;
+            this.btn_edit.IdleCornerRadius = 20;
+            this.btn_edit.IdleFillColor = System.Drawing.Color.White;
+            this.btn_edit.IdleForecolor = System.Drawing.Color.Black;
+            this.btn_edit.IdleLineColor = System.Drawing.Color.Black;
+            this.btn_edit.Location = new System.Drawing.Point(233, 379);
+            this.btn_edit.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(211, 66);
+            this.btn_edit.TabIndex = 25;
+            this.btn_edit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_edit.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // timePeriodsTableAdapter
             // 
@@ -183,7 +184,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
         public Bunifu.Framework.UI.BunifuThinButton2 DeleteBtn;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_edit;
         private hospitallDataSet5 hospitallDataSet5;
         private System.Windows.Forms.BindingSource timePeriodsBindingSource;
         private hospitallDataSet5TableAdapters.TimePeriodsTableAdapter timePeriodsTableAdapter;

@@ -50,7 +50,6 @@
             this.btn_update_emp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_room = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_add_acount = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_update_department = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_working_period = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_add_interval = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_add_room = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -171,7 +170,6 @@
             this.panel_button.Controls.Add(this.btn_update_emp);
             this.panel_button.Controls.Add(this.btn_update_room);
             this.panel_button.Controls.Add(this.btn_add_acount);
-            this.panel_button.Controls.Add(this.btn_update_department);
             this.panel_button.Controls.Add(this.btn_update_working_period);
             this.panel_button.Controls.Add(this.btn_add_interval);
             this.panel_button.Controls.Add(this.btn_add_room);
@@ -203,7 +201,7 @@
             this.btn_show_working_period.IconVisible = true;
             this.btn_show_working_period.IconZoom = 40D;
             this.btn_show_working_period.IsTab = false;
-            this.btn_show_working_period.Location = new System.Drawing.Point(-2, 525);
+            this.btn_show_working_period.Location = new System.Drawing.Point(1, 489);
             this.btn_show_working_period.Margin = new System.Windows.Forms.Padding(5);
             this.btn_show_working_period.Name = "btn_show_working_period";
             this.btn_show_working_period.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -281,7 +279,7 @@
             this.btn_show_department.IconVisible = true;
             this.btn_show_department.IconZoom = 40D;
             this.btn_show_department.IsTab = false;
-            this.btn_show_department.Location = new System.Drawing.Point(-2, 490);
+            this.btn_show_department.Location = new System.Drawing.Point(1, 454);
             this.btn_show_department.Margin = new System.Windows.Forms.Padding(5);
             this.btn_show_department.Name = "btn_show_department";
             this.btn_show_department.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -359,7 +357,7 @@
             this.btn_show_emp.IconVisible = true;
             this.btn_show_emp.IconZoom = 40D;
             this.btn_show_emp.IsTab = false;
-            this.btn_show_emp.Location = new System.Drawing.Point(-2, 385);
+            this.btn_show_emp.Location = new System.Drawing.Point(1, 349);
             this.btn_show_emp.Margin = new System.Windows.Forms.Padding(5);
             this.btn_show_emp.Name = "btn_show_emp";
             this.btn_show_emp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -437,7 +435,7 @@
             this.btn_show_room.IconVisible = true;
             this.btn_show_room.IconZoom = 40D;
             this.btn_show_room.IsTab = false;
-            this.btn_show_room.Location = new System.Drawing.Point(-2, 455);
+            this.btn_show_room.Location = new System.Drawing.Point(1, 419);
             this.btn_show_room.Margin = new System.Windows.Forms.Padding(5);
             this.btn_show_room.Name = "btn_show_room";
             this.btn_show_room.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -515,7 +513,7 @@
             this.btn_show_acount.IconVisible = true;
             this.btn_show_acount.IconZoom = 40D;
             this.btn_show_acount.IsTab = false;
-            this.btn_show_acount.Location = new System.Drawing.Point(-2, 420);
+            this.btn_show_acount.Location = new System.Drawing.Point(1, 384);
             this.btn_show_acount.Margin = new System.Windows.Forms.Padding(5);
             this.btn_show_acount.Name = "btn_show_acount";
             this.btn_show_acount.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -648,45 +646,6 @@
             this.btn_add_acount.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_add_acount.Click += new System.EventHandler(this.btn_add_acount_Click);
             // 
-            // btn_update_department
-            // 
-            this.btn_update_department.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_update_department.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_update_department.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_update_department.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_update_department.BorderRadius = 0;
-            this.btn_update_department.ButtonText = "تعديل قسم";
-            this.btn_update_department.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_update_department.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_update_department.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_update_department.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_update_department.Iconimage = null;
-            this.btn_update_department.Iconimage_right = null;
-            this.btn_update_department.Iconimage_right_Selected = null;
-            this.btn_update_department.Iconimage_Selected = null;
-            this.btn_update_department.IconMarginLeft = 0;
-            this.btn_update_department.IconMarginRight = 0;
-            this.btn_update_department.IconRightVisible = true;
-            this.btn_update_department.IconRightZoom = 0D;
-            this.btn_update_department.IconVisible = true;
-            this.btn_update_department.IconZoom = 40D;
-            this.btn_update_department.IsTab = false;
-            this.btn_update_department.Location = new System.Drawing.Point(-4, 315);
-            this.btn_update_department.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_update_department.Name = "btn_update_department";
-            this.btn_update_department.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_update_department.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.btn_update_department.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_update_department.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_update_department.selected = false;
-            this.btn_update_department.Size = new System.Drawing.Size(178, 25);
-            this.btn_update_department.TabIndex = 62;
-            this.btn_update_department.Text = "تعديل قسم";
-            this.btn_update_department.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_update_department.Textcolor = System.Drawing.Color.Gainsboro;
-            this.btn_update_department.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_update_department.Click += new System.EventHandler(this.btn_update_department_Click);
-            // 
             // btn_update_working_period
             // 
             this.btn_update_working_period.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -710,7 +669,7 @@
             this.btn_update_working_period.IconVisible = true;
             this.btn_update_working_period.IconZoom = 40D;
             this.btn_update_working_period.IsTab = false;
-            this.btn_update_working_period.Location = new System.Drawing.Point(-4, 350);
+            this.btn_update_working_period.Location = new System.Drawing.Point(-1, 314);
             this.btn_update_working_period.Margin = new System.Windows.Forms.Padding(5);
             this.btn_update_working_period.Name = "btn_update_working_period";
             this.btn_update_working_period.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -856,7 +815,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_update_interval;
         private Bunifu.Framework.UI.BunifuFlatButton btn_update_emp;
         private Bunifu.Framework.UI.BunifuFlatButton btn_update_room;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_update_department;
         private Bunifu.Framework.UI.BunifuFlatButton btn_update_working_period;
         private Bunifu.Framework.UI.BunifuFlatButton btn_show_working_period;
         private Bunifu.Framework.UI.BunifuFlatButton btn_show_department;

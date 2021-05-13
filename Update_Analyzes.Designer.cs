@@ -32,17 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_Analyzes));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hospitallDataSet38 = new Final_project.hospitallDataSet38();
-            this.analyzesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.analyzesTableAdapter = new Final_project.hospitallDataSet38TableAdapters.AnalyzesTableAdapter();
             this.analysisnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.analysisnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.processingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.analyzesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet38 = new Final_project.hospitallDataSet38();
+            this.analyzesTableAdapter = new Final_project.hospitallDataSet38TableAdapters.AnalyzesTableAdapter();
             this.btn_Edit = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.analyzesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet38)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -67,20 +67,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // hospitallDataSet38
-            // 
-            this.hospitallDataSet38.DataSetName = "hospitallDataSet38";
-            this.hospitallDataSet38.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // analyzesBindingSource
-            // 
-            this.analyzesBindingSource.DataMember = "Analyzes";
-            this.analyzesBindingSource.DataSource = this.hospitallDataSet38;
-            // 
-            // analyzesTableAdapter
-            // 
-            this.analyzesTableAdapter.ClearBeforeFill = true;
             // 
             // analysisnumberDataGridViewTextBoxColumn
             // 
@@ -107,6 +93,20 @@
             this.processingDataGridViewTextBoxColumn.HeaderText = "processing";
             this.processingDataGridViewTextBoxColumn.Name = "processingDataGridViewTextBoxColumn";
             // 
+            // analyzesBindingSource
+            // 
+            this.analyzesBindingSource.DataMember = "Analyzes";
+            this.analyzesBindingSource.DataSource = this.hospitallDataSet38;
+            // 
+            // hospitallDataSet38
+            // 
+            this.hospitallDataSet38.DataSetName = "hospitallDataSet38";
+            this.hospitallDataSet38.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // analyzesTableAdapter
+            // 
+            this.analyzesTableAdapter.ClearBeforeFill = true;
+            // 
             // btn_Edit
             // 
             this.btn_Edit.ActiveBorderThickness = 1;
@@ -126,7 +126,7 @@
             this.btn_Edit.IdleFillColor = System.Drawing.Color.White;
             this.btn_Edit.IdleForecolor = System.Drawing.Color.Black;
             this.btn_Edit.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_Edit.Location = new System.Drawing.Point(289, 307);
+            this.btn_Edit.Location = new System.Drawing.Point(38, 370);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(220, 66);
@@ -146,8 +146,8 @@
             this.Text = "Update_Analyzes";
             this.Load += new System.EventHandler(this.Update_Analyzes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.analyzesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet38)).EndInit();
             this.ResumeLayout(false);
 
         }

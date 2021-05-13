@@ -32,17 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_Picture));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hospitallDataSet39 = new Final_project.hospitallDataSet39();
-            this.picturesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.picturesTableAdapter = new Final_project.hospitallDataSet39TableAdapters.picturesTableAdapter();
             this.picturesidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.picturesnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.processingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.picturesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet39 = new Final_project.hospitallDataSet39();
+            this.picturesTableAdapter = new Final_project.hospitallDataSet39TableAdapters.picturesTableAdapter();
             this.btn_Edit = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet39)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -54,6 +54,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.picturesidDataGridViewTextBoxColumn,
@@ -66,20 +67,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // hospitallDataSet39
-            // 
-            this.hospitallDataSet39.DataSetName = "hospitallDataSet39";
-            this.hospitallDataSet39.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // picturesBindingSource
-            // 
-            this.picturesBindingSource.DataMember = "pictures";
-            this.picturesBindingSource.DataSource = this.hospitallDataSet39;
-            // 
-            // picturesTableAdapter
-            // 
-            this.picturesTableAdapter.ClearBeforeFill = true;
             // 
             // picturesidDataGridViewTextBoxColumn
             // 
@@ -105,6 +92,20 @@
             this.processingDataGridViewTextBoxColumn.DataPropertyName = "processing";
             this.processingDataGridViewTextBoxColumn.HeaderText = "processing";
             this.processingDataGridViewTextBoxColumn.Name = "processingDataGridViewTextBoxColumn";
+            // 
+            // picturesBindingSource
+            // 
+            this.picturesBindingSource.DataMember = "pictures";
+            this.picturesBindingSource.DataSource = this.hospitallDataSet39;
+            // 
+            // hospitallDataSet39
+            // 
+            this.hospitallDataSet39.DataSetName = "hospitallDataSet39";
+            this.hospitallDataSet39.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // picturesTableAdapter
+            // 
+            this.picturesTableAdapter.ClearBeforeFill = true;
             // 
             // btn_Edit
             // 
@@ -145,8 +146,8 @@
             this.Text = "Update_Picture";
             this.Load += new System.EventHandler(this.Update_Picture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet39)).EndInit();
             this.ResumeLayout(false);
 
         }

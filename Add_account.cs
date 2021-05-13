@@ -25,10 +25,16 @@ namespace Final_project
         
         private void btn_add_Click(object sender, EventArgs e)
         {
-            int count = DB.DataTable("select * from المستخدمين where username='" + txt_user_name.Text + "'").Rows.Count;
+            int count = DB.DataTable("select * from users where username='" + txt_user_name.Text + "'").Rows.Count;
+            int dept = DB.DataTable("select * from users where form ='" + combox_deptid.Text.ToString() + "'").Rows.Count;
             if(count==0)
             {
-                DB.Insert_Update_Delete("insert into المستخدمين (username,passeword,form)values ('" + txt_user_name.Text + "','" + txt_password.Text + "','" + combox_deptid.SelectedValue.ToString() + "')");
+                if(dept==0)
+                DB.Insert_Update_Delete("insert into users (username,passeword,form)values ('" + txt_user_name.Text + "','" + txt_password.Text + "','" + combox_deptid.SelectedValue.ToString() + "')");
+                else
+                {
+                    MessageBox.Show("تم إنشاء حساب خاص بهذا القسم مسبقاً");
+                }
             }
             else
             {

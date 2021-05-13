@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -22,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EEE9AFFE46F5E059D6FE0E2A2CBA86C4185C032E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Final_project_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
@@ -348,6 +361,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>hospitallDataSet45.xsd</DependentUpon>
     </Compile>
+    <Compile Include="hospitallDataSet46.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet46.xsd</DependentUpon>
+    </Compile>
     <Compile Include="hospitallDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -476,12 +494,6 @@
     </Compile>
     <Compile Include="Update_Analyzes.Designer.cs">
       <DependentUpon>Update_Analyzes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Update_department.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Update_department.Designer.cs">
-      <DependentUpon>Update_department.cs</DependentUpon>
     </Compile>
     <Compile Include="Update_Patient.cs">
       <SubType>Form</SubType>
@@ -660,9 +672,6 @@
     <EmbeddedResource Include="Update_Analyzes.resx">
       <DependentUpon>Update_Analyzes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update_department.resx">
-      <DependentUpon>Update_department.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Update_Patient.resx">
       <DependentUpon>Update_Patient.cs</DependentUpon>
     </EmbeddedResource>
@@ -705,6 +714,7 @@
     <EmbeddedResource Include="X_Ray.resx">
       <DependentUpon>X_Ray.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Final_project_TemporaryKey.pfx" />
     <None Include="hospitallDataSet.xsc">
       <DependentUpon>hospitallDataSet.xsd</DependentUpon>
     </None>
@@ -1155,6 +1165,17 @@
     </None>
     <None Include="hospitallDataSet45.xss">
       <DependentUpon>hospitallDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet46.xsc">
+      <DependentUpon>hospitallDataSet46.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet46.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet46.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet46.xss">
+      <DependentUpon>hospitallDataSet46.xsd</DependentUpon>
     </None>
     <None Include="hospitallDataSet5.xsc">
       <DependentUpon>hospitallDataSet5.xsd</DependentUpon>

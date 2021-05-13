@@ -19,13 +19,11 @@ namespace Final_project
         }
 
         private void btn_add_Click(object sender, EventArgs e)
-        {
-            for(int i=0;i<dataGridView1.RowCount;i++)
-            {
-                DataGridViewRow gr = dataGridView1.Rows[i];
+        { 
+                DataGridViewRow gr = dataGridView1.CurrentRow;
                 DB.Insert_Update_Delete("update TimePeriods set ThePeriod='" + gr.Cells[1].Value.ToString() + "" +
                     "where id=" + int.Parse(gr.Cells[0].Value.ToString()) );
-            }
+            
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)

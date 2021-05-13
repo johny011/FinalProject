@@ -38,20 +38,14 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.formDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitallDataSet2 = new Final_project.hospitallDataSet2();
+            this.hospitallDataSet46 = new Final_project.hospitallDataSet46();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.usersTableAdapter = new Final_project.hospitallDataSet2TableAdapters.usersTableAdapter();
-            this.hospitallDataSet3 = new Final_project.hospitallDataSet3();
-            this.deptTableAdapter = new Final_project.hospitallDataSet3TableAdapters.DeptTableAdapter();
-            this.hospitallDataSet21 = new Final_project.hospitallDataSet21();
-            this.deptTableAdapter1 = new Final_project.hospitallDataSet21TableAdapters.DeptTableAdapter();
+            this.usersTableAdapter = new Final_project.hospitallDataSet46TableAdapters.usersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet46)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet21)).BeginInit();
             this.SuspendLayout();
             // 
             // DeleteBtn
@@ -113,6 +107,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.useridDataGridViewTextBoxColumn,
@@ -154,17 +149,16 @@
             this.formDataGridViewTextBoxColumn.Name = "formDataGridViewTextBoxColumn";
             this.formDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.formDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.formDataGridViewTextBoxColumn.ValueMember = "form";
             // 
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.hospitallDataSet2;
+            this.usersBindingSource.DataSource = this.hospitallDataSet46;
             // 
-            // hospitallDataSet2
+            // hospitallDataSet46
             // 
-            this.hospitallDataSet2.DataSetName = "hospitallDataSet2";
-            this.hospitallDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.hospitallDataSet46.DataSetName = "hospitallDataSet46";
+            this.hospitallDataSet46.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuElipse1
             // 
@@ -186,24 +180,6 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // hospitallDataSet3
-            // 
-            this.hospitallDataSet3.DataSetName = "hospitallDataSet3";
-            this.hospitallDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // deptTableAdapter
-            // 
-            this.deptTableAdapter.ClearBeforeFill = true;
-            // 
-            // hospitallDataSet21
-            // 
-            this.hospitallDataSet21.DataSetName = "hospitallDataSet21";
-            this.hospitallDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // deptTableAdapter1
-            // 
-            this.deptTableAdapter1.ClearBeforeFill = true;
-            // 
             // Update_account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,10 +192,8 @@
             this.Load += new System.EventHandler(this.Update_account_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet46)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet21)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -231,13 +205,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
-        private hospitallDataSet2 hospitallDataSet2;
+        private hospitallDataSet46 hospitallDataSet46;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private hospitallDataSet2TableAdapters.usersTableAdapter usersTableAdapter;
-        private hospitallDataSet3 hospitallDataSet3;
-        private hospitallDataSet3TableAdapters.DeptTableAdapter deptTableAdapter;
-        private hospitallDataSet21 hospitallDataSet21;
-        private hospitallDataSet21TableAdapters.DeptTableAdapter deptTableAdapter1;
+        private hospitallDataSet46TableAdapters.usersTableAdapter usersTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passewordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;

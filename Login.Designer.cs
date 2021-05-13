@@ -136,8 +136,8 @@
             this.txt_user_name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_user_name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_user_name.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_user_name.HintText = "";
+            this.txt_user_name.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_user_name.HintText = "اسم المستخدم";
             this.txt_user_name.isPassword = false;
             this.txt_user_name.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_user_name.LineIdleColor = System.Drawing.Color.Gray;
@@ -149,7 +149,6 @@
             this.txt_user_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_user_name.Size = new System.Drawing.Size(220, 60);
             this.txt_user_name.TabIndex = 18;
-            this.txt_user_name.Text = "اسم المستخدم";
             this.txt_user_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_user_name.OnValueChanged += new System.EventHandler(this.txt_user_name_OnValueChanged);
             this.txt_user_name.Validating += new System.ComponentModel.CancelEventHandler(this.txt_user_name_Validating);
@@ -160,8 +159,8 @@
             this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_password.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_password.HintText = "";
+            this.txt_password.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_password.HintText = "كلمة المرور";
             this.txt_password.isPassword = true;
             this.txt_password.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_password.LineIdleColor = System.Drawing.Color.Gray;
@@ -173,7 +172,6 @@
             this.txt_password.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_password.Size = new System.Drawing.Size(220, 60);
             this.txt_password.TabIndex = 19;
-            this.txt_password.Text = "كلمة المرور";
             this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_login
@@ -195,13 +193,14 @@
             this.btn_login.IdleFillColor = System.Drawing.Color.White;
             this.btn_login.IdleForecolor = System.Drawing.Color.Black;
             this.btn_login.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_login.Location = new System.Drawing.Point(271, 302);
+            this.btn_login.Location = new System.Drawing.Point(271, 316);
             this.btn_login.Margin = new System.Windows.Forms.Padding(5);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(220, 66);
             this.btn_login.TabIndex = 23;
             this.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.btn_login.Enter += new System.EventHandler(this.btn_login_Enter);
             // 
             // Login
             // 
