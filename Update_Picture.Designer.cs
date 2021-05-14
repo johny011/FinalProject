@@ -40,6 +40,7 @@
             this.hospitallDataSet39 = new Final_project.hospitallDataSet39();
             this.picturesTableAdapter = new Final_project.hospitallDataSet39TableAdapters.picturesTableAdapter();
             this.btn_Edit = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet39)).BeginInit();
@@ -55,6 +56,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.picturesidDataGridViewTextBoxColumn,
@@ -134,11 +136,39 @@
             this.btn_Edit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
+            // btn_delete
+            // 
+            this.btn_delete.ActiveBorderThickness = 1;
+            this.btn_delete.ActiveCornerRadius = 20;
+            this.btn_delete.ActiveFillColor = System.Drawing.Color.Silver;
+            this.btn_delete.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_delete.ActiveLineColor = System.Drawing.Color.White;
+            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_delete.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_delete.BackgroundImage")));
+            this.btn_delete.ButtonText = "حذف";
+            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_delete.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_delete.ForeColor = System.Drawing.Color.Black;
+            this.btn_delete.IdleBorderThickness = 1;
+            this.btn_delete.IdleCornerRadius = 20;
+            this.btn_delete.IdleFillColor = System.Drawing.Color.White;
+            this.btn_delete.IdleForecolor = System.Drawing.Color.Black;
+            this.btn_delete.IdleLineColor = System.Drawing.Color.Black;
+            this.btn_delete.Location = new System.Drawing.Point(50, 311);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(220, 66);
+            this.btn_delete.TabIndex = 31;
+            this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
             // Update_Picture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -164,5 +194,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn processingDataGridViewTextBoxColumn;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_Edit;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_delete;
     }
 }

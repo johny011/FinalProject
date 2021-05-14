@@ -19,7 +19,7 @@ namespace Final_project
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            DB.Insert_Update_Delete("insert into pictures (picturesname,price,processing) values ('" + txt_name_picture + "','" + int.Parse(txt_price_picture.Text) + "','" + txt_processing.Text + "')");
+            DB.Insert_Update_Delete("insert into pictures (picturesname,price,processing) values ('" + txt_name_picture.Text + "','" + int.Parse(txt_price_picture.Text) + "','" + txt_processing.Text + "')");
         }
     }
 }

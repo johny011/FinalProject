@@ -31,5 +31,11 @@ namespace Final_project
                 DB.Insert_Update_Delete("update pictures set picturesname='" + gr.Cells[1].Value.ToString() + "',price=" + int.Parse(gr.Cells[2].Value.ToString()) + " ,processing ='" + gr.Cells[3].Value.ToString() + "' where picturesid=" + int.Parse(gr.Cells[0].Value.ToString()) + "");
             
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow gr = dataGridView1.CurrentRow;
+            DB.Insert_Update_Delete("delete from pictures where picturesid=" + int.Parse(gr.Cells[0].Value.ToString()) + "");
+        }
     }
 }

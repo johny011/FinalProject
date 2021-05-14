@@ -35,23 +35,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.combox_typeid = new System.Windows.Forms.ComboBox();
+            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet18 = new Final_project.hospitallDataSet18();
+            this.typeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet17 = new Final_project.hospitallDataSet17();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.combox_deptid = new System.Windows.Forms.ComboBox();
             this.txt_NO_number = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_father_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_mother_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.hospitallDataSet17 = new Final_project.hospitallDataSet17();
-            this.typeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.typeeTableAdapter = new Final_project.hospitallDataSet17TableAdapters.TypeeTableAdapter();
-            this.hospitallDataSet18 = new Final_project.hospitallDataSet18();
-            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deptTableAdapter = new Final_project.hospitallDataSet18TableAdapters.DeptTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet17)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -75,6 +75,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label2
             // 
@@ -111,6 +112,26 @@
             this.combox_typeid.Size = new System.Drawing.Size(220, 27);
             this.combox_typeid.TabIndex = 23;
             this.combox_typeid.ValueMember = "typeid";
+            // 
+            // deptBindingSource
+            // 
+            this.deptBindingSource.DataMember = "Dept";
+            this.deptBindingSource.DataSource = this.hospitallDataSet18;
+            // 
+            // hospitallDataSet18
+            // 
+            this.hospitallDataSet18.DataSetName = "hospitallDataSet18";
+            this.hospitallDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // typeeBindingSource
+            // 
+            this.typeeBindingSource.DataMember = "Typee";
+            this.typeeBindingSource.DataSource = this.hospitallDataSet17;
+            // 
+            // hospitallDataSet17
+            // 
+            this.hospitallDataSet17.DataSetName = "hospitallDataSet17";
+            this.hospitallDataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_add
             // 
@@ -163,7 +184,7 @@
             this.txt_NO_number.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NO_number.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_NO_number.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_NO_number.HintText = "";
+            this.txt_NO_number.HintText = "الرقم الوطني";
             this.txt_NO_number.isPassword = false;
             this.txt_NO_number.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_NO_number.LineIdleColor = System.Drawing.Color.Gray;
@@ -175,7 +196,6 @@
             this.txt_NO_number.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_NO_number.Size = new System.Drawing.Size(220, 60);
             this.txt_NO_number.TabIndex = 20;
-            this.txt_NO_number.Text = "الرقم الوطني";
             this.txt_NO_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_father_name
@@ -185,7 +205,7 @@
             this.txt_father_name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_father_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_father_name.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_father_name.HintText = "";
+            this.txt_father_name.HintText = "اسم الأب";
             this.txt_father_name.isPassword = false;
             this.txt_father_name.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_father_name.LineIdleColor = System.Drawing.Color.Gray;
@@ -197,7 +217,6 @@
             this.txt_father_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_father_name.Size = new System.Drawing.Size(220, 60);
             this.txt_father_name.TabIndex = 19;
-            this.txt_father_name.Text = "اسم الأب";
             this.txt_father_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_mother_name
@@ -207,7 +226,7 @@
             this.txt_mother_name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mother_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_mother_name.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_mother_name.HintText = "";
+            this.txt_mother_name.HintText = "اسم الأم";
             this.txt_mother_name.isPassword = false;
             this.txt_mother_name.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_mother_name.LineIdleColor = System.Drawing.Color.Gray;
@@ -219,7 +238,6 @@
             this.txt_mother_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_mother_name.Size = new System.Drawing.Size(220, 60);
             this.txt_mother_name.TabIndex = 18;
-            this.txt_mother_name.Text = "اسم الأم";
             this.txt_mother_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_name
@@ -229,7 +247,7 @@
             this.txt_name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_name.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_name.HintText = "";
+            this.txt_name.HintText = "اسم الموظف";
             this.txt_name.isPassword = false;
             this.txt_name.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_name.LineIdleColor = System.Drawing.Color.Gray;
@@ -241,32 +259,11 @@
             this.txt_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_name.Size = new System.Drawing.Size(220, 60);
             this.txt_name.TabIndex = 17;
-            this.txt_name.Text = "اسم الموظف";
             this.txt_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // hospitallDataSet17
-            // 
-            this.hospitallDataSet17.DataSetName = "hospitallDataSet17";
-            this.hospitallDataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // typeeBindingSource
-            // 
-            this.typeeBindingSource.DataMember = "Typee";
-            this.typeeBindingSource.DataSource = this.hospitallDataSet17;
             // 
             // typeeTableAdapter
             // 
             this.typeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // hospitallDataSet18
-            // 
-            this.hospitallDataSet18.DataSetName = "hospitallDataSet18";
-            this.hospitallDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // deptBindingSource
-            // 
-            this.deptBindingSource.DataMember = "Dept";
-            this.deptBindingSource.DataSource = this.hospitallDataSet18;
             // 
             // deptTableAdapter
             // 
@@ -284,10 +281,10 @@
             this.Load += new System.EventHandler(this.Add_work_staff_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet17)).EndInit();
             this.ResumeLayout(false);
 
         }
