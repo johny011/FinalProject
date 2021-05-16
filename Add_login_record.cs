@@ -19,8 +19,9 @@ namespace Final_project
             dept = x;
             InitializeComponent();
             deptid = int.Parse(DB.SelectToGetOneValue("select deptid from dept where deptname='" + dept + "'"));
-            combox_room=DB.FillCombo("select roomid from room where deptid ="+deptid+ " and roomid <> (select roomid from patientAdmission where checkoutDate=null)", combox_room);
+            combox_room=DB.FillCombo("select roomid from room where deptid ="+deptid+ " and roomid not in (select roomid from patientAdmission where checkoutDate IS Null and deptid="+deptid+")", combox_room);
             combox_doctor = DB.FillCombo("select Sname from TheStaff where typeid=1 and deptid ="+deptid, combox_doctor);
+            
         }
 
         private void combox_dept_SelectedValueChanged(object sender, EventArgs e)

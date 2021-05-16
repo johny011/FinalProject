@@ -21,14 +21,14 @@ namespace Final_project
         private void btn_add_Click(object sender, EventArgs e)
         { 
                 DataGridViewRow gr = dataGridView1.CurrentRow;
-                DB.Insert_Update_Delete("update TimePeriods set ThePeriod='" + gr.Cells[1].Value.ToString() + "" +
-                    "where id=" + int.Parse(gr.Cells[0].Value.ToString()) );
+                DB.Insert_Update_Delete("update TimePeriods set ThePeriod='" + gr.Cells[1].Value.ToString() + "'" +
+                    "where periodnumber=" + int.Parse(gr.Cells[0].Value.ToString()) );
             
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            DB.Insert_Update_Delete("delete from TimePeriods where id=" +int.Parse( dataGridView1.CurrentRow.Cells[0].Value.ToString())+"");
+            DB.Insert_Update_Delete("delete from TimePeriods where periodnumber=" + int.Parse( dataGridView1.CurrentRow.Cells[0].Value.ToString())+"");
         }
 
         private void Update_period_Load(object sender, EventArgs e)

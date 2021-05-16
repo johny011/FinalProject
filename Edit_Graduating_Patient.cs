@@ -13,11 +13,10 @@ namespace Final_project
     public partial class Edit_Graduating_Patient : Form
     {
         string dept = "";
+        int deptid;
         public Edit_Graduating_Patient(string x)
         {
-            x = dept;
-            InitializeComponent();
-          
+            
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -29,7 +28,7 @@ namespace Final_project
         private void btn_graduating_Click(object sender, EventArgs e)
         {
             DB.Insert_Update_Delete("update patientAdmission set checkoutDate=convert(date,'" + dateOut.Value.Day.ToString() + "-"
-                + dateOut.Value.Month.ToString() + "-" + dateOut.Value.Year.ToString() + "',105)");
+                + dateOut.Value.Month.ToString() + "-" + dateOut.Value.Year.ToString() + "',105) where Admissionid="+int.Parse(txt_numberpatient.Text)+"");
             
         }
     }
