@@ -163,23 +163,7 @@ namespace Final_project
             ChildForm(new Update_working_period());
         }
 
-        private void btn_show_emp_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new View_staff());
-        }
-
-        private void btn_show_acount_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new View_account());
-        }
-
-        private void btn_show_room_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new View_room());
-        }
+        
 
         private void btn_show_department_Click(object sender, EventArgs e)
         {
@@ -187,11 +171,7 @@ namespace Final_project
             ChildForm(new View_department());
         }
 
-        private void btn_show_working_period_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new View_working_period());
-        }
+        
 
         private void panel_title_Paint(object sender, PaintEventArgs e)
         {

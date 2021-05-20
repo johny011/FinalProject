@@ -138,7 +138,7 @@
         b4NjjEU7gmPMcQTHmOMIjjHHERxjbjvaL8qUlUI1q6jUAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_refresh.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANwAAAA0CAYAAADhTVZuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKSSURBVHhe7d0tiypxGIZxo22j0bY2bTYxiUXYsmAw+Bls

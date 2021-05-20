@@ -72,7 +72,7 @@
             this.txt_payment.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_payment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_payment.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_payment.HintText = "";
+            this.txt_payment.HintText = "الدفعة الأولية";
             this.txt_payment.isPassword = false;
             this.txt_payment.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_payment.LineIdleColor = System.Drawing.Color.Gray;
@@ -84,7 +84,6 @@
             this.txt_payment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_payment.Size = new System.Drawing.Size(220, 60);
             this.txt_payment.TabIndex = 45;
-            this.txt_payment.Text = "الدفعة الأولية";
             this.txt_payment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_Notes
@@ -160,6 +159,7 @@
             // 
             this.combox_room.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combox_room.BackColor = System.Drawing.Color.White;
+            this.combox_room.DisplayMember = "roomid";
             this.combox_room.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_room.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combox_room.FormattingEnabled = true;
@@ -176,7 +176,7 @@
             this.txt_place.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_place.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_place.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_place.HintText = "";
+            this.txt_place.HintText = "مكان الإقامة";
             this.txt_place.isPassword = false;
             this.txt_place.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_place.LineIdleColor = System.Drawing.Color.Gray;
@@ -188,7 +188,6 @@
             this.txt_place.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_place.Size = new System.Drawing.Size(220, 60);
             this.txt_place.TabIndex = 26;
-            this.txt_place.Text = "مكان الإقامة";
             this.txt_place.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_numberpatient
@@ -198,7 +197,7 @@
             this.txt_numberpatient.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_numberpatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_numberpatient.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_numberpatient.HintText = "";
+            this.txt_numberpatient.HintText = "رقم المريض";
             this.txt_numberpatient.isPassword = false;
             this.txt_numberpatient.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_numberpatient.LineIdleColor = System.Drawing.Color.Gray;
@@ -210,7 +209,6 @@
             this.txt_numberpatient.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_numberpatient.Size = new System.Drawing.Size(220, 60);
             this.txt_numberpatient.TabIndex = 24;
-            this.txt_numberpatient.Text = "رقم المريض";
             this.txt_numberpatient.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_add

@@ -76,7 +76,7 @@
             this.txt_id_admission.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id_admission.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_id_admission.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_id_admission.HintText = "";
+            this.txt_id_admission.HintText = "رقم دخولية المريض";
             this.txt_id_admission.isPassword = false;
             this.txt_id_admission.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_id_admission.LineIdleColor = System.Drawing.Color.Gray;
@@ -88,7 +88,6 @@
             this.txt_id_admission.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_id_admission.Size = new System.Drawing.Size(800, 60);
             this.txt_id_admission.TabIndex = 24;
-            this.txt_id_admission.Text = "رقم الدخولية";
             this.txt_id_admission.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dataGridView1

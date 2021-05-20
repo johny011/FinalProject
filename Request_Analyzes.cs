@@ -19,8 +19,9 @@ namespace Final_project
 
         private void Request_Analyzes_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hospitallDataSet31.Analyzes' table. You can move, or remove it, as needed.
-            this.analyzesTableAdapter.Fill(this.hospitallDataSet31.Analyzes);
+            // TODO: This line of code loads data into the 'hospitallDataSet50.Analyzes' table. You can move, or remove it, as needed.
+            this.analyzesTableAdapter.Fill(this.hospitallDataSet50.Analyzes);
+            
 
         }
 
@@ -33,7 +34,7 @@ namespace Final_project
                 {
                     try
                     {
-                        if (row.Cells[5].Value != null)
+                        if (row.Cells[4].Value != null)
                         {
                             DB.Insert_Update_Delete("insert into RequiredAnalysis (Analysisnumber,Admissionid) values(" + int.Parse(row.Cells[0].Value.ToString()) + " ," + int.Parse(txt_Admissionid.Text) + ")");
                             requierd = true;

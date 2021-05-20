@@ -140,7 +140,7 @@ namespace Final_project
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);
-            ChildForm(new Result_picture());
+            ChildForm(new Result_picture(dept));
         }
 
         private void search_patientAdmission_Click(object sender, EventArgs e)
@@ -159,14 +159,10 @@ namespace Final_project
         private void btn_result_analyzes_Click(object sender, EventArgs e)
         {
             ActiveBtn(sender);
-            ChildForm(new Result_Analyzes());
+            ChildForm(new Result_Analyzes(dept));
         }
 
-        private void btn_view_rooms_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new View_room(dept));
-        }
+        
     }
 
 }

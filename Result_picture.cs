@@ -14,18 +14,35 @@ namespace Final_project
 {
     public partial class Result_picture : Form
     {
-        public Result_picture()
+        int deptid;
+        public Result_picture(string x)
         {
             InitializeComponent();
+            deptid = int.Parse(DB.SelectToGetOneValue("select deptid from dept where deptname='" + x + "'"));
         }
 
         
 
         private void btn_find_result_Click(object sender, EventArgs e)
         {
-            int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=" + int.Parse(txt_Admissionid.Text) + ""));
-            dataGridView1.DataSource = DB.DataTable("select * from celendarRP where Requiredpicturesid=" + Requiredpicturesid + "");
-        }
+            try
+            {
+                if (int.Parse(DB.SelectToGetOneValue("select deptid from patientAdmission where Admissionid=" + int.Parse(txt_Admissionid.Text) + "")) == deptid)
+                {
+                    int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=" + int.Parse(txt_Admissionid.Text)));
+                    dataGridView1.DataSource = DB.DataTable("select * from celendarRP where Requiredpicturesid=" + Requiredpicturesid);
+                }
+                else
+                {
+                    MessageBox.Show("تحقق من رقم دخولية المريض");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+}
 
         private void Result_picture_Load(object sender, EventArgs e)
         {
@@ -44,19 +61,34 @@ namespace Final_project
             DataTable dt = dataGridView1.DataSource as DataTable;
             if(dt!=null)
             {
-                DataRow row = dt.Rows[e.RowIndex];
-                pictureBox1.Image = convert((byte[])row["AcalendarP"]);
+                try
+                {
+                    DataRow row = dt.Rows[e.RowIndex];
+                    pictureBox1.Image = convert((byte[])row["AcalendarP"]);
+                }
+                catch(Exception masseage)
+                {
+                    MessageBox.Show(masseage.Message);
+                }
             }
 
         }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            using(SaveFileDialog sfd=new SaveFileDialog() { Filter="Image|*.jpg;*.gif;*.bmp;"})
+            try
             {
-                if(sfd.ShowDialog()==DialogResult.OK)
-                pictureBox1.Image.Save(sfd.FileName);
+                using (SaveFileDialog sfd = new SaveFileDialog() {Filter= "Image files(*.jpg,*.bmp,*.jpeg,*.png,*.gif)|*.jpg;*.bmp;*.jpef;*.png;*.gif " })
+                {
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                        pictureBox1.Image.Save(sfd.FileName);
+                }
             }
+            catch
+            {
+                MessageBox.Show("اضغط على الصورة من الجدول ");
+            }
+            
         }
     }
 }

@@ -60,7 +60,7 @@
             this.txt_Admissionid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Admissionid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Admissionid.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_Admissionid.HintText = "";
+            this.txt_Admissionid.HintText = "رقم دخولية المريض";
             this.txt_Admissionid.isPassword = false;
             this.txt_Admissionid.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Admissionid.LineIdleColor = System.Drawing.Color.Gray;
@@ -72,7 +72,6 @@
             this.txt_Admissionid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
             this.txt_Admissionid.TabIndex = 29;
-            this.txt_Admissionid.Text = "رقم دخولية المريض";
             this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Admissionid.OnValueChanged += new System.EventHandler(this.txt_Admissionid_OnValueChanged);
             // 

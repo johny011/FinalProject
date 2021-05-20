@@ -366,10 +366,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>hospitallDataSet46.xsd</DependentUpon>
     </Compile>
+    <Compile Include="hospitallDataSet47.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet47.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet48.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet48.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet49.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet49.xsd</DependentUpon>
+    </Compile>
     <Compile Include="hospitallDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>hospitallDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet50.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet50.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet51.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitallDataSet52.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitallDataSet52.xsd</DependentUpon>
     </Compile>
     <Compile Include="hospitallDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -531,12 +561,6 @@
     <Compile Include="Update_working_period.Designer.cs">
       <DependentUpon>Update_working_period.cs</DependentUpon>
     </Compile>
-    <Compile Include="View_account.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View_account.Designer.cs">
-      <DependentUpon>View_account.cs</DependentUpon>
-    </Compile>
     <Compile Include="View_department.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -554,24 +578,6 @@
     </Compile>
     <Compile Include="View_Patient.Designer.cs">
       <DependentUpon>View_Patient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View_room.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View_room.Designer.cs">
-      <DependentUpon>View_room.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View_staff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View_staff.Designer.cs">
-      <DependentUpon>View_staff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View_working_period.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View_working_period.Designer.cs">
-      <DependentUpon>View_working_period.cs</DependentUpon>
     </Compile>
     <Compile Include="X_Ray.cs">
       <SubType>Form</SubType>
@@ -690,9 +696,6 @@
     <EmbeddedResource Include="Update_working_period.resx">
       <DependentUpon>Update_working_period.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View_account.resx">
-      <DependentUpon>View_account.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View_department.resx">
       <DependentUpon>View_department.cs</DependentUpon>
     </EmbeddedResource>
@@ -701,15 +704,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View_Patient.resx">
       <DependentUpon>View_Patient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View_room.resx">
-      <DependentUpon>View_room.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View_staff.resx">
-      <DependentUpon>View_staff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View_working_period.resx">
-      <DependentUpon>View_working_period.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="X_Ray.resx">
       <DependentUpon>X_Ray.cs</DependentUpon>
@@ -1177,6 +1171,39 @@
     <None Include="hospitallDataSet46.xss">
       <DependentUpon>hospitallDataSet46.xsd</DependentUpon>
     </None>
+    <None Include="hospitallDataSet47.xsc">
+      <DependentUpon>hospitallDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet47.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet47.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet47.xss">
+      <DependentUpon>hospitallDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet48.xsc">
+      <DependentUpon>hospitallDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet48.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet48.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet48.xss">
+      <DependentUpon>hospitallDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet49.xsc">
+      <DependentUpon>hospitallDataSet49.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet49.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet49.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet49.xss">
+      <DependentUpon>hospitallDataSet49.xsd</DependentUpon>
+    </None>
     <None Include="hospitallDataSet5.xsc">
       <DependentUpon>hospitallDataSet5.xsd</DependentUpon>
     </None>
@@ -1187,6 +1214,39 @@
     </None>
     <None Include="hospitallDataSet5.xss">
       <DependentUpon>hospitallDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet50.xsc">
+      <DependentUpon>hospitallDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet50.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet50.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet50.xss">
+      <DependentUpon>hospitallDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet51.xsc">
+      <DependentUpon>hospitallDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet51.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet51.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet51.xss">
+      <DependentUpon>hospitallDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet52.xsc">
+      <DependentUpon>hospitallDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="hospitallDataSet52.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitallDataSet52.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitallDataSet52.xss">
+      <DependentUpon>hospitallDataSet52.xsd</DependentUpon>
     </None>
     <None Include="hospitallDataSet6.xsc">
       <DependentUpon>hospitallDataSet6.xsd</DependentUpon>

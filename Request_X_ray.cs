@@ -26,7 +26,7 @@ namespace Final_project
                  {
                     try
                     {
-                        if (row.Cells[5].Value != null)
+                        if (row.Cells[4].Value != null)
                         { DB.Insert_Update_Delete("insert into Requiredpictures (picturesid,Admissionid) values(" + int.Parse(row.Cells[0].Value.ToString()) + " ," + int.Parse(txt_Admissionid.Text) + ")");
                             requierd = true;
                         }
@@ -35,7 +35,7 @@ namespace Final_project
                     }
                     catch(Exception exp)
                     {
-                        
+                        MessageBox.Show(exp.Message);
                     }
                  }
 
@@ -56,8 +56,9 @@ namespace Final_project
 
         private void Required_X_ray_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hospitallDataSet27.pictures' table. You can move, or remove it, as needed.
-            this.picturesTableAdapter.Fill(this.hospitallDataSet27.pictures);
+            // TODO: This line of code loads data into the 'hospitallDataSet48.pictures' table. You can move, or remove it, as needed.
+            this.picturesTableAdapter.Fill(this.hospitallDataSet48.pictures);
+           
             
 
         }

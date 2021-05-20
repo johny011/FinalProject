@@ -34,20 +34,21 @@
             this.picturesidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.picturesnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.presenceOfThepicturesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.processingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selectpic = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.selectedpic = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.picturesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitallDataSet27 = new Final_project.hospitallDataSet27();
+            this.hospitallDataSet48 = new Final_project.hospitallDataSet48();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_Admissionid = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btn_Request = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.picturesTableAdapter = new Final_project.hospitallDataSet27TableAdapters.picturesTableAdapter();
+            this.picturesTableAdapter = new Final_project.hospitallDataSet48TableAdapters.picturesTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet48)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,9 +61,8 @@
             this.picturesidDataGridViewTextBoxColumn,
             this.picturesnameDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn,
-            this.presenceOfThepicturesDataGridViewTextBoxColumn,
             this.processingDataGridViewTextBoxColumn,
-            this.selectpic});
+            this.selectedpic});
             this.dataGridView1.DataSource = this.picturesBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -82,43 +82,33 @@
             this.picturesnameDataGridViewTextBoxColumn.DataPropertyName = "picturesname";
             this.picturesnameDataGridViewTextBoxColumn.HeaderText = "picturesname";
             this.picturesnameDataGridViewTextBoxColumn.Name = "picturesnameDataGridViewTextBoxColumn";
-            this.picturesnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // presenceOfThepicturesDataGridViewTextBoxColumn
-            // 
-            this.presenceOfThepicturesDataGridViewTextBoxColumn.DataPropertyName = "presenceOfThepictures";
-            this.presenceOfThepicturesDataGridViewTextBoxColumn.HeaderText = "presenceOfThepictures";
-            this.presenceOfThepicturesDataGridViewTextBoxColumn.Name = "presenceOfThepicturesDataGridViewTextBoxColumn";
-            this.presenceOfThepicturesDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // processingDataGridViewTextBoxColumn
             // 
             this.processingDataGridViewTextBoxColumn.DataPropertyName = "processing";
             this.processingDataGridViewTextBoxColumn.HeaderText = "processing";
             this.processingDataGridViewTextBoxColumn.Name = "processingDataGridViewTextBoxColumn";
-            this.processingDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // selectpic
+            // selectedpic
             // 
-            this.selectpic.HeaderText = "select picture";
-            this.selectpic.Name = "selectpic";
+            this.selectedpic.HeaderText = "select picture";
+            this.selectedpic.Name = "selectedpic";
             // 
             // picturesBindingSource
             // 
             this.picturesBindingSource.DataMember = "pictures";
-            this.picturesBindingSource.DataSource = this.hospitallDataSet27;
+            this.picturesBindingSource.DataSource = this.hospitallDataSet48;
             // 
-            // hospitallDataSet27
+            // hospitallDataSet48
             // 
-            this.hospitallDataSet27.DataSetName = "hospitallDataSet27";
-            this.hospitallDataSet27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.hospitallDataSet48.DataSetName = "hospitallDataSet48";
+            this.hospitallDataSet48.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuElipse1
             // 
@@ -127,8 +117,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txt_Admissionid);
-            this.panel1.Controls.Add(this.btn_Request);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -143,19 +132,18 @@
             this.txt_Admissionid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Admissionid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Admissionid.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_Admissionid.HintText = "";
+            this.txt_Admissionid.HintText = "رقم دخولية المريض";
             this.txt_Admissionid.isPassword = false;
             this.txt_Admissionid.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Admissionid.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_Admissionid.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Admissionid.LineThickness = 4;
-            this.txt_Admissionid.Location = new System.Drawing.Point(521, 370);
+            this.txt_Admissionid.Location = new System.Drawing.Point(430, 7);
             this.txt_Admissionid.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_Admissionid.Name = "txt_Admissionid";
             this.txt_Admissionid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
             this.txt_Admissionid.TabIndex = 27;
-            this.txt_Admissionid.Text = "رقم دخولية المريض";
             this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Admissionid.OnValueChanged += new System.EventHandler(this.txt_Admissionid_OnValueChanged);
             // 
@@ -167,7 +155,7 @@
             this.btn_Request.ActiveForecolor = System.Drawing.Color.White;
             this.btn_Request.ActiveLineColor = System.Drawing.Color.White;
             this.btn_Request.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Request.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Request.BackColor = System.Drawing.Color.White;
             this.btn_Request.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Request.BackgroundImage")));
             this.btn_Request.ButtonText = "طلب";
             this.btn_Request.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -178,7 +166,7 @@
             this.btn_Request.IdleFillColor = System.Drawing.Color.White;
             this.btn_Request.IdleForecolor = System.Drawing.Color.Black;
             this.btn_Request.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_Request.Location = new System.Drawing.Point(195, 370);
+            this.btn_Request.Location = new System.Drawing.Point(156, 7);
             this.btn_Request.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Request.Name = "btn_Request";
             this.btn_Request.Size = new System.Drawing.Size(220, 66);
@@ -189,6 +177,17 @@
             // picturesTableAdapter
             // 
             this.picturesTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btn_Request);
+            this.panel2.Controls.Add(this.txt_Admissionid);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 372);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 78);
+            this.panel2.TabIndex = 31;
             // 
             // Request_X_ray
             // 
@@ -202,8 +201,9 @@
             this.Load += new System.EventHandler(this.Required_X_ray_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet48)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -214,15 +214,15 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_Request;
-        private hospitallDataSet27 hospitallDataSet27;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_Admissionid;
+        private hospitallDataSet48 hospitallDataSet48;
         private System.Windows.Forms.BindingSource picturesBindingSource;
-        private hospitallDataSet27TableAdapters.picturesTableAdapter picturesTableAdapter;
+        private hospitallDataSet48TableAdapters.picturesTableAdapter picturesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn picturesidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn picturesnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn presenceOfThepicturesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn processingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn selectpic;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_Admissionid;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn selectedpic;
+        private System.Windows.Forms.Panel panel2;
     }
 }

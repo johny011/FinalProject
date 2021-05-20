@@ -39,7 +39,8 @@ namespace Final_project
         }
         private void btn_ٍSelectpicture_Click(object sender, EventArgs e)
         {
-            if(openFileDialog1.ShowDialog()==DialogResult.OK)
+            openFileDialog1.Filter = "Image files(*.jpg,*.bmp,*.jpeg,*.png,*.gif)|*.jpg;*.bmp;*.jpef;*.png;*.gif ";
+            if (openFileDialog1.ShowDialog()==DialogResult.OK)
             {
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
             }

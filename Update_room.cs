@@ -15,6 +15,7 @@ namespace Final_project
         public Update_room()
         {
             InitializeComponent();
+            
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -22,16 +23,23 @@ namespace Final_project
              
                  DataGridViewRow gr = dataGridView1.CurrentRow;
                  DB.Insert_Update_Delete("update room set roomtype='" + gr.Cells[1].Value.ToString() + "',deptid=" + int.Parse(gr.Cells[2].Value.ToString()) + " where roomid="+int.Parse(gr.Cells[0].Value.ToString())+"");
-             
+            MessageBox.Show("تم التعديل");
+            Update_room_Load(sender, e);
+
+
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
             DB.Insert_Update_Delete("delete from room where id=" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "");
+            MessageBox.Show("تم الحذف");
+            Update_room_Load(sender, e);
         }
 
         private void Update_room_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hospitallDataSet52.Room' table. You can move, or remove it, as needed.
+            this.roomTableAdapter1.Fill(this.hospitallDataSet52.Room);
             // TODO: This line of code loads data into the 'hospitallDataSet7.Dept' table. You can move, or remove it, as needed.
             this.deptTableAdapter.Fill(this.hospitallDataSet7.Dept);
             // TODO: This line of code loads data into the 'hospitallDataSet6.Room' table. You can move, or remove it, as needed.

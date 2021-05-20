@@ -67,62 +67,62 @@ namespace Final_project
         }
         private void btn_login_Click(object sender, EventArgs e)
         {
-            
-             bool user= validate(txt_user_name.Text);
-             bool pass = validate(txt_password.Text);
-             if (user==true && pass==true)
-             {
-                  int login= DB.DataTable("select * from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';").Rows.Count;
-                 if (login == 1)
-                 {
-                    
-                     string resquery = Select("select form from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';");
-                     if (resquery == "IT")
-                     {
-                         Main_admin admin = new Main_admin();
-                         this.Hide();
-                         admin.ShowDialog();
-                         this.Close();
-                     }
-                     else if (resquery == "MainResiption")
-                     {
-                         General_reception general_Reception = new General_reception();
-                         this.Hide();
-                         general_Reception.ShowDialog();
-                         this.Close();
-                     }
-                     else if (resquery == "xray")
-                     {
-                         X_Ray x_Ray = new X_Ray();
-                         this.Hide();
-                         x_Ray.ShowDialog();
-                         this.Close();
-                     }
-                     else if (resquery == "analyze")
-                     {
-                         Laboratory x_Ray = new Laboratory();
-                         this.Hide();
-                         x_Ray.ShowDialog();
-                         this.Close();
-                     }
-                     else 
-                     {
-                         Private_reception private_Reception;
-                         private_Reception = new Private_reception(resquery);
-                         this.Hide();
-                         private_Reception.ShowDialog();
-                         this.Close();
-                     }
-                 }
-                 else
-                     MessageBox.Show("تحقق من اسم المستخدم وكلمة المرور");   
-             }
-             else
-             {
-                 MessageBox.Show("لقد قمت باستخدام بعض الرموز التي لا يمكن استخدامها");
-                 txt_password.Text = "كلمة المرور";
-                 txt_user_name.Text = "اسم المستخدم";
-             }
+
+               bool user= validate(txt_user_name.Text);
+               bool pass = validate(txt_password.Text);
+               if (user==true && pass==true)
+               {
+                    int login= DB.DataTable("select * from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';").Rows.Count;
+                   if (login == 1)
+                   {
+
+                       string resquery = Select("select form from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';");
+                       if (resquery == "IT")
+                       {
+                           Main_admin admin = new Main_admin();
+                           this.Hide();
+                           admin.ShowDialog();
+                           this.Close();
+                       }
+                       else if (resquery == "MainResiption")
+                       {
+                           General_reception general_Reception = new General_reception();
+                           this.Hide();
+                           general_Reception.ShowDialog();
+                           this.Close();
+                       }
+                       else if (resquery == "xray")
+                       {
+                           X_Ray x_Ray = new X_Ray();
+                           this.Hide();
+                           x_Ray.ShowDialog();
+                           this.Close();
+                       }
+                       else if (resquery == "analyze")
+                       {
+                           Laboratory x_Ray = new Laboratory();
+                           this.Hide();
+                           x_Ray.ShowDialog();
+                           this.Close();
+                       }
+                       else 
+                       {
+                           Private_reception private_Reception;
+                           private_Reception = new Private_reception(resquery);
+                           this.Hide();
+                           private_Reception.ShowDialog();
+                           this.Close();
+                       }
+                   }
+                   else
+                       MessageBox.Show("تحقق من اسم المستخدم وكلمة المرور");   
+               }
+               else
+               {
+                   MessageBox.Show("لقد قمت باستخدام بعض الرموز التي لا يمكن استخدامها");
+                   txt_password.Text = "كلمة المرور";
+                   txt_user_name.Text = "اسم المستخدم";
+               }
             
         }
         private void panel_title_MouseDown(object sender, MouseEventArgs e)

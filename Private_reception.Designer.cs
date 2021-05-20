@@ -606,7 +606,7 @@
             this.btn_view_rooms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_view_rooms.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_view_rooms.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_view_rooms.Click += new System.EventHandler(this.btn_view_rooms_Click);
+            
             // 
             // Private_reception
             // 

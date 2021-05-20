@@ -49,6 +49,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 219);
@@ -91,7 +92,7 @@
             this.txt_Admissionid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Admissionid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Admissionid.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_Admissionid.HintText = "";
+            this.txt_Admissionid.HintText = "رقم دخولية المريض";
             this.txt_Admissionid.isPassword = false;
             this.txt_Admissionid.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Admissionid.LineIdleColor = System.Drawing.Color.Gray;
@@ -103,14 +104,13 @@
             this.txt_Admissionid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
             this.txt_Admissionid.TabIndex = 36;
-            this.txt_Admissionid.Text = "رقم دخولية المريض";
             this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(354, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(368, 201);
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
@@ -124,7 +124,7 @@
             this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_save.BackColor = System.Drawing.SystemColors.Control;
             this.btn_save.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_save.BackgroundImage")));
-            this.btn_save.ButtonText = "خفظ الصورة";
+            this.btn_save.ButtonText = "حفظ الصورة";
             this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_save.ForeColor = System.Drawing.Color.Black;

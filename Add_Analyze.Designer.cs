@@ -76,7 +76,7 @@
             this.txt_processing.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_processing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_processing.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_processing.HintText = "";
+            this.txt_processing.HintText = "مدة التجهيز";
             this.txt_processing.isPassword = false;
             this.txt_processing.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_processing.LineIdleColor = System.Drawing.Color.Gray;
@@ -88,7 +88,6 @@
             this.txt_processing.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_processing.Size = new System.Drawing.Size(220, 60);
             this.txt_processing.TabIndex = 27;
-            this.txt_processing.Text = "مدة التجهيز";
             this.txt_processing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_price_analyze
@@ -98,7 +97,7 @@
             this.txt_price_analyze.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_price_analyze.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_price_analyze.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_price_analyze.HintText = "";
+            this.txt_price_analyze.HintText = "سعر التحليل";
             this.txt_price_analyze.isPassword = false;
             this.txt_price_analyze.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_price_analyze.LineIdleColor = System.Drawing.Color.Gray;
@@ -110,7 +109,6 @@
             this.txt_price_analyze.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_price_analyze.Size = new System.Drawing.Size(220, 60);
             this.txt_price_analyze.TabIndex = 26;
-            this.txt_price_analyze.Text = "سعر التحليل";
             this.txt_price_analyze.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_name_analyze
@@ -120,7 +118,7 @@
             this.txt_name_analyze.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_analyze.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_name_analyze.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_name_analyze.HintText = "";
+            this.txt_name_analyze.HintText = "اسم التحليل";
             this.txt_name_analyze.isPassword = false;
             this.txt_name_analyze.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_name_analyze.LineIdleColor = System.Drawing.Color.Gray;
@@ -132,7 +130,6 @@
             this.txt_name_analyze.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_name_analyze.Size = new System.Drawing.Size(220, 60);
             this.txt_name_analyze.TabIndex = 25;
-            this.txt_name_analyze.Text = "اسم التحليل";
             this.txt_name_analyze.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Add_Analyze

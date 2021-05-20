@@ -23,12 +23,16 @@ namespace Final_project
                 DataGridViewRow gr = dataGridView1.CurrentRow;
                 DB.Insert_Update_Delete("update TimePeriods set ThePeriod='" + gr.Cells[1].Value.ToString() + "'" +
                     "where periodnumber=" + int.Parse(gr.Cells[0].Value.ToString()) );
-            
+            MessageBox.Show("تم التعديل");
+            Update_period_Load(sender, e);
+
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             DB.Insert_Update_Delete("delete from TimePeriods where periodnumber=" + int.Parse( dataGridView1.CurrentRow.Cells[0].Value.ToString())+"");
+            MessageBox.Show("تم الحذف");
+            Update_period_Load(sender, e);
         }
 
         private void Update_period_Load(object sender, EventArgs e)

@@ -19,7 +19,7 @@ namespace Final_project
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            DB.Insert_Update_Delete("insert into Analyzes (Analysisname,price,processing) values ('"+txt_name_analyze+"','"+int.Parse(txt_price_analyze.Text)+"','"+txt_processing.Text+"')");
+            DB.Insert_Update_Delete("insert into Analyzes (Analysisname,price,processing) values ('"+txt_name_analyze.Text+"','"+int.Parse(txt_price_analyze.Text)+"','"+txt_processing.Text+"')");
         }
     }
 }

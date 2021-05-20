@@ -49,7 +49,7 @@
             this.txt_name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_name.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_name.HintText = "";
+            this.txt_name.HintText = "اسم المريض";
             this.txt_name.isPassword = false;
             this.txt_name.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_name.LineIdleColor = System.Drawing.Color.Gray;
@@ -61,7 +61,6 @@
             this.txt_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_name.Size = new System.Drawing.Size(800, 60);
             this.txt_name.TabIndex = 18;
-            this.txt_name.Text = "اسم المريض";
             this.txt_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_add

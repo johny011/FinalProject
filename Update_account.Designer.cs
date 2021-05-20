@@ -33,19 +33,24 @@
             this.DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passewordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hospitallDataSet46 = new Final_project.hospitallDataSet46();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.usersTableAdapter = new Final_project.hospitallDataSet46TableAdapters.usersTableAdapter();
+            this.hospitallDataSet49 = new Final_project.hospitallDataSet49();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter1 = new Final_project.hospitallDataSet49TableAdapters.usersTableAdapter();
+            this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passewordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet46)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // DeleteBtn
@@ -108,6 +113,7 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.useridDataGridViewTextBoxColumn,
@@ -120,35 +126,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 24;
-            // 
-            // useridDataGridViewTextBoxColumn
-            // 
-            this.useridDataGridViewTextBoxColumn.DataPropertyName = "userid";
-            this.useridDataGridViewTextBoxColumn.HeaderText = "userid";
-            this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
-            this.useridDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // passewordDataGridViewTextBoxColumn
-            // 
-            this.passewordDataGridViewTextBoxColumn.DataPropertyName = "passeword";
-            this.passewordDataGridViewTextBoxColumn.HeaderText = "passeword";
-            this.passewordDataGridViewTextBoxColumn.Name = "passewordDataGridViewTextBoxColumn";
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // formDataGridViewTextBoxColumn
-            // 
-            this.formDataGridViewTextBoxColumn.DataPropertyName = "form";
-            this.formDataGridViewTextBoxColumn.DataSource = this.usersBindingSource;
-            this.formDataGridViewTextBoxColumn.DisplayMember = "form";
-            this.formDataGridViewTextBoxColumn.HeaderText = "form";
-            this.formDataGridViewTextBoxColumn.Name = "formDataGridViewTextBoxColumn";
-            this.formDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.formDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // usersBindingSource
             // 
@@ -180,6 +157,50 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // hospitallDataSet49
+            // 
+            this.hospitallDataSet49.DataSetName = "hospitallDataSet49";
+            this.hospitallDataSet49.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.hospitallDataSet49;
+            // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // useridDataGridViewTextBoxColumn
+            // 
+            this.useridDataGridViewTextBoxColumn.DataPropertyName = "userid";
+            this.useridDataGridViewTextBoxColumn.HeaderText = "userid";
+            this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
+            this.useridDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passewordDataGridViewTextBoxColumn
+            // 
+            this.passewordDataGridViewTextBoxColumn.DataPropertyName = "passeword";
+            this.passewordDataGridViewTextBoxColumn.HeaderText = "passeword";
+            this.passewordDataGridViewTextBoxColumn.Name = "passewordDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // formDataGridViewTextBoxColumn
+            // 
+            this.formDataGridViewTextBoxColumn.DataPropertyName = "form";
+            this.formDataGridViewTextBoxColumn.DataSource = this.usersBindingSource1;
+            this.formDataGridViewTextBoxColumn.DisplayMember = "form";
+            this.formDataGridViewTextBoxColumn.HeaderText = "form";
+            this.formDataGridViewTextBoxColumn.Name = "formDataGridViewTextBoxColumn";
+            this.formDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.formDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.formDataGridViewTextBoxColumn.ValueMember = "form";
+            // 
             // Update_account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +215,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet46)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,6 +231,9 @@
         private hospitallDataSet46 hospitallDataSet46;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private hospitallDataSet46TableAdapters.usersTableAdapter usersTableAdapter;
+        private hospitallDataSet49 hospitallDataSet49;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private hospitallDataSet49TableAdapters.usersTableAdapter usersTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passewordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;

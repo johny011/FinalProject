@@ -33,7 +33,7 @@ namespace Final_project
 
         private void btn_ٍSelectpicture_Click(object sender, EventArgs e)
         {
-            using(OpenFileDialog opf=new OpenFileDialog() { Filter="Image|*.jpg;|*.bmp|*.png|*.gif;"})
+            using(OpenFileDialog opf=new OpenFileDialog() { Filter="Image files(*.jpg,*.bmp,*.jpeg,*.png,*.gif)|*.jpg;*.bmp;*.jpef;*.png;*.gif "})
             {
                 if(opf.ShowDialog()==DialogResult.OK)
                 {

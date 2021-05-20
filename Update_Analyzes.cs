@@ -19,8 +19,9 @@ namespace Final_project
 
         private void Update_Analyzes_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hospitallDataSet38.Analyzes' table. You can move, or remove it, as needed.
-            this.analyzesTableAdapter.Fill(this.hospitallDataSet38.Analyzes);
+            // TODO: This line of code loads data into the 'hospitallDataSet51.Analyzes' table. You can move, or remove it, as needed.
+            this.analyzesTableAdapter.Fill(this.hospitallDataSet51.Analyzes);
+            
 
         }
 
@@ -28,7 +29,17 @@ namespace Final_project
         {
             DataGridViewRow gr = dataGridView1.CurrentRow;
                 DB.Insert_Update_Delete("update Analyzes set Analysisname='" + gr.Cells[1].Value.ToString() + "',price=" + int.Parse(gr.Cells[2].Value.ToString()) + " ,processing ='" + gr.Cells[3].Value.ToString() + "' where Analysisnumber=" + int.Parse(gr.Cells[0].Value.ToString()) + "");
-            
+            MessageBox.Show("تم التعديل");
+            Update_Analyzes_Load(sender, e);
+
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow gr = dataGridView1.CurrentRow;
+            DB.Insert_Update_Delete("delet from Analyzes where  Analysisnumber=" + int.Parse(gr.Cells[0].Value.ToString()) );
+            MessageBox.Show("تم الحذف");
+            Update_Analyzes_Load(sender, e);
         }
     }
 }

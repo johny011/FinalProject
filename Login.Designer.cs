@@ -160,7 +160,7 @@
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_password.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_password.HintText = "كلمة المرور";
+            this.txt_password.HintText = "";
             this.txt_password.isPassword = true;
             this.txt_password.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_password.LineIdleColor = System.Drawing.Color.Gray;
@@ -172,6 +172,7 @@
             this.txt_password.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_password.Size = new System.Drawing.Size(220, 60);
             this.txt_password.TabIndex = 19;
+            this.txt_password.Text = "كلمة المرور";
             this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_login

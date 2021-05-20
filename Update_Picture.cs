@@ -19,8 +19,9 @@ namespace Final_project
 
         private void Update_Picture_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hospitallDataSet39.pictures' table. You can move, or remove it, as needed.
-            this.picturesTableAdapter.Fill(this.hospitallDataSet39.pictures);
+            // TODO: This line of code loads data into the 'hospitallDataSet47.pictures' table. You can move, or remove it, as needed.
+            this.picturesTableAdapter.Fill(this.hospitallDataSet47.pictures);
+
 
         }
 
@@ -29,13 +30,17 @@ namespace Final_project
             DataGridViewRow gr = dataGridView1.CurrentRow;
            
                 DB.Insert_Update_Delete("update pictures set picturesname='" + gr.Cells[1].Value.ToString() + "',price=" + int.Parse(gr.Cells[2].Value.ToString()) + " ,processing ='" + gr.Cells[3].Value.ToString() + "' where picturesid=" + int.Parse(gr.Cells[0].Value.ToString()) + "");
-            
+            MessageBox.Show("تم التعديل");
+            Update_Picture_Load(sender, e);
+
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
             DataGridViewRow gr = dataGridView1.CurrentRow;
             DB.Insert_Update_Delete("delete from pictures where picturesid=" + int.Parse(gr.Cells[0].Value.ToString()) + "");
+            MessageBox.Show("تم الحذف");
+            Update_Picture_Load(sender, e);
         }
     }
 }

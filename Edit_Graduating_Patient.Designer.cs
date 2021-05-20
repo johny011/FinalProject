@@ -44,6 +44,8 @@
             this.txt_numberpatient = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dateOut = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.editRadio = new System.Windows.Forms.RadioButton();
+            this.GraduatingRadio = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -112,7 +114,7 @@
             this.txt_payment.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_payment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_payment.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_payment.HintText = "";
+            this.txt_payment.HintText = "الدفعة الأولية";
             this.txt_payment.isPassword = false;
             this.txt_payment.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_payment.LineIdleColor = System.Drawing.Color.Gray;
@@ -124,7 +126,6 @@
             this.txt_payment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_payment.Size = new System.Drawing.Size(220, 60);
             this.txt_payment.TabIndex = 54;
-            this.txt_payment.Text = "الدفعة الأولية";
             this.txt_payment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
@@ -203,7 +204,7 @@
             this.txt_place.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_place.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_place.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_place.HintText = "";
+            this.txt_place.HintText = "مكان الإقامة";
             this.txt_place.isPassword = false;
             this.txt_place.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_place.LineIdleColor = System.Drawing.Color.Gray;
@@ -215,7 +216,6 @@
             this.txt_place.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_place.Size = new System.Drawing.Size(220, 60);
             this.txt_place.TabIndex = 47;
-            this.txt_place.Text = "مكان الإقامة";
             this.txt_place.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_numberpatient
@@ -225,7 +225,7 @@
             this.txt_numberpatient.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_numberpatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_numberpatient.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_numberpatient.HintText = "";
+            this.txt_numberpatient.HintText = "رقم المريض";
             this.txt_numberpatient.isPassword = false;
             this.txt_numberpatient.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_numberpatient.LineIdleColor = System.Drawing.Color.Gray;
@@ -237,7 +237,6 @@
             this.txt_numberpatient.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_numberpatient.Size = new System.Drawing.Size(220, 60);
             this.txt_numberpatient.TabIndex = 46;
-            this.txt_numberpatient.Text = "رقم المريض";
             this.txt_numberpatient.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dateOut
@@ -261,11 +260,35 @@
             this.label4.TabIndex = 55;
             this.label4.Text = "تاريخ الخروج";
             // 
+            // editRadio
+            // 
+            this.editRadio.AutoSize = true;
+            this.editRadio.Checked = true;
+            this.editRadio.Location = new System.Drawing.Point(241, 336);
+            this.editRadio.Name = "editRadio";
+            this.editRadio.Size = new System.Drawing.Size(51, 17);
+            this.editRadio.TabIndex = 57;
+            this.editRadio.Text = "تعديل";
+            this.editRadio.UseVisualStyleBackColor = true;
+            // 
+            // GraduatingRadio
+            // 
+            this.GraduatingRadio.AutoSize = true;
+            this.GraduatingRadio.Location = new System.Drawing.Point(351, 336);
+            this.GraduatingRadio.Name = "GraduatingRadio";
+            this.GraduatingRadio.Size = new System.Drawing.Size(51, 17);
+            this.GraduatingRadio.TabIndex = 58;
+            this.GraduatingRadio.Text = "تخريج";
+            this.GraduatingRadio.UseVisualStyleBackColor = true;
+            this.GraduatingRadio.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // Edit_Graduating_Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GraduatingRadio);
+            this.Controls.Add(this.editRadio);
             this.Controls.Add(this.dateOut);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_payment);
@@ -303,5 +326,7 @@
         private System.Windows.Forms.ComboBox combox_room;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_place;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_numberpatient;
+        private System.Windows.Forms.RadioButton editRadio;
+        private System.Windows.Forms.RadioButton GraduatingRadio;
     }
 }

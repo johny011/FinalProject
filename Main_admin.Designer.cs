@@ -38,15 +38,11 @@
             this.exitBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.minBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel_button = new System.Windows.Forms.Panel();
-            this.btn_show_working_period = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_acount = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_show_department = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_add_emp = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_show_emp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_interval = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_show_room = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_add_working_period = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_show_acount = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_emp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_room = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_add_acount = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -158,15 +154,11 @@
             this.panel_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.panel_button.Controls.Add(this.btn_show_working_period);
             this.panel_button.Controls.Add(this.btn_update_acount);
             this.panel_button.Controls.Add(this.btn_show_department);
             this.panel_button.Controls.Add(this.btn_add_emp);
-            this.panel_button.Controls.Add(this.btn_show_emp);
             this.panel_button.Controls.Add(this.btn_update_interval);
-            this.panel_button.Controls.Add(this.btn_show_room);
             this.panel_button.Controls.Add(this.btn_add_working_period);
-            this.panel_button.Controls.Add(this.btn_show_acount);
             this.panel_button.Controls.Add(this.btn_update_emp);
             this.panel_button.Controls.Add(this.btn_update_room);
             this.panel_button.Controls.Add(this.btn_add_acount);
@@ -178,45 +170,6 @@
             this.panel_button.Size = new System.Drawing.Size(181, 710);
             this.panel_button.TabIndex = 6;
             // 
-            // btn_show_working_period
-            // 
-            this.btn_show_working_period.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_working_period.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_working_period.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_working_period.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_show_working_period.BorderRadius = 0;
-            this.btn_show_working_period.ButtonText = "عرض فترات العمل";
-            this.btn_show_working_period.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_show_working_period.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_show_working_period.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_show_working_period.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_show_working_period.Iconimage = null;
-            this.btn_show_working_period.Iconimage_right = null;
-            this.btn_show_working_period.Iconimage_right_Selected = null;
-            this.btn_show_working_period.Iconimage_Selected = null;
-            this.btn_show_working_period.IconMarginLeft = 0;
-            this.btn_show_working_period.IconMarginRight = 0;
-            this.btn_show_working_period.IconRightVisible = true;
-            this.btn_show_working_period.IconRightZoom = 0D;
-            this.btn_show_working_period.IconVisible = true;
-            this.btn_show_working_period.IconZoom = 40D;
-            this.btn_show_working_period.IsTab = false;
-            this.btn_show_working_period.Location = new System.Drawing.Point(1, 489);
-            this.btn_show_working_period.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_show_working_period.Name = "btn_show_working_period";
-            this.btn_show_working_period.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_working_period.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.btn_show_working_period.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_show_working_period.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_show_working_period.selected = false;
-            this.btn_show_working_period.Size = new System.Drawing.Size(178, 25);
-            this.btn_show_working_period.TabIndex = 56;
-            this.btn_show_working_period.Text = "عرض فترات العمل";
-            this.btn_show_working_period.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_show_working_period.Textcolor = System.Drawing.Color.Gainsboro;
-            this.btn_show_working_period.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_show_working_period.Click += new System.EventHandler(this.btn_show_working_period_Click);
-            // 
             // btn_update_acount
             // 
             this.btn_update_acount.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -224,7 +177,7 @@
             this.btn_update_acount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
             this.btn_update_acount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_update_acount.BorderRadius = 0;
-            this.btn_update_acount.ButtonText = "تعديل حساب";
+            this.btn_update_acount.ButtonText = "عرض وتعديل الحسابات";
             this.btn_update_acount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_update_acount.DisabledColor = System.Drawing.Color.Gray;
             this.btn_update_acount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
@@ -240,7 +193,7 @@
             this.btn_update_acount.IconVisible = true;
             this.btn_update_acount.IconZoom = 40D;
             this.btn_update_acount.IsTab = false;
-            this.btn_update_acount.Location = new System.Drawing.Point(-4, 210);
+            this.btn_update_acount.Location = new System.Drawing.Point(-2, 311);
             this.btn_update_acount.Margin = new System.Windows.Forms.Padding(5);
             this.btn_update_acount.Name = "btn_update_acount";
             this.btn_update_acount.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -248,10 +201,10 @@
             this.btn_update_acount.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_update_acount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_update_acount.selected = false;
-            this.btn_update_acount.Size = new System.Drawing.Size(178, 25);
+            this.btn_update_acount.Size = new System.Drawing.Size(178, 40);
             this.btn_update_acount.TabIndex = 66;
-            this.btn_update_acount.Text = "تعديل حساب";
-            this.btn_update_acount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_update_acount.Text = "عرض وتعديل الحسابات";
+            this.btn_update_acount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_update_acount.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_update_acount.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_update_acount.Click += new System.EventHandler(this.btn_update_acount_Click);
@@ -279,7 +232,7 @@
             this.btn_show_department.IconVisible = true;
             this.btn_show_department.IconZoom = 40D;
             this.btn_show_department.IsTab = false;
-            this.btn_show_department.Location = new System.Drawing.Point(1, 454);
+            this.btn_show_department.Location = new System.Drawing.Point(0, 511);
             this.btn_show_department.Margin = new System.Windows.Forms.Padding(5);
             this.btn_show_department.Name = "btn_show_department";
             this.btn_show_department.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -287,10 +240,10 @@
             this.btn_show_department.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_show_department.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_show_department.selected = false;
-            this.btn_show_department.Size = new System.Drawing.Size(178, 25);
+            this.btn_show_department.Size = new System.Drawing.Size(178, 40);
             this.btn_show_department.TabIndex = 55;
             this.btn_show_department.Text = "عرض الأقسام";
-            this.btn_show_department.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_show_department.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_show_department.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_show_department.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_show_department.Click += new System.EventHandler(this.btn_show_department_Click);
@@ -318,7 +271,7 @@
             this.btn_add_emp.IconVisible = true;
             this.btn_add_emp.IconZoom = 40D;
             this.btn_add_emp.IsTab = false;
-            this.btn_add_emp.Location = new System.Drawing.Point(1, 3);
+            this.btn_add_emp.Location = new System.Drawing.Point(0, 10);
             this.btn_add_emp.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add_emp.Name = "btn_add_emp";
             this.btn_add_emp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -326,52 +279,13 @@
             this.btn_add_emp.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_add_emp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_add_emp.selected = false;
-            this.btn_add_emp.Size = new System.Drawing.Size(178, 25);
+            this.btn_add_emp.Size = new System.Drawing.Size(178, 40);
             this.btn_add_emp.TabIndex = 58;
             this.btn_add_emp.Text = "إضافة عاملين";
-            this.btn_add_emp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add_emp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_add_emp.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_add_emp.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_add_emp.Click += new System.EventHandler(this.btn_add_emp_Click);
-            // 
-            // btn_show_emp
-            // 
-            this.btn_show_emp.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_emp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_emp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_emp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_show_emp.BorderRadius = 0;
-            this.btn_show_emp.ButtonText = "عرض العاملين";
-            this.btn_show_emp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_show_emp.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_show_emp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_show_emp.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_show_emp.Iconimage = null;
-            this.btn_show_emp.Iconimage_right = null;
-            this.btn_show_emp.Iconimage_right_Selected = null;
-            this.btn_show_emp.Iconimage_Selected = null;
-            this.btn_show_emp.IconMarginLeft = 0;
-            this.btn_show_emp.IconMarginRight = 0;
-            this.btn_show_emp.IconRightVisible = true;
-            this.btn_show_emp.IconRightZoom = 0D;
-            this.btn_show_emp.IconVisible = true;
-            this.btn_show_emp.IconZoom = 40D;
-            this.btn_show_emp.IsTab = false;
-            this.btn_show_emp.Location = new System.Drawing.Point(1, 349);
-            this.btn_show_emp.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_show_emp.Name = "btn_show_emp";
-            this.btn_show_emp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_emp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.btn_show_emp.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_show_emp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_show_emp.selected = false;
-            this.btn_show_emp.Size = new System.Drawing.Size(178, 25);
-            this.btn_show_emp.TabIndex = 52;
-            this.btn_show_emp.Text = "عرض العاملين";
-            this.btn_show_emp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_show_emp.Textcolor = System.Drawing.Color.Gainsboro;
-            this.btn_show_emp.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_show_emp.Click += new System.EventHandler(this.btn_show_emp_Click);
             // 
             // btn_update_interval
             // 
@@ -380,7 +294,7 @@
             this.btn_update_interval.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
             this.btn_update_interval.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_update_interval.BorderRadius = 0;
-            this.btn_update_interval.ButtonText = "تعديل فترة";
+            this.btn_update_interval.ButtonText = "عرض وتعديل فترة";
             this.btn_update_interval.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_update_interval.DisabledColor = System.Drawing.Color.Gray;
             this.btn_update_interval.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
@@ -396,7 +310,7 @@
             this.btn_update_interval.IconVisible = true;
             this.btn_update_interval.IconZoom = 40D;
             this.btn_update_interval.IsTab = false;
-            this.btn_update_interval.Location = new System.Drawing.Point(-4, 245);
+            this.btn_update_interval.Location = new System.Drawing.Point(-2, 361);
             this.btn_update_interval.Margin = new System.Windows.Forms.Padding(5);
             this.btn_update_interval.Name = "btn_update_interval";
             this.btn_update_interval.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -404,52 +318,13 @@
             this.btn_update_interval.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_update_interval.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_update_interval.selected = false;
-            this.btn_update_interval.Size = new System.Drawing.Size(178, 25);
+            this.btn_update_interval.Size = new System.Drawing.Size(178, 40);
             this.btn_update_interval.TabIndex = 65;
-            this.btn_update_interval.Text = "تعديل فترة";
-            this.btn_update_interval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_update_interval.Text = "عرض وتعديل فترة";
+            this.btn_update_interval.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_update_interval.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_update_interval.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_update_interval.Click += new System.EventHandler(this.btn_update_interval_Click);
-            // 
-            // btn_show_room
-            // 
-            this.btn_show_room.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_room.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_room.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_room.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_show_room.BorderRadius = 0;
-            this.btn_show_room.ButtonText = "عرض الغرف";
-            this.btn_show_room.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_show_room.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_show_room.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_show_room.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_show_room.Iconimage = null;
-            this.btn_show_room.Iconimage_right = null;
-            this.btn_show_room.Iconimage_right_Selected = null;
-            this.btn_show_room.Iconimage_Selected = null;
-            this.btn_show_room.IconMarginLeft = 0;
-            this.btn_show_room.IconMarginRight = 0;
-            this.btn_show_room.IconRightVisible = true;
-            this.btn_show_room.IconRightZoom = 0D;
-            this.btn_show_room.IconVisible = true;
-            this.btn_show_room.IconZoom = 40D;
-            this.btn_show_room.IsTab = false;
-            this.btn_show_room.Location = new System.Drawing.Point(1, 419);
-            this.btn_show_room.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_show_room.Name = "btn_show_room";
-            this.btn_show_room.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_room.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.btn_show_room.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_show_room.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_show_room.selected = false;
-            this.btn_show_room.Size = new System.Drawing.Size(178, 25);
-            this.btn_show_room.TabIndex = 54;
-            this.btn_show_room.Text = "عرض الغرف";
-            this.btn_show_room.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_show_room.Textcolor = System.Drawing.Color.Gainsboro;
-            this.btn_show_room.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_show_room.Click += new System.EventHandler(this.btn_show_room_Click);
             // 
             // btn_add_working_period
             // 
@@ -474,7 +349,7 @@
             this.btn_add_working_period.IconVisible = true;
             this.btn_add_working_period.IconZoom = 40D;
             this.btn_add_working_period.IsTab = false;
-            this.btn_add_working_period.Location = new System.Drawing.Point(-4, 140);
+            this.btn_add_working_period.Location = new System.Drawing.Point(1, 211);
             this.btn_add_working_period.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add_working_period.Name = "btn_add_working_period";
             this.btn_add_working_period.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -482,52 +357,13 @@
             this.btn_add_working_period.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_add_working_period.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_add_working_period.selected = false;
-            this.btn_add_working_period.Size = new System.Drawing.Size(178, 25);
+            this.btn_add_working_period.Size = new System.Drawing.Size(178, 40);
             this.btn_add_working_period.TabIndex = 63;
             this.btn_add_working_period.Text = "إضافة فترة عمل";
-            this.btn_add_working_period.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add_working_period.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_add_working_period.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_add_working_period.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_add_working_period.Click += new System.EventHandler(this.btn_add_working_period_Click);
-            // 
-            // btn_show_acount
-            // 
-            this.btn_show_acount.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_acount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_acount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_acount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_show_acount.BorderRadius = 0;
-            this.btn_show_acount.ButtonText = "عرض الحسابات";
-            this.btn_show_acount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_show_acount.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_show_acount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_show_acount.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_show_acount.Iconimage = null;
-            this.btn_show_acount.Iconimage_right = null;
-            this.btn_show_acount.Iconimage_right_Selected = null;
-            this.btn_show_acount.Iconimage_Selected = null;
-            this.btn_show_acount.IconMarginLeft = 0;
-            this.btn_show_acount.IconMarginRight = 0;
-            this.btn_show_acount.IconRightVisible = true;
-            this.btn_show_acount.IconRightZoom = 0D;
-            this.btn_show_acount.IconVisible = true;
-            this.btn_show_acount.IconZoom = 40D;
-            this.btn_show_acount.IsTab = false;
-            this.btn_show_acount.Location = new System.Drawing.Point(1, 384);
-            this.btn_show_acount.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_show_acount.Name = "btn_show_acount";
-            this.btn_show_acount.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_show_acount.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.btn_show_acount.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_show_acount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_show_acount.selected = false;
-            this.btn_show_acount.Size = new System.Drawing.Size(178, 25);
-            this.btn_show_acount.TabIndex = 53;
-            this.btn_show_acount.Text = "عرض الحسابات";
-            this.btn_show_acount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_show_acount.Textcolor = System.Drawing.Color.Gainsboro;
-            this.btn_show_acount.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_show_acount.Click += new System.EventHandler(this.btn_show_acount_Click);
             // 
             // btn_update_emp
             // 
@@ -536,7 +372,7 @@
             this.btn_update_emp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
             this.btn_update_emp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_update_emp.BorderRadius = 0;
-            this.btn_update_emp.ButtonText = "تعديل العاملين";
+            this.btn_update_emp.ButtonText = "عرض وتعديل العاملين";
             this.btn_update_emp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_update_emp.DisabledColor = System.Drawing.Color.Gray;
             this.btn_update_emp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
@@ -552,7 +388,7 @@
             this.btn_update_emp.IconVisible = true;
             this.btn_update_emp.IconZoom = 40D;
             this.btn_update_emp.IsTab = false;
-            this.btn_update_emp.Location = new System.Drawing.Point(-4, 175);
+            this.btn_update_emp.Location = new System.Drawing.Point(-2, 261);
             this.btn_update_emp.Margin = new System.Windows.Forms.Padding(5);
             this.btn_update_emp.Name = "btn_update_emp";
             this.btn_update_emp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -560,10 +396,10 @@
             this.btn_update_emp.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_update_emp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_update_emp.selected = false;
-            this.btn_update_emp.Size = new System.Drawing.Size(178, 25);
+            this.btn_update_emp.Size = new System.Drawing.Size(178, 40);
             this.btn_update_emp.TabIndex = 64;
-            this.btn_update_emp.Text = "تعديل العاملين";
-            this.btn_update_emp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_update_emp.Text = "عرض وتعديل العاملين";
+            this.btn_update_emp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_update_emp.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_update_emp.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_update_emp.Click += new System.EventHandler(this.btn_update_emp_Click);
@@ -575,7 +411,7 @@
             this.btn_update_room.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
             this.btn_update_room.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_update_room.BorderRadius = 0;
-            this.btn_update_room.ButtonText = "تعديل غرفة";
+            this.btn_update_room.ButtonText = "عرض وتعديل الغرف";
             this.btn_update_room.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_update_room.DisabledColor = System.Drawing.Color.Gray;
             this.btn_update_room.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
@@ -591,7 +427,7 @@
             this.btn_update_room.IconVisible = true;
             this.btn_update_room.IconZoom = 40D;
             this.btn_update_room.IsTab = false;
-            this.btn_update_room.Location = new System.Drawing.Point(-4, 280);
+            this.btn_update_room.Location = new System.Drawing.Point(0, 411);
             this.btn_update_room.Margin = new System.Windows.Forms.Padding(5);
             this.btn_update_room.Name = "btn_update_room";
             this.btn_update_room.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -599,10 +435,10 @@
             this.btn_update_room.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_update_room.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_update_room.selected = false;
-            this.btn_update_room.Size = new System.Drawing.Size(178, 25);
+            this.btn_update_room.Size = new System.Drawing.Size(178, 40);
             this.btn_update_room.TabIndex = 61;
-            this.btn_update_room.Text = "تعديل غرفة";
-            this.btn_update_room.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_update_room.Text = "عرض وتعديل الغرف";
+            this.btn_update_room.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_update_room.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_update_room.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_update_room.Click += new System.EventHandler(this.btn_update_room_Click);
@@ -630,7 +466,7 @@
             this.btn_add_acount.IconVisible = true;
             this.btn_add_acount.IconZoom = 40D;
             this.btn_add_acount.IsTab = false;
-            this.btn_add_acount.Location = new System.Drawing.Point(1, 35);
+            this.btn_add_acount.Location = new System.Drawing.Point(-2, 61);
             this.btn_add_acount.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add_acount.Name = "btn_add_acount";
             this.btn_add_acount.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -638,10 +474,10 @@
             this.btn_add_acount.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_add_acount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_add_acount.selected = false;
-            this.btn_add_acount.Size = new System.Drawing.Size(178, 25);
+            this.btn_add_acount.Size = new System.Drawing.Size(178, 40);
             this.btn_add_acount.TabIndex = 59;
             this.btn_add_acount.Text = "إضافة حساب";
-            this.btn_add_acount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add_acount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_add_acount.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_add_acount.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_add_acount.Click += new System.EventHandler(this.btn_add_acount_Click);
@@ -653,7 +489,7 @@
             this.btn_update_working_period.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
             this.btn_update_working_period.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_update_working_period.BorderRadius = 0;
-            this.btn_update_working_period.ButtonText = "تعديل فترة عمل";
+            this.btn_update_working_period.ButtonText = "عرض وتعديل فترة عمل";
             this.btn_update_working_period.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_update_working_period.DisabledColor = System.Drawing.Color.Gray;
             this.btn_update_working_period.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
@@ -669,7 +505,7 @@
             this.btn_update_working_period.IconVisible = true;
             this.btn_update_working_period.IconZoom = 40D;
             this.btn_update_working_period.IsTab = false;
-            this.btn_update_working_period.Location = new System.Drawing.Point(-1, 314);
+            this.btn_update_working_period.Location = new System.Drawing.Point(-2, 461);
             this.btn_update_working_period.Margin = new System.Windows.Forms.Padding(5);
             this.btn_update_working_period.Name = "btn_update_working_period";
             this.btn_update_working_period.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -677,10 +513,10 @@
             this.btn_update_working_period.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_update_working_period.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_update_working_period.selected = false;
-            this.btn_update_working_period.Size = new System.Drawing.Size(178, 25);
+            this.btn_update_working_period.Size = new System.Drawing.Size(178, 40);
             this.btn_update_working_period.TabIndex = 63;
-            this.btn_update_working_period.Text = "تعديل فترة عمل";
-            this.btn_update_working_period.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_update_working_period.Text = "عرض وتعديل فترة عمل";
+            this.btn_update_working_period.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_update_working_period.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_update_working_period.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_update_working_period.Click += new System.EventHandler(this.btn_update_working_period_Click);
@@ -708,7 +544,7 @@
             this.btn_add_interval.IconVisible = true;
             this.btn_add_interval.IconZoom = 40D;
             this.btn_add_interval.IsTab = false;
-            this.btn_add_interval.Location = new System.Drawing.Point(1, 70);
+            this.btn_add_interval.Location = new System.Drawing.Point(-2, 111);
             this.btn_add_interval.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add_interval.Name = "btn_add_interval";
             this.btn_add_interval.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -716,10 +552,10 @@
             this.btn_add_interval.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_add_interval.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_add_interval.selected = false;
-            this.btn_add_interval.Size = new System.Drawing.Size(178, 25);
+            this.btn_add_interval.Size = new System.Drawing.Size(178, 40);
             this.btn_add_interval.TabIndex = 60;
             this.btn_add_interval.Text = "إضافة فترة";
-            this.btn_add_interval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add_interval.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_add_interval.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_add_interval.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_add_interval.Click += new System.EventHandler(this.btn_add_interval_Click);
@@ -747,7 +583,7 @@
             this.btn_add_room.IconVisible = true;
             this.btn_add_room.IconZoom = 40D;
             this.btn_add_room.IsTab = false;
-            this.btn_add_room.Location = new System.Drawing.Point(1, 105);
+            this.btn_add_room.Location = new System.Drawing.Point(-2, 161);
             this.btn_add_room.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add_room.Name = "btn_add_room";
             this.btn_add_room.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -755,10 +591,10 @@
             this.btn_add_room.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_add_room.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_add_room.selected = false;
-            this.btn_add_room.Size = new System.Drawing.Size(178, 25);
+            this.btn_add_room.Size = new System.Drawing.Size(178, 40);
             this.btn_add_room.TabIndex = 61;
             this.btn_add_room.Text = "إضافة غرفة";
-            this.btn_add_room.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_add_room.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_add_room.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_add_room.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_add_room.Click += new System.EventHandler(this.btn_add_room_Click);
@@ -816,10 +652,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_update_emp;
         private Bunifu.Framework.UI.BunifuFlatButton btn_update_room;
         private Bunifu.Framework.UI.BunifuFlatButton btn_update_working_period;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_show_working_period;
         private Bunifu.Framework.UI.BunifuFlatButton btn_show_department;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_show_emp;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_show_room;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_show_acount;
     }
 }

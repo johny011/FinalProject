@@ -87,7 +87,7 @@
             this.txt_place.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_place.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_place.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_place.HintText = "";
+            this.txt_place.HintText = "مكان الإقامة";
             this.txt_place.isPassword = false;
             this.txt_place.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_place.LineIdleColor = System.Drawing.Color.Gray;
@@ -99,7 +99,6 @@
             this.txt_place.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_place.Size = new System.Drawing.Size(220, 60);
             this.txt_place.TabIndex = 26;
-            this.txt_place.Text = "مكان الإقامة";
             this.txt_place.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_add
@@ -136,7 +135,7 @@
             this.txt_NO_number.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NO_number.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_NO_number.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_NO_number.HintText = "";
+            this.txt_NO_number.HintText = "الرقم الوطني";
             this.txt_NO_number.isPassword = false;
             this.txt_NO_number.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_NO_number.LineIdleColor = System.Drawing.Color.Gray;
@@ -148,7 +147,6 @@
             this.txt_NO_number.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_NO_number.Size = new System.Drawing.Size(220, 60);
             this.txt_NO_number.TabIndex = 20;
-            this.txt_NO_number.Text = "الرقم الوطني";
             this.txt_NO_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_father_name
@@ -158,7 +156,7 @@
             this.txt_father_name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_father_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_father_name.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_father_name.HintText = "";
+            this.txt_father_name.HintText = "اسم الأب";
             this.txt_father_name.isPassword = false;
             this.txt_father_name.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_father_name.LineIdleColor = System.Drawing.Color.Gray;
@@ -170,7 +168,6 @@
             this.txt_father_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_father_name.Size = new System.Drawing.Size(220, 60);
             this.txt_father_name.TabIndex = 19;
-            this.txt_father_name.Text = "اسم الأب";
             this.txt_father_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_mother_name
@@ -180,7 +177,7 @@
             this.txt_mother_name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mother_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_mother_name.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_mother_name.HintText = "";
+            this.txt_mother_name.HintText = "اسم الأم";
             this.txt_mother_name.isPassword = false;
             this.txt_mother_name.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_mother_name.LineIdleColor = System.Drawing.Color.Gray;
@@ -192,7 +189,6 @@
             this.txt_mother_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_mother_name.Size = new System.Drawing.Size(220, 60);
             this.txt_mother_name.TabIndex = 18;
-            this.txt_mother_name.Text = "اسم الأم";
             this.txt_mother_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_name
@@ -202,7 +198,7 @@
             this.txt_name.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_name.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_name.HintText = "";
+            this.txt_name.HintText = "اسم المريض";
             this.txt_name.isPassword = false;
             this.txt_name.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_name.LineIdleColor = System.Drawing.Color.Gray;
@@ -214,7 +210,6 @@
             this.txt_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_name.Size = new System.Drawing.Size(220, 60);
             this.txt_name.TabIndex = 17;
-            this.txt_name.Text = "اسم المريض";
             this.txt_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bunifuElipse1

@@ -285,7 +285,7 @@ namespace Final_project {
             
             private global::System.Data.DataColumn columnprice;
             
-            private global::System.Data.DataColumn columnpresenceOfTheAnalysis;
+            
             
             private global::System.Data.DataColumn columnprocessing;
             
@@ -348,14 +348,9 @@ namespace Final_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn presenceOfTheAnalysisColumn {
-                get {
-                    return this.columnpresenceOfTheAnalysis;
-                }
-            }
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            
+            
             public global::System.Data.DataColumn processingColumn {
                 get {
                     return this.columnprocessing;
@@ -439,7 +434,7 @@ namespace Final_project {
                 this.columnAnalysisnumber = base.Columns["Analysisnumber"];
                 this.columnAnalysisname = base.Columns["Analysisname"];
                 this.columnprice = base.Columns["price"];
-                this.columnpresenceOfTheAnalysis = base.Columns["presenceOfTheAnalysis"];
+               
                 this.columnprocessing = base.Columns["processing"];
             }
             
@@ -452,8 +447,7 @@ namespace Final_project {
                 base.Columns.Add(this.columnAnalysisname);
                 this.columnprice = new global::System.Data.DataColumn("price", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprice);
-                this.columnpresenceOfTheAnalysis = new global::System.Data.DataColumn("presenceOfTheAnalysis", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpresenceOfTheAnalysis);
+               
                 this.columnprocessing = new global::System.Data.DataColumn("processing", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprocessing);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -467,8 +461,7 @@ namespace Final_project {
                 this.columnAnalysisname.AllowDBNull = false;
                 this.columnAnalysisname.MaxLength = 255;
                 this.columnprice.AllowDBNull = false;
-                this.columnpresenceOfTheAnalysis.AllowDBNull = false;
-                this.columnpresenceOfTheAnalysis.MaxLength = 255;
+                
                 this.columnprocessing.AllowDBNull = false;
                 this.columnprocessing.MaxLength = 255;
             }
@@ -646,17 +639,9 @@ namespace Final_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string presenceOfTheAnalysis {
-                get {
-                    return ((string)(this[this.tableAnalyzes.presenceOfTheAnalysisColumn]));
-                }
-                set {
-                    this[this.tableAnalyzes.presenceOfTheAnalysisColumn] = value;
-                }
-            }
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            
+            
             public string processing {
                 get {
                     return ((string)(this[this.tableAnalyzes.processingColumn]));

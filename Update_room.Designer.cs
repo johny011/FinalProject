@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_room));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hospitallDataSet7 = new Final_project.hospitallDataSet7();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -44,12 +41,20 @@
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.roomTableAdapter = new Final_project.hospitallDataSet6TableAdapters.RoomTableAdapter();
             this.deptTableAdapter = new Final_project.hospitallDataSet7TableAdapters.DeptTableAdapter();
+            this.hospitallDataSet52 = new Final_project.hospitallDataSet52();
+            this.roomBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.roomTableAdapter1 = new Final_project.hospitallDataSet52TableAdapters.RoomTableAdapter();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet6)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -58,6 +63,7 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -69,35 +75,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 24;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "roomid";
-            this.dataGridViewTextBoxColumn3.HeaderText = "roomid";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "roomtype";
-            this.dataGridViewTextBoxColumn4.HeaderText = "roomtype";
-            this.dataGridViewTextBoxColumn4.Items.AddRange(new object[] {
-            "for patient",
-            "for process"});
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "deptid";
-            this.dataGridViewTextBoxColumn5.DataSource = this.deptBindingSource;
-            this.dataGridViewTextBoxColumn5.DisplayMember = "deptname";
-            this.dataGridViewTextBoxColumn5.HeaderText = "deptid";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn5.ValueMember = "deptid";
             // 
             // deptBindingSource
             // 
@@ -197,6 +174,49 @@
             // 
             this.deptTableAdapter.ClearBeforeFill = true;
             // 
+            // hospitallDataSet52
+            // 
+            this.hospitallDataSet52.DataSetName = "hospitallDataSet52";
+            this.hospitallDataSet52.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomBindingSource1
+            // 
+            this.roomBindingSource1.DataMember = "Room";
+            this.roomBindingSource1.DataSource = this.hospitallDataSet52;
+            // 
+            // roomTableAdapter1
+            // 
+            this.roomTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "roomid";
+            this.dataGridViewTextBoxColumn3.HeaderText = "roomid";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "roomtype";
+            this.dataGridViewTextBoxColumn4.HeaderText = "roomtype";
+            this.dataGridViewTextBoxColumn4.Items.AddRange(new object[] {
+            "غرفة مريض",
+            "غرفة عمليات"});
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "deptid";
+            this.dataGridViewTextBoxColumn5.DataSource = this.deptBindingSource;
+            this.dataGridViewTextBoxColumn5.DisplayMember = "deptname";
+            this.dataGridViewTextBoxColumn5.HeaderText = "deptid";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn5.ValueMember = "deptid";
+            // 
             // Update_room
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +233,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet6)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,6 +258,9 @@
         private hospitallDataSet7 hospitallDataSet7;
         private System.Windows.Forms.BindingSource deptBindingSource;
         private hospitallDataSet7TableAdapters.DeptTableAdapter deptTableAdapter;
+        private hospitallDataSet52 hospitallDataSet52;
+        private System.Windows.Forms.BindingSource roomBindingSource1;
+        private hospitallDataSet52TableAdapters.RoomTableAdapter roomTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;

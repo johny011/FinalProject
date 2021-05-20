@@ -37,13 +37,13 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.processingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.picturesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitallDataSet39 = new Final_project.hospitallDataSet39();
-            this.picturesTableAdapter = new Final_project.hospitallDataSet39TableAdapters.picturesTableAdapter();
+            this.hospitallDataSet47 = new Final_project.hospitallDataSet47();
             this.btn_Edit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.picturesTableAdapter = new Final_project.hospitallDataSet47TableAdapters.picturesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet47)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -98,16 +98,12 @@
             // picturesBindingSource
             // 
             this.picturesBindingSource.DataMember = "pictures";
-            this.picturesBindingSource.DataSource = this.hospitallDataSet39;
+            this.picturesBindingSource.DataSource = this.hospitallDataSet47;
             // 
-            // hospitallDataSet39
+            // hospitallDataSet47
             // 
-            this.hospitallDataSet39.DataSetName = "hospitallDataSet39";
-            this.hospitallDataSet39.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // picturesTableAdapter
-            // 
-            this.picturesTableAdapter.ClearBeforeFill = true;
+            this.hospitallDataSet47.DataSetName = "hospitallDataSet47";
+            this.hospitallDataSet47.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_Edit
             // 
@@ -128,7 +124,7 @@
             this.btn_Edit.IdleFillColor = System.Drawing.Color.White;
             this.btn_Edit.IdleForecolor = System.Drawing.Color.Black;
             this.btn_Edit.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_Edit.Location = new System.Drawing.Point(306, 311);
+            this.btn_Edit.Location = new System.Drawing.Point(264, 370);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(220, 66);
@@ -155,13 +151,17 @@
             this.btn_delete.IdleFillColor = System.Drawing.Color.White;
             this.btn_delete.IdleForecolor = System.Drawing.Color.Black;
             this.btn_delete.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_delete.Location = new System.Drawing.Point(50, 311);
+            this.btn_delete.Location = new System.Drawing.Point(14, 370);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(5);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(220, 66);
             this.btn_delete.TabIndex = 31;
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // picturesTableAdapter
+            // 
+            this.picturesTableAdapter.ClearBeforeFill = true;
             // 
             // Update_Picture
             // 
@@ -177,7 +177,7 @@
             this.Load += new System.EventHandler(this.Update_Picture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet47)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,14 +186,14 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private hospitallDataSet39 hospitallDataSet39;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_Edit;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_delete;
+        private hospitallDataSet47 hospitallDataSet47;
         private System.Windows.Forms.BindingSource picturesBindingSource;
-        private hospitallDataSet39TableAdapters.picturesTableAdapter picturesTableAdapter;
+        private hospitallDataSet47TableAdapters.picturesTableAdapter picturesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn picturesidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn picturesnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn processingDataGridViewTextBoxColumn;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_Edit;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_delete;
     }
 }

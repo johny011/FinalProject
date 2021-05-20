@@ -27,14 +27,18 @@ namespace Final_project
                 DB.Insert_Update_Delete("update TheStaff set Sname='" + gr.Cells[1].Value.ToString() + "', Fathername ='" + gr.Cells[2].Value.ToString() + "', mothername ='" + gr.Cells[3].Value.ToString() + "', TheIdNumber ='" + gr.Cells[4].Value.ToString() +
                                "', typeid =" + int.Parse(gr.Cells[5].Value.ToString()) + ",  deptid=" + int.Parse(gr.Cells[6].Value.ToString()) + "where id=" +
                                int.Parse(gr.Cells[0].Value.ToString()) + ";");
-            
-            
+            MessageBox.Show("تم التعديل");
+            Update_staff_Load(sender, e);
+
+
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
               DB.Insert_Update_Delete("delete from TheStaff where id="+(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()))+";");
-            
+            MessageBox.Show("تم الحذف");
+            Update_staff_Load(sender, e);
+
         }
 
         private void Update_staff_Load(object sender, EventArgs e)
