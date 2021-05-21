@@ -62,6 +62,7 @@
             this.txt_name.Size = new System.Drawing.Size(800, 60);
             this.txt_name.TabIndex = 18;
             this.txt_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_name.OnValueChanged += new System.EventHandler(this.txt_name_OnValueChanged);
             // 
             // btn_add
             // 

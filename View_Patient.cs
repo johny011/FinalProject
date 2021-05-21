@@ -12,7 +12,8 @@ namespace Final_project
 {
     public partial class View_Patient : Form
     {
-        string dept;
+        string dept="";
+        
         public View_Patient(string x)
         {
             InitializeComponent();
@@ -38,5 +39,24 @@ namespace Final_project
            
 
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dept == "")
+                    dataGridView1.DataSource = DB.DataTable("select * from patient where paname='" + txt_name.Text + "'");
+                else
+                {
+                    dataGridView1.DataSource = DB.DataTable("select p.* from patient p,patientAdmission pa where p.paname='" + txt_name.Text + "' and " +
+                        "pa.panumber=p.panumber and pa.deptid =(select deptid from dept where deptname='" + dept + "')");
+                }
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
+        }
     }
+    
 }

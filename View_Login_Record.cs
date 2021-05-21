@@ -30,5 +30,15 @@ namespace Final_project
            
 
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            if(dept=="")
+            dataGridView1.DataSource = DB.DataTable("select * from patientAdmission where Admissionid=" + int.Parse(txt_id_admission.Text) + "");
+            else
+            {
+                dataGridView1.DataSource = DB.DataTable("select * from patientAdmission where deptid=(select deptid from dept where deptname='" + dept + "') and Admissionid=" + int.Parse(txt_id_admission.Text));
+            }
+        }
     }
 }

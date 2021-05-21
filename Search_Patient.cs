@@ -22,5 +22,10 @@ namespace Final_project
         {
             dataGridView1.DataSource = DB.DataTable("select * from patient where paname='" + txt_name.Text + "'");
         }
+
+        private void txt_name_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
