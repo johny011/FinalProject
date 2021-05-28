@@ -123,10 +123,6 @@ namespace Final_project
             ChildForm(new View_Login_Record());
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)   
-        {
-            ActiveBtn(sender);
-            ChildForm(new Search_Patient());
-        }
+        
     }
 }

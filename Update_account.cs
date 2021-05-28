@@ -23,10 +23,16 @@ namespace Final_project
         private void btn_add_Click(object sender, EventArgs e)
         {
             DataGridViewRow gr = dataGridView1.CurrentRow;
-            int countuser = DB.DataTable("select * from users where username='" + gr.Cells[2].Value.ToString() + "' and userid <> "+int.Parse(gr.Cells[0].Value.ToString())+"").Rows.Count;
+            int countuser = DB.DataTable("select * from users where username=@username and userid <> @userid",
+                new SqlParameter("@username", gr.Cells[2].Value.ToString()),
+                new SqlParameter("@userid", int.Parse(gr.Cells[0].Value.ToString()))).Rows.Count;
             if (countuser == 0)
             {
-                DB.Insert_Update_Delete("Update users set username='" + gr.Cells[2].Value.ToString() + "' , passeword='" + gr.Cells[1].Value.ToString() + "', form='" + gr.Cells[3].Value.ToString() + "' where userid=" + int.Parse(gr.Cells[0].Value.ToString()) + "");
+                DB.Insert_Update_Delete("Update users set username=@username   , passeword=@passeword, form=@form  where userid=@userid" ,
+                    new SqlParameter("@username", gr.Cells[2].Value.ToString()),
+                    new SqlParameter("@passeword", gr.Cells[1].Value.ToString()),
+                    new SqlParameter("@form", gr.Cells[3].Value.ToString()),
+                    new SqlParameter("@userid",int.Parse(gr.Cells[0].Value.ToString())));
                 MessageBox.Show("تم التعديل");
                 Update_account_Load(sender, e);
             }
@@ -51,7 +57,8 @@ namespace Final_project
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            DB.Insert_Update_Delete("delete from users where userid=" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "");
+            DB.Insert_Update_Delete("delete from users where userid=@userid",
+                new SqlParameter("@userid", int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())));
             MessageBox.Show("تم الحذف");
             Update_account_Load(sender,e);
         }

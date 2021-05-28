@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Final_project
 {
@@ -36,7 +37,9 @@ namespace Final_project
                     {
                         if (row.Cells[4].Value != null)
                         {
-                            DB.Insert_Update_Delete("insert into RequiredAnalysis (Analysisnumber,Admissionid) values(" + int.Parse(row.Cells[0].Value.ToString()) + " ," + int.Parse(txt_Admissionid.Text) + ")");
+                            DB.Insert_Update_Delete("insert into RequiredAnalysis (Analysisnumber,Admissionid) values(@Analysisnumber ,@Admissionid)",
+                                new SqlParameter("@Analysisnumber", int.Parse(row.Cells[0].Value.ToString())),
+                                new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text)));
                             requierd = true;
                         }
 
@@ -44,7 +47,7 @@ namespace Final_project
                     }
                     catch (Exception exp)
                     {
-
+                        MessageBox.Show(exp.Message);
                     }
                 }
 

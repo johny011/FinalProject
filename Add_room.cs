@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace Final_project
 {
     public partial class Add_room : Form
@@ -22,7 +22,9 @@ namespace Final_project
         private void btn_add_Click(object sender, EventArgs e)
         {
             int deptId =int.Parse(combox_section.SelectedValue.ToString());
-            DB.Insert_Update_Delete("insert into Room (roomtype,deptid) values ('" + combox_room_type.Text + "'," + deptId + ")");
+            DB.Insert_Update_Delete("insert into Room (roomtype,deptid) values (@roomtype,@deptid)",
+                new SqlParameter("@roomtype", combox_room_type.Text),
+                new SqlParameter("@deptid",deptId));
         }
 
         private void Add_room_Load(object sender, EventArgs e)

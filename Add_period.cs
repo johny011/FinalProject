@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Sql;
+using System.Data.SqlClient;
 
 
 namespace Final_project
@@ -23,7 +23,7 @@ namespace Final_project
         {
             
                 DataGridViewRow gr = dataGridView1.CurrentRow;       
-                        DB.Insert_Update_Delete("insert into TimePeriods (ThePeriod) values ('" + gr.Cells[1].Value.ToString() + "');");
+                        DB.Insert_Update_Delete("insert into TimePeriods (ThePeriod) values (@ThePeriod);", new SqlParameter("@ThePeriod", gr.Cells[1].Value.ToString()));
             
         }
     }

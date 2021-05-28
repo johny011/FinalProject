@@ -156,6 +156,12 @@
     <Compile Include="Edit_Graduating_Patient.Designer.cs">
       <DependentUpon>Edit_Graduating_Patient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit_Work_period.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Work_period.Designer.cs">
+      <DependentUpon>Edit_Work_period.cs</DependentUpon>
+    </Compile>
     <Compile Include="hospitallDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -489,18 +495,6 @@
     <Compile Include="Result_picture.Designer.cs">
       <DependentUpon>Result_picture.cs</DependentUpon>
     </Compile>
-    <Compile Include="Search_Admission.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Search_Admission.Designer.cs">
-      <DependentUpon>Search_Admission.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Search_Patient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Search_Patient.Designer.cs">
-      <DependentUpon>Search_Patient.cs</DependentUpon>
-    </Compile>
     <Compile Include="Send_Analyzes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -618,6 +612,9 @@
     <EmbeddedResource Include="Edit_Graduating_Patient.resx">
       <DependentUpon>Edit_Graduating_Patient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Work_period.resx">
+      <DependentUpon>Edit_Work_period.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laboratory.resx">
       <DependentUpon>Laboratory.cs</DependentUpon>
     </EmbeddedResource>
@@ -659,12 +656,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Result_picture.resx">
       <DependentUpon>Result_picture.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Search_Admission.resx">
-      <DependentUpon>Search_Admission.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Search_Patient.resx">
-      <DependentUpon>Search_Patient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Send_Analyzes.resx">
       <DependentUpon>Send_Analyzes.cs</DependentUpon>

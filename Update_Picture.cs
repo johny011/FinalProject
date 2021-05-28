@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace Final_project
 {
@@ -29,7 +31,11 @@ namespace Final_project
         {
             DataGridViewRow gr = dataGridView1.CurrentRow;
            
-                DB.Insert_Update_Delete("update pictures set picturesname='" + gr.Cells[1].Value.ToString() + "',price=" + int.Parse(gr.Cells[2].Value.ToString()) + " ,processing ='" + gr.Cells[3].Value.ToString() + "' where picturesid=" + int.Parse(gr.Cells[0].Value.ToString()) + "");
+                DB.Insert_Update_Delete("update pictures set picturesname=@picturesname ,price=@price  ,processing =@processing  where picturesid=@picturesid",
+                    new SqlParameter("@picturesname", gr.Cells[1].Value.ToString()),
+                    new SqlParameter("@price", int.Parse(gr.Cells[2].Value.ToString())),
+                    new SqlParameter("@processing", gr.Cells[3].Value.ToString()),
+                    new SqlParameter("@picturesid", int.Parse(gr.Cells[0].Value.ToString())));
             MessageBox.Show("تم التعديل");
             Update_Picture_Load(sender, e);
 
@@ -38,7 +44,8 @@ namespace Final_project
         private void btn_delete_Click(object sender, EventArgs e)
         {
             DataGridViewRow gr = dataGridView1.CurrentRow;
-            DB.Insert_Update_Delete("delete from pictures where picturesid=" + int.Parse(gr.Cells[0].Value.ToString()) + "");
+            DB.Insert_Update_Delete("delete from pictures where picturesid=@picturesid",
+                 new SqlParameter("@picturesid", int.Parse(gr.Cells[0].Value.ToString())));
             MessageBox.Show("تم الحذف");
             Update_Picture_Load(sender, e);
         }

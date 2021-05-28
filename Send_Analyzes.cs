@@ -20,7 +20,8 @@ namespace Final_project
 
         private void btn_sendpicture_Click(object sender, EventArgs e)
         {
-            int RequiredAnalyzes = int.Parse(DB.SelectToGetOneValue("select RequiredAnalysisid from RequiredAnalysis where Admissionid=" + int.Parse(txt_Admissionid.Text) + ""));
+            int RequiredAnalyzes = int.Parse(DB.SelectToGetOneValue("select RequiredAnalysisid from RequiredAnalysis where Admissionid=@Admissionid" ,
+                new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text))));
 
             SqlConnection con = new SqlConnection(DB.con);
             con.Open();

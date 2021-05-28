@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Final_project
 {
@@ -27,7 +28,9 @@ namespace Final_project
                     try
                     {
                         if (row.Cells[4].Value != null)
-                        { DB.Insert_Update_Delete("insert into Requiredpictures (picturesid,Admissionid) values(" + int.Parse(row.Cells[0].Value.ToString()) + " ," + int.Parse(txt_Admissionid.Text) + ")");
+                        { DB.Insert_Update_Delete("insert into Requiredpictures (picturesid,Admissionid) values(@picturesid,@Admissionid)",
+                           new SqlParameter("@picturesid", int.Parse(row.Cells[0].Value.ToString())),
+                           new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text)));
                             requierd = true;
                         }
 

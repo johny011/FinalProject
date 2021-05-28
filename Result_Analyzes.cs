@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Final_project
 {
@@ -23,10 +24,14 @@ namespace Final_project
         {
             try
             {
-                if (int.Parse(DB.SelectToGetOneValue("select deptid from patientAdmission where Admissionid=" + int.Parse(txt_Admissionid.Text) + "")) == deptid)
+                int value = int.Parse(DB.SelectToGetOneValue("select deptid from patientAdmission where Admissionid=@Admissionid",
+                   new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text))));
+            
+                if (value == deptid)
                 {
-                    int RequiredAnalysisid = int.Parse(DB.SelectToGetOneValue("select RequiredAnalysisid from RequiredAnalysis where Admissionid=" + int.Parse(txt_Admissionid.Text) + ""));
-                    dataGridView1.DataSource = DB.DataTable("select * from celendarRA where RequiredAnalysisid=" + RequiredAnalysisid + "");
+                    int RequiredAnalysisid = int.Parse(DB.SelectToGetOneValue("select RequiredAnalysisid from RequiredAnalysis where Admissionid=@Admissionid",
+                        new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text))));
+                    dataGridView1.DataSource = DB.DataTable("select * from celendarRA where RequiredAnalysisid=@RequiredAnalysisid", new SqlParameter("@RequiredAnalysisid", RequiredAnalysisid));
                 }
                 else
                 {

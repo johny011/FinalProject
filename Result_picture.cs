@@ -27,10 +27,12 @@ namespace Final_project
         {
             try
             {
-                if (int.Parse(DB.SelectToGetOneValue("select deptid from patientAdmission where Admissionid=" + int.Parse(txt_Admissionid.Text) + "")) == deptid)
+                int value = int.Parse(DB.SelectToGetOneValue("select deptid from patientAdmission where Admissionid=@Admissionid",
+                   new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text))));
+                if (value == deptid)
                 {
-                    int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=" + int.Parse(txt_Admissionid.Text)));
-                    dataGridView1.DataSource = DB.DataTable("select * from celendarRP where Requiredpicturesid=" + Requiredpicturesid);
+                    int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=@Admissionid",new SqlParameter("@", int.Parse(txt_Admissionid.Text))));
+                    dataGridView1.DataSource = DB.DataTable("select * from celendarRP where Requiredpicturesid=@Requiredpicturesid",new SqlParameter("@Requiredpicturesid", Requiredpicturesid));
                 }
                 else
                 {

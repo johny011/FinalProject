@@ -117,11 +117,6 @@ namespace Final_project
             ChildForm(view_Login_Record);
         }
 
-        private void search_Click(object sender, EventArgs e)
-        {
-            ActiveBtn(sender);
-            ChildForm(new Search_Patient());
-        }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
@@ -143,12 +138,7 @@ namespace Final_project
             ChildForm(new Result_picture(dept));
         }
 
-        private void search_patientAdmission_Click(object sender, EventArgs e)
-        {
-            int deptid = int.Parse(DB.SelectToGetOneValue("select deptid from dept where deptname='" + dept + "'"));
-            ActiveBtn(sender);
-            ChildForm(new Search_Admission(deptid));
-        }
+        
 
         private void btn_request_analyzes_Click(object sender, EventArgs e)
         {

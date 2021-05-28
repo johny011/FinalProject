@@ -25,8 +25,13 @@ namespace Final_project
         private void btn_add_Click(object sender, EventArgs e)
         {
 
-             DB.Insert_Update_Delete("insert into TheStaff (Sname,Fathername,mothername,TheIdNumber,typeid,deptid)values('"+txt_name.Text+"','" +
-                 txt_father_name.Text+"','"+txt_mother_name.Text+"','"+txt_NO_number.Text+"',"+int.Parse(combox_typeid.SelectedValue.ToString())+","+int.Parse(combox_deptid.SelectedValue.ToString())+")");
+             DB.Insert_Update_Delete("insert into TheStaff (Sname,Fathername,mothername,TheIdNumber,typeid,deptid)values(@Sname,@Fathername,@mothername,@TheIdNumber,@typeid,@deptid)" +
+                 new SqlParameter("@Sname", txt_name.Text),
+                new SqlParameter("@Fathername", txt_father_name.Text),
+                new SqlParameter("@mothername", txt_mother_name.Text),
+                new SqlParameter("@TheIdNumber", txt_NO_number.Text),
+                new SqlParameter("@typeid", int.Parse(combox_typeid.SelectedValue.ToString())),
+                new SqlParameter("@deptid", int.Parse(combox_deptid.SelectedValue.ToString())));
             
             
         }

@@ -34,7 +34,6 @@
             this.panel_hospital_name = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
             this.panel_button = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.add_info_patient = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.update_info_patient = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -85,7 +84,6 @@
             this.panel_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.panel_button.Controls.Add(this.bunifuFlatButton2);
             this.panel_button.Controls.Add(this.add_info_patient);
             this.panel_button.Controls.Add(this.bunifuFlatButton3);
             this.panel_button.Controls.Add(this.update_info_patient);
@@ -94,45 +92,6 @@
             this.panel_button.Name = "panel_button";
             this.panel_button.Size = new System.Drawing.Size(177, 571);
             this.panel_button.TabIndex = 3;
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.bunifuFlatButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "بحث";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = null;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 40D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(-1, 203);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(178, 40);
-            this.bunifuFlatButton2.TabIndex = 44;
-            this.bunifuFlatButton2.Text = "بحث";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // add_info_patient
             // 
@@ -395,7 +354,6 @@
         private Bunifu.Framework.UI.BunifuImageButton maxBtn;
         private Bunifu.Framework.UI.BunifuImageButton exitBtn;
         private Bunifu.Framework.UI.BunifuImageButton minBtn;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton add_info_patient;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton update_info_patient;

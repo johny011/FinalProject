@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace Final_project
 {
@@ -24,9 +25,14 @@ namespace Final_project
         {
                 DataGridViewRow gr = dataGridView1.CurrentRow;
 
-                DB.Insert_Update_Delete("update TheStaff set Sname='" + gr.Cells[1].Value.ToString() + "', Fathername ='" + gr.Cells[2].Value.ToString() + "', mothername ='" + gr.Cells[3].Value.ToString() + "', TheIdNumber ='" + gr.Cells[4].Value.ToString() +
-                               "', typeid =" + int.Parse(gr.Cells[5].Value.ToString()) + ",  deptid=" + int.Parse(gr.Cells[6].Value.ToString()) + "where id=" +
-                               int.Parse(gr.Cells[0].Value.ToString()) + ";");
+                DB.Insert_Update_Delete("update TheStaff set Sname=@Sname, Fathername =@Fathername , mothername =@mothername , TheIdNumber =@TheIdNumber, typeid =@typeid ,  deptid=@deptid where id=@id",
+                               new SqlParameter("@Sname", gr.Cells[1].Value.ToString()),
+                               new SqlParameter("@Fathername", gr.Cells[2].Value.ToString()),
+                               new SqlParameter("@mothername", gr.Cells[3].Value.ToString()),
+                               new SqlParameter("@TheIdNumber", gr.Cells[4].Value.ToString()),
+                               new SqlParameter("@typeid", int.Parse(gr.Cells[5].Value.ToString())),
+                               new SqlParameter("@deptid", int.Parse(gr.Cells[6].Value.ToString())),
+                               new SqlParameter("@id", int.Parse(gr.Cells[0].Value.ToString())));
             MessageBox.Show("تم التعديل");
             Update_staff_Load(sender, e);
 
@@ -35,7 +41,8 @@ namespace Final_project
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-              DB.Insert_Update_Delete("delete from TheStaff where id="+(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()))+";");
+              DB.Insert_Update_Delete("delete from TheStaff where id=@id",
+                  new SqlParameter("@id", int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())));
             MessageBox.Show("تم الحذف");
             Update_staff_Load(sender, e);
 

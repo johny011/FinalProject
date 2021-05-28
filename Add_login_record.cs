@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Final_project
 {
@@ -31,10 +32,16 @@ namespace Final_project
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            int panumber = int.Parse(DB.SelectToGetOneValue("select id from TheStaff where Sname='" + combox_doctor.Text + "'"));
-            DB.Insert_Update_Delete("" +
-                "insert into patientAdmission (DateOfEntry,Notes,panumber,roomid,deptid,SIdd,DownPayment)values(" +
-                "convert(date,'" + dateTimePicker1.Value.Day.ToString() + "-" + dateTimePicker1.Value.Month.ToString() + "-" + dateTimePicker1.Value.Year.ToString() + "',105),'" + txt_Notes.Text + "'," + int.Parse(txt_numberpatient.Text) + "," + int.Parse(combox_room.Text) + ","+deptid+","+panumber+","+int.Parse(txt_payment.Text)+")");
+            int SIdd = int.Parse(DB.SelectToGetOneValue("select id from TheStaff where Sname='" + combox_doctor.Text + "'"));
+            DB.Insert_Update_Delete("insert into patientAdmission (DateOfEntry,Notes,panumber,roomid,deptid,SIdd,DownPayment)values(@DateOfEntry,@Notes,@panumber,@roomid,@deptid,@SIdd,@DownPayment)",
+                new SqlParameter("@DateOfEntry", Convert.ToDateTime(dateTimePicker1.Value.Month.ToString() + "/" + dateTimePicker1.Value.Day.ToString() + "/" + dateTimePicker1.Value.Year.ToString()).ToShortDateString()),
+                new SqlParameter("@Notes", txt_Notes.Text),
+                new SqlParameter("@panumber", int.Parse(txt_numberpatient.Text)),
+                new SqlParameter("@roomid", int.Parse(combox_room.Text)),
+                new SqlParameter("@deptid", deptid),
+                new SqlParameter("@SIdd", SIdd),
+                new SqlParameter("@DownPayment", int.Parse(txt_payment.Text))
+                );
         }
 
         private void Add_login_record_Load(object sender, EventArgs e)

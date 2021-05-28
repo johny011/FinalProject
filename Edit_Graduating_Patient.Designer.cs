@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_Graduating_Patient));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_graduating = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_payment = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,33 +78,6 @@
             this.btn_add.TabIndex = 26;
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // btn_graduating
-            // 
-            this.btn_graduating.ActiveBorderThickness = 1;
-            this.btn_graduating.ActiveCornerRadius = 20;
-            this.btn_graduating.ActiveFillColor = System.Drawing.Color.Silver;
-            this.btn_graduating.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_graduating.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_graduating.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_graduating.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_graduating.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_graduating.BackgroundImage")));
-            this.btn_graduating.ButtonText = "تخريج";
-            this.btn_graduating.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_graduating.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_graduating.ForeColor = System.Drawing.Color.Black;
-            this.btn_graduating.IdleBorderThickness = 1;
-            this.btn_graduating.IdleCornerRadius = 20;
-            this.btn_graduating.IdleFillColor = System.Drawing.Color.White;
-            this.btn_graduating.IdleForecolor = System.Drawing.Color.Black;
-            this.btn_graduating.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_graduating.Location = new System.Drawing.Point(13, 361);
-            this.btn_graduating.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_graduating.Name = "btn_graduating";
-            this.btn_graduating.Size = new System.Drawing.Size(220, 66);
-            this.btn_graduating.TabIndex = 27;
-            this.btn_graduating.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_graduating.Click += new System.EventHandler(this.btn_graduating_Click);
             // 
             // txt_payment
             // 
@@ -268,6 +240,7 @@
             this.editRadio.Name = "editRadio";
             this.editRadio.Size = new System.Drawing.Size(51, 17);
             this.editRadio.TabIndex = 57;
+            this.editRadio.TabStop = true;
             this.editRadio.Text = "تعديل";
             this.editRadio.UseVisualStyleBackColor = true;
             // 
@@ -300,7 +273,6 @@
             this.Controls.Add(this.combox_room);
             this.Controls.Add(this.txt_place);
             this.Controls.Add(this.txt_numberpatient);
-            this.Controls.Add(this.btn_graduating);
             this.Controls.Add(this.btn_add);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Edit_Graduating_Patient";
@@ -313,7 +285,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_graduating;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
         private System.Windows.Forms.DateTimePicker dateOut;
         private System.Windows.Forms.Label label4;

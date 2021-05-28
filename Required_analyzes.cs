@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Final_project
 {
@@ -19,8 +20,9 @@ namespace Final_project
 
         private void btn_Request_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DB.DataTable("select paname,R.Admissionid,Analysisname from patient Pt,RequiredAnalysis R,Analyzes A,patientAdmission PA  where R.Admissionid=" + int.Parse(txt_Admissionid.Text) + " and R.Analysisnumber=A.Analysisnumber and PA.panumber=Pt.panumber " +
-                "and R.Admissionid=PA.Admissionid"); 
+            dataGridView1.DataSource = DB.DataTable("select paname,R.Admissionid,Analysisname from patient Pt,RequiredAnalysis R,Analyzes A,patientAdmission PA  where R.Admissionid=@Admissionid and R.Analysisnumber=A.Analysisnumber and PA.panumber=Pt.panumber " +
+                "and R.Admissionid=PA.Admissionid",
+                new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text))); 
         }
     }
 }

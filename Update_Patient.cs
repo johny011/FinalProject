@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Final_project
 {
@@ -26,8 +27,14 @@ namespace Final_project
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            DB.Insert_Update_Delete("update patient set paname='" + txt_name.Text + "', fathername='" + txt_father_name.Text + "'," +
-                "mothername='" + txt_mother_name.Text + "',birthday=convert(date,'" + dateTimePicker1.Value.Day.ToString() + "-" + dateTimePicker1.Value.Month.ToString() + "-" + dateTimePicker1.Value.Year.ToString() + "',105),TheIdNumber='" + txt_NO_number.Text + "',placeOfResidence='" + txt_place.Text + "' where panumber="+int.Parse(txt_panumber.Text));
+            DB.Insert_Update_Delete("update patient set paname=@paname ,fathername=@fathername ,mothername=@mothername ,birthday=@birthday ,TheIdNumber=@TheIdNumber ,placeOfResidence=@placeOfResidence where panumber=@panumber" ,
+                new SqlParameter("@paname", txt_name.Text),
+                new SqlParameter("@fathername", txt_father_name.Text),
+                new SqlParameter("@mothername", txt_mother_name.Text),
+                new SqlParameter("@birthday",Convert.ToDateTime(dateTimePicker1.Value).ToShortDateString()),
+                new SqlParameter("@TheIdNumber",txt_NO_number.Text),
+                new SqlParameter("@placeOfResidence",txt_place.Text),
+                new SqlParameter("@panumber",int.Parse(txt_panumber.Text))); ;
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Final_project
 {
@@ -28,15 +29,22 @@ namespace Final_project
              if (editRadio.Checked)
              {
                 int SIdd =int.Parse( DB.SelectToGetOneValue("select id from TheStaff where Sname='" + combox_doctor.SelectedItem.ToString() + "'"));
-                 DB.Insert_Update_Delete("update patientAdmission set DateOfEntry=convert(date,'" + dateIn.Value.Day.ToString() + "-" + dateIn.Value.Month.ToString() + "-" + dateIn.Value.Year.ToString() + "',105),panumber=" +
-                     int.Parse(txt_numberpatient.Text) + " ,roomid=" + int.Parse(combox_room.SelectedItem.ToString()) + ",SIdd=" + SIdd + " ,DownPayment=" + int.Parse(txt_payment.Text) + " where panumber="+int.Parse(txt_numberpatient.Text)+"");
+                 DB.Insert_Update_Delete("update patientAdmission set DateOfEntry=@DateOfEntry,panumber=@panumber ,roomid=@roomid ,SIdd=@SIdd ,DownPayment=@DownPayment where panumber=@panumber",
+                     new SqlParameter("@DateOfEntry", Convert.ToDateTime(dateIn.Value).ToShortDateString()),
+                     new SqlParameter("@panumber", int.Parse(txt_numberpatient.Text)),
+                     new SqlParameter("@roomid", int.Parse(combox_room.SelectedItem.ToString())),
+                     new SqlParameter("@SIdd", SIdd),
+                     new SqlParameter("@DownPayment",int.Parse(txt_payment.Text)),
+                     new SqlParameter("@panumber", int.Parse(txt_numberpatient.Text))
+                     );
              }
              else if(GraduatingRadio.Checked)
              {
 
                  if (validate(int.Parse(txt_numberpatient.Text)))
-                     DB.Insert_Update_Delete("update patientAdmission set checkoutDate=convert(date,'" + dateOut.Value.Day.ToString() + "-"
-                         + dateOut.Value.Month.ToString() + "-" + dateOut.Value.Year.ToString() + "',105) where Admissionid=" + int.Parse(txt_numberpatient.Text) + "");
+                     DB.Insert_Update_Delete("update patientAdmission set checkoutDate=@checkoutDate where Admissionid=@Admissionid",
+                         new SqlParameter("@checkoutDate", Convert.ToDateTime(dateIn.Value).ToShortDateString()),
+                         new SqlParameter("@", int.Parse(txt_numberpatient.Text)));
                  else
                  {
                      MessageBox.Show("error");
@@ -44,17 +52,6 @@ namespace Final_project
              }
         }
 
-        private void btn_graduating_Click(object sender, EventArgs e)
-        {
-            if(validate(int.Parse(txt_numberpatient.Text)))
-            DB.Insert_Update_Delete("update patientAdmission set checkoutDate=convert(date,'" + dateOut.Value.Day.ToString() + "-"
-                + dateOut.Value.Month.ToString() + "-" + dateOut.Value.Year.ToString() + "',105) where Admissionid="+int.Parse(txt_numberpatient.Text)+"");
-            else
-            {
-                MessageBox.Show("error");
-            }
-            
-        }
         private bool validate(int admissionid)
         {
             int value=int.Parse(DB.SelectToGetOneValue("select deptid from patientAdmission where Admissionid=" + admissionid + ""));

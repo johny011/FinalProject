@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Final_project
 {
@@ -22,7 +23,10 @@ namespace Final_project
         {
              
                  DataGridViewRow gr = dataGridView1.CurrentRow;
-                 DB.Insert_Update_Delete("update room set roomtype='" + gr.Cells[1].Value.ToString() + "',deptid=" + int.Parse(gr.Cells[2].Value.ToString()) + " where roomid="+int.Parse(gr.Cells[0].Value.ToString())+"");
+                 DB.Insert_Update_Delete("update room set roomtype=@roomtype ,deptid=@deptid  where roomid=@roomid ",
+                     new SqlParameter("@roomtype", gr.Cells[1].Value.ToString()),
+                     new SqlParameter("@deptid", int.Parse(gr.Cells[2].Value.ToString())),
+                     new SqlParameter("@roomid", int.Parse(gr.Cells[0].Value.ToString())));
             MessageBox.Show("تم التعديل");
             Update_room_Load(sender, e);
 
@@ -31,7 +35,9 @@ namespace Final_project
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            DB.Insert_Update_Delete("delete from room where id=" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "");
+            DataGridViewRow gr = dataGridView1.CurrentRow;
+            DB.Insert_Update_Delete("delete from room where roomid=@roomid" ,
+                new SqlParameter("@roomid", int.Parse(gr.Cells[0].Value.ToString())));
             MessageBox.Show("تم الحذف");
             Update_room_Load(sender, e);
         }

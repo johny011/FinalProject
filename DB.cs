@@ -14,12 +14,14 @@ namespace Final_project
     class DB
     {
         public static string con = "Data Source=DESKTOP-U91N0A8;Initial Catalog=hospitall;Integrated Security=True";
-        public static void Insert_Update_Delete(string query)
+        public static void Insert_Update_Delete(string query, params SqlParameter[] parameters)
         {
             SqlConnection connection = new SqlConnection(con);
-            SqlCommand command = new SqlCommand(query, connection);
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = query;
+            command.Parameters.AddRange(parameters);
             connection.Open();
-            command.ExecuteNonQuery();
+            int count = command.ExecuteNonQuery();
             connection.Close();
         }
         public static string SelectToGetOneValue(string query)
@@ -34,10 +36,33 @@ namespace Final_project
             connection.Close();
             return res;
         }
+        public static string SelectToGetOneValue(string query, params SqlParameter[] parameters)
+        {
+            string res = "";
+            SqlConnection connection = new SqlConnection(con);
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddRange(parameters);
+            connection.Open();
+            var result = command.ExecuteReader();
+            if (result.Read())
+                res = result[0].ToString();
+            connection.Close();
+            return res;
+        }
         public static DataTable DataTable(string query)
         {
             SqlConnection connection = new SqlConnection(DB.con);
             SqlCommand command = new SqlCommand(query, connection);
+            DataTable DT = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+            sqlDataAdapter.Fill(DT);
+            return DT;
+        }
+        public static DataTable DataTable(string query, params SqlParameter[] parameters)
+        {
+            SqlConnection connection = new SqlConnection(DB.con);
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddRange(parameters);
             DataTable DT = new DataTable();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
             sqlDataAdapter.Fill(DT);

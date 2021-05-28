@@ -38,10 +38,11 @@ namespace Final_project
         {
             WindowState = FormWindowState.Minimized;
         }
-        private string Select(string txt)
+        private string Select(string txt, params SqlParameter[] parameters)
         {
             SqlConnection connection = new SqlConnection(DB.con);
             SqlCommand command = new SqlCommand(txt, connection);
+            command.Parameters.AddRange(parameters);
             connection.Open();
             var query = command.ExecuteReader();
             string resquery = "";
@@ -72,11 +73,14 @@ namespace Final_project
                bool pass = validate(txt_password.Text);
                if (user==true && pass==true)
                {
-                    int login= DB.DataTable("select * from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';").Rows.Count;
+                    int login= DB.DataTable("select * from users where username=@username and passeword=@passeword;",
+                        new SqlParameter("@username", txt_user_name.Text),
+                        new SqlParameter("@passeword", txt_password.Text)).Rows.Count;
                    if (login == 1)
                    {
 
-                       string resquery = Select("select form from users where username='" + txt_user_name.Text + "' and passeword='" + txt_password.Text + "';");
+                       string resquery = Select("select form from users where username=@username and passeword=@passeword;", new SqlParameter("@username", txt_user_name.Text),
+                        new SqlParameter("@passeword", txt_password.Text));
                        if (resquery == "IT")
                        {
                            Main_admin admin = new Main_admin();

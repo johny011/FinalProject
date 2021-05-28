@@ -27,7 +27,7 @@ namespace Final_project
         private void btn_sendpicture_Click(object sender, EventArgs e)
         {
             
-            int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=" + int.Parse(txt_Admissionid.Text) + ""));
+            int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=@Admissionid", new SqlParameter("@", int.Parse(txt_Admissionid.Text))));
             
             SqlConnection con = new SqlConnection(DB.con);
             con.Open();

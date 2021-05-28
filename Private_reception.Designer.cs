@@ -34,13 +34,12 @@
             this.panel_hospital_name = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
             this.panel_button = new System.Windows.Forms.Panel();
+            this.btn_view_rooms = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_result_analyzes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_request_analyzes = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.search_patientAdmission = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.search_patient = new Bunifu.Framework.UI.BunifuFlatButton();
             this.view_info_patient = new Bunifu.Framework.UI.BunifuFlatButton();
             this.update_entrance_patient = new Bunifu.Framework.UI.BunifuFlatButton();
             this.view_entrance_patient = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -49,7 +48,6 @@
             this.exitBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.minBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel_title = new System.Windows.Forms.Panel();
-            this.btn_view_rooms = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_hospital_name.SuspendLayout();
             this.panel_button.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
@@ -94,11 +92,9 @@
             this.panel_button.Controls.Add(this.btn_view_rooms);
             this.panel_button.Controls.Add(this.btn_result_analyzes);
             this.panel_button.Controls.Add(this.btn_request_analyzes);
-            this.panel_button.Controls.Add(this.search_patientAdmission);
             this.panel_button.Controls.Add(this.bunifuFlatButton3);
             this.panel_button.Controls.Add(this.bunifuFlatButton2);
             this.panel_button.Controls.Add(this.bunifuFlatButton1);
-            this.panel_button.Controls.Add(this.search_patient);
             this.panel_button.Controls.Add(this.view_info_patient);
             this.panel_button.Controls.Add(this.update_entrance_patient);
             this.panel_button.Controls.Add(this.view_entrance_patient);
@@ -106,6 +102,44 @@
             this.panel_button.Name = "panel_button";
             this.panel_button.Size = new System.Drawing.Size(181, 575);
             this.panel_button.TabIndex = 5;
+            // 
+            // btn_view_rooms
+            // 
+            this.btn_view_rooms.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_view_rooms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_view_rooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_view_rooms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_view_rooms.BorderRadius = 0;
+            this.btn_view_rooms.ButtonText = "عرض الغرف";
+            this.btn_view_rooms.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_view_rooms.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_view_rooms.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_view_rooms.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_view_rooms.Iconimage = null;
+            this.btn_view_rooms.Iconimage_right = null;
+            this.btn_view_rooms.Iconimage_right_Selected = null;
+            this.btn_view_rooms.Iconimage_Selected = null;
+            this.btn_view_rooms.IconMarginLeft = 0;
+            this.btn_view_rooms.IconMarginRight = 0;
+            this.btn_view_rooms.IconRightVisible = true;
+            this.btn_view_rooms.IconRightZoom = 0D;
+            this.btn_view_rooms.IconVisible = true;
+            this.btn_view_rooms.IconZoom = 40D;
+            this.btn_view_rooms.IsTab = false;
+            this.btn_view_rooms.Location = new System.Drawing.Point(0, 399);
+            this.btn_view_rooms.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_view_rooms.Name = "btn_view_rooms";
+            this.btn_view_rooms.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_view_rooms.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
+            this.btn_view_rooms.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_view_rooms.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btn_view_rooms.selected = false;
+            this.btn_view_rooms.Size = new System.Drawing.Size(178, 40);
+            this.btn_view_rooms.TabIndex = 40;
+            this.btn_view_rooms.Text = "عرض الغرف";
+            this.btn_view_rooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_view_rooms.Textcolor = System.Drawing.Color.Gainsboro;
+            this.btn_view_rooms.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             // 
             // btn_result_analyzes
             // 
@@ -130,7 +164,7 @@
             this.btn_result_analyzes.IconVisible = true;
             this.btn_result_analyzes.IconZoom = 40D;
             this.btn_result_analyzes.IsTab = false;
-            this.btn_result_analyzes.Location = new System.Drawing.Point(0, 434);
+            this.btn_result_analyzes.Location = new System.Drawing.Point(0, 358);
             this.btn_result_analyzes.Margin = new System.Windows.Forms.Padding(5);
             this.btn_result_analyzes.Name = "btn_result_analyzes";
             this.btn_result_analyzes.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -141,7 +175,7 @@
             this.btn_result_analyzes.Size = new System.Drawing.Size(178, 40);
             this.btn_result_analyzes.TabIndex = 39;
             this.btn_result_analyzes.Text = "نتائج التحاليل";
-            this.btn_result_analyzes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_result_analyzes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_result_analyzes.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_result_analyzes.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_result_analyzes.Click += new System.EventHandler(this.btn_result_analyzes_Click);
@@ -169,7 +203,7 @@
             this.btn_request_analyzes.IconVisible = true;
             this.btn_request_analyzes.IconZoom = 40D;
             this.btn_request_analyzes.IsTab = false;
-            this.btn_request_analyzes.Location = new System.Drawing.Point(-2, 384);
+            this.btn_request_analyzes.Location = new System.Drawing.Point(-2, 308);
             this.btn_request_analyzes.Margin = new System.Windows.Forms.Padding(5);
             this.btn_request_analyzes.Name = "btn_request_analyzes";
             this.btn_request_analyzes.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -180,49 +214,10 @@
             this.btn_request_analyzes.Size = new System.Drawing.Size(178, 40);
             this.btn_request_analyzes.TabIndex = 38;
             this.btn_request_analyzes.Text = "طلب تحليل";
-            this.btn_request_analyzes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_request_analyzes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_request_analyzes.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_request_analyzes.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_request_analyzes.Click += new System.EventHandler(this.btn_request_analyzes_Click);
-            // 
-            // search_patientAdmission
-            // 
-            this.search_patientAdmission.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.search_patientAdmission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search_patientAdmission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.search_patientAdmission.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.search_patientAdmission.BorderRadius = 0;
-            this.search_patientAdmission.ButtonText = "بحث عن دخولية";
-            this.search_patientAdmission.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.search_patientAdmission.DisabledColor = System.Drawing.Color.Gray;
-            this.search_patientAdmission.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.search_patientAdmission.Iconcolor = System.Drawing.Color.Transparent;
-            this.search_patientAdmission.Iconimage = null;
-            this.search_patientAdmission.Iconimage_right = null;
-            this.search_patientAdmission.Iconimage_right_Selected = null;
-            this.search_patientAdmission.Iconimage_Selected = null;
-            this.search_patientAdmission.IconMarginLeft = 0;
-            this.search_patientAdmission.IconMarginRight = 0;
-            this.search_patientAdmission.IconRightVisible = true;
-            this.search_patientAdmission.IconRightZoom = 0D;
-            this.search_patientAdmission.IconVisible = true;
-            this.search_patientAdmission.IconZoom = 40D;
-            this.search_patientAdmission.IsTab = false;
-            this.search_patientAdmission.Location = new System.Drawing.Point(-2, 245);
-            this.search_patientAdmission.Margin = new System.Windows.Forms.Padding(5);
-            this.search_patientAdmission.Name = "search_patientAdmission";
-            this.search_patientAdmission.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.search_patientAdmission.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.search_patientAdmission.OnHoverTextColor = System.Drawing.Color.White;
-            this.search_patientAdmission.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.search_patientAdmission.selected = false;
-            this.search_patientAdmission.Size = new System.Drawing.Size(178, 40);
-            this.search_patientAdmission.TabIndex = 37;
-            this.search_patientAdmission.Text = "بحث عن دخولية";
-            this.search_patientAdmission.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.search_patientAdmission.Textcolor = System.Drawing.Color.Gainsboro;
-            this.search_patientAdmission.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.search_patientAdmission.Click += new System.EventHandler(this.search_patientAdmission_Click);
             // 
             // bunifuFlatButton3
             // 
@@ -247,7 +242,7 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 40D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 334);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 258);
             this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -258,7 +253,7 @@
             this.bunifuFlatButton3.Size = new System.Drawing.Size(178, 40);
             this.bunifuFlatButton3.TabIndex = 36;
             this.bunifuFlatButton3.Text = "نتائج الصور";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Gainsboro;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
@@ -286,7 +281,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 40D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(-2, 284);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(-2, 208);
             this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -297,7 +292,7 @@
             this.bunifuFlatButton2.Size = new System.Drawing.Size(178, 40);
             this.bunifuFlatButton2.TabIndex = 35;
             this.bunifuFlatButton2.Text = "طلب صورة";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Gainsboro;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
@@ -336,49 +331,10 @@
             this.bunifuFlatButton1.Size = new System.Drawing.Size(178, 40);
             this.bunifuFlatButton1.TabIndex = 34;
             this.bunifuFlatButton1.Text = "اضافة دخولية مريض";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Gainsboro;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
-            // search_patient
-            // 
-            this.search_patient.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.search_patient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search_patient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.search_patient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.search_patient.BorderRadius = 0;
-            this.search_patient.ButtonText = "بحث عن مريض";
-            this.search_patient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.search_patient.DisabledColor = System.Drawing.Color.Gray;
-            this.search_patient.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.search_patient.Iconcolor = System.Drawing.Color.Transparent;
-            this.search_patient.Iconimage = null;
-            this.search_patient.Iconimage_right = null;
-            this.search_patient.Iconimage_right_Selected = null;
-            this.search_patient.Iconimage_Selected = null;
-            this.search_patient.IconMarginLeft = 0;
-            this.search_patient.IconMarginRight = 0;
-            this.search_patient.IconRightVisible = true;
-            this.search_patient.IconRightZoom = 0D;
-            this.search_patient.IconVisible = true;
-            this.search_patient.IconZoom = 40D;
-            this.search_patient.IsTab = false;
-            this.search_patient.Location = new System.Drawing.Point(-2, 202);
-            this.search_patient.Margin = new System.Windows.Forms.Padding(5);
-            this.search_patient.Name = "search_patient";
-            this.search_patient.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.search_patient.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.search_patient.OnHoverTextColor = System.Drawing.Color.White;
-            this.search_patient.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.search_patient.selected = false;
-            this.search_patient.Size = new System.Drawing.Size(178, 40);
-            this.search_patient.TabIndex = 33;
-            this.search_patient.Text = "بحث عن مريض";
-            this.search_patient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.search_patient.Textcolor = System.Drawing.Color.Gainsboro;
-            this.search_patient.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.search_patient.Click += new System.EventHandler(this.search_Click);
             // 
             // view_info_patient
             // 
@@ -414,7 +370,7 @@
             this.view_info_patient.Size = new System.Drawing.Size(178, 40);
             this.view_info_patient.TabIndex = 32;
             this.view_info_patient.Text = "عرض معلومات مريض";
-            this.view_info_patient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.view_info_patient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.view_info_patient.Textcolor = System.Drawing.Color.Gainsboro;
             this.view_info_patient.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.view_info_patient.Click += new System.EventHandler(this.view_info_patient_Click);
@@ -453,7 +409,7 @@
             this.update_entrance_patient.Size = new System.Drawing.Size(178, 40);
             this.update_entrance_patient.TabIndex = 30;
             this.update_entrance_patient.Text = "تعديل أو تخريج مريض";
-            this.update_entrance_patient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.update_entrance_patient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.update_entrance_patient.Textcolor = System.Drawing.Color.Gainsboro;
             this.update_entrance_patient.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.update_entrance_patient.Click += new System.EventHandler(this.update_entrance_patient_Click_1);
@@ -492,7 +448,7 @@
             this.view_entrance_patient.Size = new System.Drawing.Size(178, 40);
             this.view_entrance_patient.TabIndex = 31;
             this.view_entrance_patient.Text = "عرض سجلات الدخولية";
-            this.view_entrance_patient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.view_entrance_patient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.view_entrance_patient.Textcolor = System.Drawing.Color.Gainsboro;
             this.view_entrance_patient.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.view_entrance_patient.Click += new System.EventHandler(this.view_entrance_patient_Click);
@@ -569,45 +525,6 @@
             this.panel_title.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseMove);
             this.panel_title.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseUp);
             // 
-            // btn_view_rooms
-            // 
-            this.btn_view_rooms.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_view_rooms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_view_rooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_view_rooms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_view_rooms.BorderRadius = 0;
-            this.btn_view_rooms.ButtonText = "عرض الغرف";
-            this.btn_view_rooms.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_view_rooms.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_view_rooms.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_view_rooms.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_view_rooms.Iconimage = null;
-            this.btn_view_rooms.Iconimage_right = null;
-            this.btn_view_rooms.Iconimage_right_Selected = null;
-            this.btn_view_rooms.Iconimage_Selected = null;
-            this.btn_view_rooms.IconMarginLeft = 0;
-            this.btn_view_rooms.IconMarginRight = 0;
-            this.btn_view_rooms.IconRightVisible = true;
-            this.btn_view_rooms.IconRightZoom = 0D;
-            this.btn_view_rooms.IconVisible = true;
-            this.btn_view_rooms.IconZoom = 40D;
-            this.btn_view_rooms.IsTab = false;
-            this.btn_view_rooms.Location = new System.Drawing.Point(0, 475);
-            this.btn_view_rooms.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_view_rooms.Name = "btn_view_rooms";
-            this.btn_view_rooms.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_view_rooms.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.btn_view_rooms.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_view_rooms.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_view_rooms.selected = false;
-            this.btn_view_rooms.Size = new System.Drawing.Size(178, 40);
-            this.btn_view_rooms.TabIndex = 40;
-            this.btn_view_rooms.Text = "عرض الغرف";
-            this.btn_view_rooms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_view_rooms.Textcolor = System.Drawing.Color.Gainsboro;
-            this.btn_view_rooms.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            
-            // 
             // Private_reception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -641,14 +558,12 @@
         private Bunifu.Framework.UI.BunifuImageButton maxBtn;
         private Bunifu.Framework.UI.BunifuImageButton exitBtn;
         private Bunifu.Framework.UI.BunifuImageButton minBtn;
-        private Bunifu.Framework.UI.BunifuFlatButton search_patient;
         private Bunifu.Framework.UI.BunifuFlatButton view_info_patient;
         private Bunifu.Framework.UI.BunifuFlatButton update_entrance_patient;
         private Bunifu.Framework.UI.BunifuFlatButton view_entrance_patient;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton search_patientAdmission;
         private Bunifu.Framework.UI.BunifuFlatButton btn_result_analyzes;
         private Bunifu.Framework.UI.BunifuFlatButton btn_request_analyzes;
         private Bunifu.Framework.UI.BunifuFlatButton btn_view_rooms;

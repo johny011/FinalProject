@@ -36,6 +36,7 @@
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.situationidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dayAndDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.workPeriodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hospitallDataSet11 = new Final_project.hospitallDataSet11();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -87,13 +88,15 @@
             this.periodnumberDataGridViewTextBoxColumn,
             this.idDataGridViewTextBoxColumn,
             this.situationidDataGridViewTextBoxColumn,
-            this.dayAndDateDataGridViewTextBoxColumn});
+            this.dayAndDateDataGridViewTextBoxColumn,
+            this.Edit});
             this.dataGridView1.DataSource = this.workPeriodsBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // periodnumberDataGridViewTextBoxColumn
             // 
@@ -118,6 +121,16 @@
             this.dayAndDateDataGridViewTextBoxColumn.DataPropertyName = "DayAndDate";
             this.dayAndDateDataGridViewTextBoxColumn.HeaderText = "DayAndDate";
             this.dayAndDateDataGridViewTextBoxColumn.Name = "dayAndDateDataGridViewTextBoxColumn";
+            // 
+            // Edit
+            // 
+            this.Edit.DataPropertyName = "periodnumber";
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
             // 
             // workPeriodsBindingSource
             // 
@@ -208,5 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn situationidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dayAndDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
     }
 }
