@@ -25,7 +25,7 @@ namespace Final_project
         
         private void btn_add_Click(object sender, EventArgs e)
         {
-             int count = DB.DataTable("select * from users where username=@username'",
+             int count = DB.DataTable("select * from users where username=@username",
                  new SqlParameter("@username", txt_user_name.Text)).Rows.Count;
              int dept = DB.DataTable("select * from users where form =@form",
                  new SqlParameter("@form", combox_deptid.Text.ToString())).Rows.Count;

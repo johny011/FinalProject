@@ -22,8 +22,15 @@ namespace Final_project
         private void btn_add_Click(object sender, EventArgs e)
         {
             
-                DataGridViewRow gr = dataGridView1.CurrentRow;       
+                DataGridViewRow gr = dataGridView1.CurrentRow;
+            int id=-1;
+             id = int.Parse(DB.SelectToGetOneValue("select periodnumber from TimePeriods where ThePeriod=@theperiod", new SqlParameter("@theperiod", gr.Cells[1].Value.ToString())));
+            if(id==-1)
                         DB.Insert_Update_Delete("insert into TimePeriods (ThePeriod) values (@ThePeriod);", new SqlParameter("@ThePeriod", gr.Cells[1].Value.ToString()));
+            else
+            {
+                MessageBox.Show("هذه الفترة موجودة");
+            }
             
         }
     }

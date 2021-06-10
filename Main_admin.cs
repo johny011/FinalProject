@@ -80,7 +80,7 @@ namespace Final_project
         }
         public void DisplayBtn(object btnsender)
         {
-            foreach (Bunifu.Framework.UI.BunifuFlatButton previousBtn in panel_button.Controls)
+            foreach (Bunifu.Framework.UI.BunifuFlatButton previousBtn in panel.Controls)
             {
                 if (previousBtn.GetType() == typeof(Bunifu.Framework.UI.BunifuFlatButton))
                 {
@@ -176,6 +176,18 @@ namespace Final_project
         private void panel_title_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void viewPanle_btn_Click(object sender, EventArgs e)
+        {
+            if (panel.Visible == true) panel.Visible = false;
+            else { panel.Visible = true; }
+        }
+
+        private void addPanel_btn_Click(object sender, EventArgs e)
+        {
+            if (panel2.Visible == true) panel2.Visible = false;
+            else panel2.Visible = true;
         }
     }
 }

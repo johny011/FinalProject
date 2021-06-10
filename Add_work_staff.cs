@@ -24,14 +24,36 @@ namespace Final_project
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-
-             DB.Insert_Update_Delete("insert into TheStaff (Sname,Fathername,mothername,TheIdNumber,typeid,deptid)values(@Sname,@Fathername,@mothername,@TheIdNumber,@typeid,@deptid)" +
-                 new SqlParameter("@Sname", txt_name.Text),
-                new SqlParameter("@Fathername", txt_father_name.Text),
-                new SqlParameter("@mothername", txt_mother_name.Text),
-                new SqlParameter("@TheIdNumber", txt_NO_number.Text),
-                new SqlParameter("@typeid", int.Parse(combox_typeid.SelectedValue.ToString())),
-                new SqlParameter("@deptid", int.Parse(combox_deptid.SelectedValue.ToString())));
+            if (txt_father_name.Text!="" && txt_mother_name.Text!="" && txt_name.Text!="" && txt_NO_number.Text!="")
+            {
+                int Count;
+               Count= DB.DataTable("select * from  TheStaff where Sname=@Sname and mothername=@mothername and fathername=@fathername",
+                    new SqlParameter("@Sname", txt_name.Text), new SqlParameter("@fathername", txt_father_name.Text), new SqlParameter("@mothername", txt_mother_name.Text)).Rows.Count;
+                 
+                if (Count==0)
+                {
+                    DB.Insert_Update_Delete("insert into TheStaff (Sname,Fathername,mothername,TheIdNumber,typeid,deptid)values(@Sname,@Fathername,@mothername,@TheIdNumber,@typeid,@deptid)" ,
+                        new SqlParameter("@Sname", txt_name.Text),
+                       new SqlParameter("@Fathername", txt_father_name.Text),
+                       new SqlParameter("@mothername", txt_mother_name.Text),
+                       new SqlParameter("@TheIdNumber", txt_NO_number.Text),
+                       new SqlParameter("@typeid", int.Parse(combox_typeid.SelectedValue.ToString())),
+                       new SqlParameter("@deptid", int.Parse(combox_deptid.SelectedValue.ToString())));
+                    MessageBox.Show("تمت الإضافة بنجاح");
+                    txt_mother_name.Text = "";
+                    txt_father_name.Text = "";
+                    txt_name.Text = "";
+                    txt_NO_number.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("هذا الموظف موجود");
+                }
+            }
+            else
+            {
+                MessageBox.Show("يجب ادخال جميع المعلومات المطلوبة");
+            }
             
             
         }
