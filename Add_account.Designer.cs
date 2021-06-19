@@ -28,27 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_account));
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.combox_deptid = new System.Windows.Forms.ComboBox();
-            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitallDataSet20 = new Final_project.hospitallDataSet20();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_user_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.deptTableAdapter = new Final_project.hospitallDataSet20TableAdapters.DeptTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet20)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 0;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // panel1
             // 
@@ -82,8 +70,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.combox_deptid.BackColor = System.Drawing.Color.White;
-            this.combox_deptid.DataSource = this.deptBindingSource;
-            this.combox_deptid.DisplayMember = "deptname";
             this.combox_deptid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_deptid.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combox_deptid.FormattingEnabled = true;
@@ -92,16 +78,6 @@
             this.combox_deptid.Size = new System.Drawing.Size(220, 27);
             this.combox_deptid.TabIndex = 23;
             this.combox_deptid.ValueMember = "deptname";
-            // 
-            // deptBindingSource
-            // 
-            this.deptBindingSource.DataMember = "Dept";
-            this.deptBindingSource.DataSource = this.hospitallDataSet20;
-            // 
-            // hospitallDataSet20
-            // 
-            this.hospitallDataSet20.DataSetName = "hospitallDataSet20";
-            this.hospitallDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_add
             // 
@@ -177,10 +153,6 @@
             this.txt_user_name.TabIndex = 17;
             this.txt_user_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // deptTableAdapter
-            // 
-            this.deptTableAdapter.ClearBeforeFill = true;
-            // 
             // Add_account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,23 +165,16 @@
             this.Load += new System.EventHandler(this.Add_account_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet20)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_password;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_user_name;
         private System.Windows.Forms.ComboBox combox_deptid;
         private System.Windows.Forms.Label label1;
-        private hospitallDataSet20 hospitallDataSet20;
-        private System.Windows.Forms.BindingSource deptBindingSource;
-        private hospitallDataSet20TableAdapters.DeptTableAdapter deptTableAdapter;
     }
 }

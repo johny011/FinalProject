@@ -88,25 +88,32 @@ namespace Final_project
                            admin.ShowDialog();
                            this.Close();
                        }
-                       else if (resquery == "MainResiption")
+                       else if (resquery == "ريسبشن عام")
                        {
                            General_reception general_Reception = new General_reception();
                            this.Hide();
                            general_Reception.ShowDialog();
                            this.Close();
                        }
-                       else if (resquery == "xray")
+                       else if (resquery == "أشعة")
                        {
                            X_Ray x_Ray = new X_Ray();
                            this.Hide();
                            x_Ray.ShowDialog();
                            this.Close();
                        }
-                       else if (resquery == "analyze")
+                       else if (resquery == "مخبر")
                        {
                            Laboratory x_Ray = new Laboratory();
                            this.Hide();
                            x_Ray.ShowDialog();
+                           this.Close();
+                       }
+                       else if (resquery == "محاسبة")
+                       {
+                           Accounting accounting = new Accounting();
+                           this.Hide();
+                           accounting.ShowDialog();
                            this.Close();
                        }
                        else 
@@ -118,10 +125,16 @@ namespace Final_project
                            this.Close();
                        }
                    }
+                   else if(login > 1)
+                   {
+                         MessageBox.Show("يرجى مراجعة مدير الأدمن");
+                   }
                    else
-                       MessageBox.Show("تحقق من اسم المستخدم وكلمة المرور");   
+                   {
+                            MessageBox.Show("تحقق من اسم المستخدم وكلمة المرور");
+                        }
                }
-               else
+               else 
                {
                    MessageBox.Show("لقد قمت باستخدام بعض الرموز التي لا يمكن استخدامها");
                    txt_password.Text = "كلمة المرور";
