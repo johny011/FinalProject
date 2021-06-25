@@ -40,5 +40,14 @@ namespace Final_project
                 dataGridView1.DataSource = DB.DataTable("select * from patientAdmission where deptid=(select deptid from dept where deptname='" + dept + "') and Admissionid=" + int.Parse(txt_id_admission.Text));
             }
         }
+
+        private void txt_id_admission_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
     }
 }

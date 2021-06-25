@@ -99,6 +99,7 @@
             this.txt_id_admission.Size = new System.Drawing.Size(215, 60);
             this.txt_id_admission.TabIndex = 26;
             this.txt_id_admission.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_id_admission.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_admission_KeyPress);
             // 
             // View_Login_Record
             // 

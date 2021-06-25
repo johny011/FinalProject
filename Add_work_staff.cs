@@ -65,11 +65,6 @@ namespace Final_project
             
         }
 
-        private void combox_deptid_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Add_work_staff_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hospitallDataSet18.Dept' table. You can move, or remove it, as needed.
@@ -83,6 +78,15 @@ namespace Final_project
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txt_NO_number_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
         }
     }
 }

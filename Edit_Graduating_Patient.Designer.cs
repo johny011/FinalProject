@@ -62,7 +62,7 @@
             this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_add.BackColor = System.Drawing.SystemColors.Control;
             this.btn_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add.BackgroundImage")));
-            this.btn_add.ButtonText = "تعديل";
+            this.btn_add.ButtonText = "تعديل او تخريج";
             this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_add.ForeColor = System.Drawing.Color.Black;

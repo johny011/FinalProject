@@ -34,7 +34,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.combox_typeid = new System.Windows.Forms.ComboBox();
             this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hospitallDataSet18 = new Final_project.hospitallDataSet18();
             this.typeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -47,6 +46,7 @@
             this.txt_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.typeeTableAdapter = new Final_project.hospitallDataSet17TableAdapters.TypeeTableAdapter();
             this.deptTableAdapter = new Final_project.hospitallDataSet18TableAdapters.DeptTableAdapter();
+            this.combox_typeid = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet18)).BeginInit();
@@ -96,22 +96,6 @@
             this.label1.Size = new System.Drawing.Size(39, 24);
             this.label1.TabIndex = 24;
             this.label1.Text = "القسم";
-            // 
-            // combox_typeid
-            // 
-            this.combox_typeid.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combox_typeid.BackColor = System.Drawing.Color.White;
-            this.combox_typeid.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.deptBindingSource, "deptid", true));
-            this.combox_typeid.DataSource = this.typeeBindingSource;
-            this.combox_typeid.DisplayMember = "typename";
-            this.combox_typeid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combox_typeid.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combox_typeid.FormattingEnabled = true;
-            this.combox_typeid.Location = new System.Drawing.Point(149, 273);
-            this.combox_typeid.Name = "combox_typeid";
-            this.combox_typeid.Size = new System.Drawing.Size(220, 27);
-            this.combox_typeid.TabIndex = 23;
-            this.combox_typeid.ValueMember = "typeid";
             // 
             // deptBindingSource
             // 
@@ -175,7 +159,6 @@
             this.combox_deptid.Size = new System.Drawing.Size(220, 27);
             this.combox_deptid.TabIndex = 21;
             this.combox_deptid.ValueMember = "deptid";
-            this.combox_deptid.SelectedIndexChanged += new System.EventHandler(this.combox_deptid_SelectedIndexChanged);
             // 
             // txt_NO_number
             // 
@@ -197,6 +180,7 @@
             this.txt_NO_number.Size = new System.Drawing.Size(220, 60);
             this.txt_NO_number.TabIndex = 20;
             this.txt_NO_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_NO_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NO_number_KeyPress);
             // 
             // txt_father_name
             // 
@@ -269,6 +253,21 @@
             // 
             this.deptTableAdapter.ClearBeforeFill = true;
             // 
+            // combox_typeid
+            // 
+            this.combox_typeid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.combox_typeid.BackColor = System.Drawing.Color.White;
+            this.combox_typeid.DataSource = this.typeeBindingSource;
+            this.combox_typeid.DisplayMember = "typename";
+            this.combox_typeid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_typeid.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combox_typeid.FormattingEnabled = true;
+            this.combox_typeid.Location = new System.Drawing.Point(149, 273);
+            this.combox_typeid.Name = "combox_typeid";
+            this.combox_typeid.Size = new System.Drawing.Size(220, 27);
+            this.combox_typeid.TabIndex = 23;
+            this.combox_typeid.ValueMember = "typeid";
+            // 
             // Add_work_staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,7 +292,6 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox combox_typeid;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
         private System.Windows.Forms.ComboBox combox_deptid;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_NO_number;
@@ -308,5 +306,6 @@
         private hospitallDataSet18 hospitallDataSet18;
         private System.Windows.Forms.BindingSource deptBindingSource;
         private hospitallDataSet18TableAdapters.DeptTableAdapter deptTableAdapter;
+        private System.Windows.Forms.ComboBox combox_typeid;
     }
 }
