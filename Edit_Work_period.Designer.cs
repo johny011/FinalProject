@@ -28,11 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_Work_period));
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_cancel = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txt_Situationid = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.combox_situation = new System.Windows.Forms.ComboBox();
+            this.theSituationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet56 = new Final_project.hospitallDataSet56();
+            this.label1 = new System.Windows.Forms.Label();
+            this.theSituationTableAdapter = new Final_project.hospitallDataSet56TableAdapters.TheSituationTableAdapter();
+            this.panel_title = new System.Windows.Forms.Panel();
+            this.panel_hospital_name = new System.Windows.Forms.Panel();
+            this.Title = new System.Windows.Forms.Label();
+            this.maxBtn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.exitBtn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.minBtn = new Bunifu.Framework.UI.BunifuImageButton();
+            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet56)).BeginInit();
+            this.panel_title.SuspendLayout();
+            this.panel_hospital_name.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_add
@@ -54,7 +71,7 @@
             this.btn_add.IdleFillColor = System.Drawing.Color.White;
             this.btn_add.IdleForecolor = System.Drawing.Color.Black;
             this.btn_add.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_add.Location = new System.Drawing.Point(264, 213);
+            this.btn_add.Location = new System.Drawing.Point(187, 213);
             this.btn_add.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(150, 50);
@@ -62,82 +79,177 @@
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // btn_cancel
-            // 
-            this.btn_cancel.ActiveBorderThickness = 1;
-            this.btn_cancel.ActiveCornerRadius = 20;
-            this.btn_cancel.ActiveFillColor = System.Drawing.Color.Silver;
-            this.btn_cancel.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_cancel.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_cancel.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancel.BackgroundImage")));
-            this.btn_cancel.ButtonText = "إلغاء";
-            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_cancel.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancel.IdleBorderThickness = 1;
-            this.btn_cancel.IdleCornerRadius = 20;
-            this.btn_cancel.IdleFillColor = System.Drawing.Color.White;
-            this.btn_cancel.IdleForecolor = System.Drawing.Color.Black;
-            this.btn_cancel.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_cancel.Location = new System.Drawing.Point(88, 213);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(150, 50);
-            this.btn_cancel.TabIndex = 27;
-            this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // txt_Situationid
-            // 
-            this.txt_Situationid.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_Situationid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Situationid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Situationid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_Situationid.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_Situationid.HintText = "";
-            this.txt_Situationid.isPassword = false;
-            this.txt_Situationid.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_Situationid.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_Situationid.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_Situationid.LineThickness = 4;
-            this.txt_Situationid.Location = new System.Drawing.Point(305, 85);
-            this.txt_Situationid.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_Situationid.Name = "txt_Situationid";
-            this.txt_Situationid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_Situationid.Size = new System.Drawing.Size(137, 51);
-            this.txt_Situationid.TabIndex = 30;
-            this.txt_Situationid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(52, 102);
+            this.dateTimePicker1.Location = new System.Drawing.Point(161, 85);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(213, 20);
             this.dateTimePicker1.TabIndex = 31;
+            // 
+            // combox_situation
+            // 
+            this.combox_situation.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.combox_situation.BackColor = System.Drawing.Color.White;
+            this.combox_situation.DataSource = this.theSituationBindingSource;
+            this.combox_situation.DisplayMember = "TheSituation";
+            this.combox_situation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_situation.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combox_situation.FormattingEnabled = true;
+            this.combox_situation.Location = new System.Drawing.Point(154, 178);
+            this.combox_situation.Name = "combox_situation";
+            this.combox_situation.Size = new System.Drawing.Size(220, 27);
+            this.combox_situation.TabIndex = 32;
+            this.combox_situation.ValueMember = "Situationid";
+            // 
+            // theSituationBindingSource
+            // 
+            this.theSituationBindingSource.DataMember = "TheSituation";
+            this.theSituationBindingSource.DataSource = this.hospitallDataSet56;
+            // 
+            // hospitallDataSet56
+            // 
+            this.hospitallDataSet56.DataSetName = "hospitallDataSet56";
+            this.hospitallDataSet56.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.label1.Location = new System.Drawing.Point(323, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 22);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "الحالة";
+            // 
+            // theSituationTableAdapter
+            // 
+            this.theSituationTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel_title
+            // 
+            this.panel_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
+            this.panel_title.Controls.Add(this.panel_hospital_name);
+            this.panel_title.Controls.Add(this.maxBtn);
+            this.panel_title.Controls.Add(this.exitBtn);
+            this.panel_title.Controls.Add(this.minBtn);
+            this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_title.Location = new System.Drawing.Point(0, 0);
+            this.panel_title.Name = "panel_title";
+            this.panel_title.Size = new System.Drawing.Size(497, 67);
+            this.panel_title.TabIndex = 34;
+            this.panel_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseDown);
+            this.panel_title.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseMove);
+            this.panel_title.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseUp);
+            // 
+            // panel_hospital_name
+            // 
+            this.panel_hospital_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_hospital_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
+            this.panel_hospital_name.Controls.Add(this.Title);
+            this.panel_hospital_name.Location = new System.Drawing.Point(327, 1);
+            this.panel_hospital_name.Name = "panel_hospital_name";
+            this.panel_hospital_name.Size = new System.Drawing.Size(168, 67);
+            this.panel_hospital_name.TabIndex = 2;
+            // 
+            // Title
+            // 
+            this.Title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Title.Location = new System.Drawing.Point(14, 22);
+            this.Title.Name = "Title";
+            this.Title.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Title.Size = new System.Drawing.Size(131, 23);
+            this.Title.TabIndex = 2;
+            this.Title.Text = "Our Hospital";
+            // 
+            // maxBtn
+            // 
+            this.maxBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
+            this.maxBtn.Image = ((System.Drawing.Image)(resources.GetObject("maxBtn.Image")));
+            this.maxBtn.ImageActive = null;
+            this.maxBtn.Location = new System.Drawing.Point(59, 14);
+            this.maxBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.maxBtn.Name = "maxBtn";
+            this.maxBtn.Size = new System.Drawing.Size(40, 40);
+            this.maxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.maxBtn.TabIndex = 6;
+            this.maxBtn.TabStop = false;
+            this.maxBtn.Zoom = 10;
+            this.maxBtn.Click += new System.EventHandler(this.maxBtn_Click);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
+            this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
+            this.exitBtn.ImageActive = null;
+            this.exitBtn.Location = new System.Drawing.Point(13, 14);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(40, 40);
+            this.exitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exitBtn.TabIndex = 4;
+            this.exitBtn.TabStop = false;
+            this.exitBtn.Zoom = 10;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click_1);
+            // 
+            // minBtn
+            // 
+            this.minBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
+            this.minBtn.Image = ((System.Drawing.Image)(resources.GetObject("minBtn.Image")));
+            this.minBtn.ImageActive = null;
+            this.minBtn.Location = new System.Drawing.Point(105, 14);
+            this.minBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.minBtn.Name = "minBtn";
+            this.minBtn.Size = new System.Drawing.Size(40, 40);
+            this.minBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.minBtn.TabIndex = 5;
+            this.minBtn.TabStop = false;
+            this.minBtn.Zoom = 10;
+            this.minBtn.Click += new System.EventHandler(this.minBtn_Click);
             // 
             // Edit_Work_period
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 277);
+            this.Controls.Add(this.panel_title);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.combox_situation);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.txt_Situationid);
-            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Edit_Work_period";
             this.Text = "Edit_Work_period";
+            this.Load += new System.EventHandler(this.Edit_Work_period_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet56)).EndInit();
+            this.panel_title.ResumeLayout(false);
+            this.panel_hospital_name.ResumeLayout(false);
+            this.panel_hospital_name.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minBtn)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_cancel;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_Situationid;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox combox_situation;
+        private System.Windows.Forms.Label label1;
+        private hospitallDataSet56 hospitallDataSet56;
+        private System.Windows.Forms.BindingSource theSituationBindingSource;
+        private hospitallDataSet56TableAdapters.TheSituationTableAdapter theSituationTableAdapter;
+        private System.Windows.Forms.Panel panel_title;
+        private System.Windows.Forms.Panel panel_hospital_name;
+        protected System.Windows.Forms.Label Title;
+        private Bunifu.Framework.UI.BunifuImageButton maxBtn;
+        private Bunifu.Framework.UI.BunifuImageButton exitBtn;
+        private Bunifu.Framework.UI.BunifuImageButton minBtn;
     }
 }

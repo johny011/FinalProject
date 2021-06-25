@@ -80,26 +80,33 @@ namespace Final_project
         }
         private void FillList()
         {
-            checkedListBox1.Items.Clear();
-            DataTable d1 = DB.DataTable("select Sname from TheStaff where typeid = 1 and id not in(select id from workperiods where periodnumber=@periodnumber)",
-                new SqlParameter("@periodnumber", int.Parse(combox_period.SelectedValue.ToString())));
-            for (int i = 0; i < d1.Rows.Count; i++)
+            try
             {
-                checkedListBox1.Items.Add(d1.Rows[i]["sname"].ToString());
+                checkedListBox1.Items.Clear();
+                DataTable d1 = DB.DataTable("select Sname from TheStaff where typeid = 1 and id not in(select id from workperiods where periodnumber=@periodnumber)",
+                    new SqlParameter("@periodnumber", int.Parse(combox_period.SelectedValue.ToString())));
+                for (int i = 0; i < d1.Rows.Count; i++)
+                {
+                    checkedListBox1.Items.Add(d1.Rows[i]["sname"].ToString());
+                }
+                checkedListBox2.Items.Clear();
+                //لتعبئة الممرضين
+                DataTable d2 = DB.DataTable("select Sname from TheStaff where typeid = 2");
+                for (int i = 0; i < d2.Rows.Count; i++)
+                {
+                    checkedListBox2.Items.Add(d2.Rows[i]["sname"].ToString());
+                }
+                checkedListBox3.Items.Clear();
+                //لتعبئة المستخدمين
+                DataTable d3 = DB.DataTable("select Sname from TheStaff where typeid = 3");
+                for (int i = 0; i < d3.Rows.Count; i++)
+                {
+                    checkedListBox3.Items.Add(d3.Rows[i]["sname"].ToString());
+                }
             }
-            checkedListBox2.Items.Clear();
-            //لتعبئة الممرضين
-            DataTable d2 = DB.DataTable("select Sname from TheStaff where typeid = 2");
-            for (int i = 0; i < d2.Rows.Count; i++)
+            catch(Exception exp)
             {
-                checkedListBox2.Items.Add(d2.Rows[i]["sname"].ToString());
-            }
-            checkedListBox3.Items.Clear();
-            //لتعبئة المستخدمين
-            DataTable d3 = DB.DataTable("select Sname from TheStaff where typeid = 3");
-            for (int i = 0; i < d3.Rows.Count; i++)
-            {
-                checkedListBox3.Items.Add(d3.Rows[i]["sname"].ToString());
+                MessageBox.Show(exp.Message);
             }
 
         }

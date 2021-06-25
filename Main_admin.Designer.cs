@@ -32,34 +32,33 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_admin));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_title = new System.Windows.Forms.Panel();
-            this.panel_hospital_name = new System.Windows.Forms.Panel();
-            this.Title = new System.Windows.Forms.Label();
             this.maxBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.exitBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.minBtn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel_hospital_name = new System.Windows.Forms.Panel();
+            this.Title = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.btn_update_acount = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_show_department = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_add_emp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_interval = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_add_working_period = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_emp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_room = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_add_acount = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_update_working_period = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_add_emp = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_add_working_period = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_add_acount = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_add_interval = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_add_room = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_form = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.addPanel_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.viewPanle_btn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel_title.SuspendLayout();
-            this.panel_hospital_name.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).BeginInit();
+            this.panel_hospital_name.SuspendLayout();
             this.panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,28 +85,6 @@
             this.panel_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseDown);
             this.panel_title.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseMove);
             this.panel_title.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseUp);
-            // 
-            // panel_hospital_name
-            // 
-            this.panel_hospital_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.panel_hospital_name.Controls.Add(this.Title);
-            this.panel_hospital_name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_hospital_name.Location = new System.Drawing.Point(0, 0);
-            this.panel_hospital_name.Name = "panel_hospital_name";
-            this.panel_hospital_name.Size = new System.Drawing.Size(192, 67);
-            this.panel_hospital_name.TabIndex = 2;
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Title.Location = new System.Drawing.Point(25, 22);
-            this.Title.Name = "Title";
-            this.Title.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Title.Size = new System.Drawing.Size(131, 23);
-            this.Title.TabIndex = 2;
-            this.Title.Text = "Our Hospital";
             // 
             // maxBtn
             // 
@@ -154,6 +131,28 @@
             this.minBtn.Zoom = 10;
             this.minBtn.Click += new System.EventHandler(this.minBtn_Click);
             // 
+            // panel_hospital_name
+            // 
+            this.panel_hospital_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
+            this.panel_hospital_name.Controls.Add(this.Title);
+            this.panel_hospital_name.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_hospital_name.Location = new System.Drawing.Point(0, 0);
+            this.panel_hospital_name.Name = "panel_hospital_name";
+            this.panel_hospital_name.Size = new System.Drawing.Size(192, 67);
+            this.panel_hospital_name.TabIndex = 2;
+            // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Title.Location = new System.Drawing.Point(25, 22);
+            this.Title.Name = "Title";
+            this.Title.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Title.Size = new System.Drawing.Size(131, 23);
+            this.Title.TabIndex = 2;
+            this.Title.Text = "Our Hospital";
+            // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -164,7 +163,7 @@
             this.panel.Controls.Add(this.btn_update_room);
             this.panel.Controls.Add(this.btn_update_working_period);
             this.panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel.Location = new System.Drawing.Point(0, 386);
+            this.panel.Location = new System.Drawing.Point(0, 357);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(192, 250);
             this.panel.TabIndex = 6;
@@ -248,45 +247,6 @@
             this.btn_show_department.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_show_department.Click += new System.EventHandler(this.btn_show_department_Click);
             // 
-            // btn_add_emp
-            // 
-            this.btn_add_emp.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_add_emp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_add_emp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_add_emp.BorderRadius = 0;
-            this.btn_add_emp.ButtonText = "إضافة عاملين";
-            this.btn_add_emp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add_emp.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_add_emp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_add_emp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_add_emp.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_add_emp.Iconimage = null;
-            this.btn_add_emp.Iconimage_right = null;
-            this.btn_add_emp.Iconimage_right_Selected = null;
-            this.btn_add_emp.Iconimage_Selected = null;
-            this.btn_add_emp.IconMarginLeft = 0;
-            this.btn_add_emp.IconMarginRight = 0;
-            this.btn_add_emp.IconRightVisible = true;
-            this.btn_add_emp.IconRightZoom = 0D;
-            this.btn_add_emp.IconVisible = true;
-            this.btn_add_emp.IconZoom = 40D;
-            this.btn_add_emp.IsTab = false;
-            this.btn_add_emp.Location = new System.Drawing.Point(0, 0);
-            this.btn_add_emp.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_add_emp.Name = "btn_add_emp";
-            this.btn_add_emp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_add_emp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.btn_add_emp.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_add_emp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_add_emp.selected = false;
-            this.btn_add_emp.Size = new System.Drawing.Size(192, 40);
-            this.btn_add_emp.TabIndex = 58;
-            this.btn_add_emp.Text = "إضافة عاملين";
-            this.btn_add_emp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_add_emp.Textcolor = System.Drawing.Color.Gainsboro;
-            this.btn_add_emp.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_add_emp.Click += new System.EventHandler(this.btn_add_emp_Click);
-            // 
             // btn_update_interval
             // 
             this.btn_update_interval.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -325,45 +285,6 @@
             this.btn_update_interval.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_update_interval.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_update_interval.Click += new System.EventHandler(this.btn_update_interval_Click);
-            // 
-            // btn_add_working_period
-            // 
-            this.btn_add_working_period.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_add_working_period.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_add_working_period.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_add_working_period.BorderRadius = 0;
-            this.btn_add_working_period.ButtonText = "إضافة فترة عمل";
-            this.btn_add_working_period.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add_working_period.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_add_working_period.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_add_working_period.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_add_working_period.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_add_working_period.Iconimage = null;
-            this.btn_add_working_period.Iconimage_right = null;
-            this.btn_add_working_period.Iconimage_right_Selected = null;
-            this.btn_add_working_period.Iconimage_Selected = null;
-            this.btn_add_working_period.IconMarginLeft = 0;
-            this.btn_add_working_period.IconMarginRight = 0;
-            this.btn_add_working_period.IconRightVisible = true;
-            this.btn_add_working_period.IconRightZoom = 0D;
-            this.btn_add_working_period.IconVisible = true;
-            this.btn_add_working_period.IconZoom = 40D;
-            this.btn_add_working_period.IsTab = false;
-            this.btn_add_working_period.Location = new System.Drawing.Point(0, 160);
-            this.btn_add_working_period.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_add_working_period.Name = "btn_add_working_period";
-            this.btn_add_working_period.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_add_working_period.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.btn_add_working_period.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_add_working_period.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_add_working_period.selected = false;
-            this.btn_add_working_period.Size = new System.Drawing.Size(192, 40);
-            this.btn_add_working_period.TabIndex = 63;
-            this.btn_add_working_period.Text = "إضافة فترة عمل";
-            this.btn_add_working_period.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_add_working_period.Textcolor = System.Drawing.Color.Gainsboro;
-            this.btn_add_working_period.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_add_working_period.Click += new System.EventHandler(this.btn_add_working_period_Click);
             // 
             // btn_update_emp
             // 
@@ -443,45 +364,6 @@
             this.btn_update_room.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_update_room.Click += new System.EventHandler(this.btn_update_room_Click);
             // 
-            // btn_add_acount
-            // 
-            this.btn_add_acount.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_add_acount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_add_acount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_add_acount.BorderRadius = 0;
-            this.btn_add_acount.ButtonText = "إضافة حساب";
-            this.btn_add_acount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add_acount.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_add_acount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_add_acount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_add_acount.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_add_acount.Iconimage = null;
-            this.btn_add_acount.Iconimage_right = null;
-            this.btn_add_acount.Iconimage_right_Selected = null;
-            this.btn_add_acount.Iconimage_Selected = null;
-            this.btn_add_acount.IconMarginLeft = 0;
-            this.btn_add_acount.IconMarginRight = 0;
-            this.btn_add_acount.IconRightVisible = true;
-            this.btn_add_acount.IconRightZoom = 0D;
-            this.btn_add_acount.IconVisible = true;
-            this.btn_add_acount.IconZoom = 40D;
-            this.btn_add_acount.IsTab = false;
-            this.btn_add_acount.Location = new System.Drawing.Point(0, 120);
-            this.btn_add_acount.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_add_acount.Name = "btn_add_acount";
-            this.btn_add_acount.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.btn_add_acount.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.btn_add_acount.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_add_acount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_add_acount.selected = false;
-            this.btn_add_acount.Size = new System.Drawing.Size(192, 40);
-            this.btn_add_acount.TabIndex = 59;
-            this.btn_add_acount.Text = "إضافة حساب";
-            this.btn_add_acount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_add_acount.Textcolor = System.Drawing.Color.Gainsboro;
-            this.btn_add_acount.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_add_acount.Click += new System.EventHandler(this.btn_add_acount_Click);
-            // 
             // btn_update_working_period
             // 
             this.btn_update_working_period.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -520,6 +402,123 @@
             this.btn_update_working_period.Textcolor = System.Drawing.Color.Gainsboro;
             this.btn_update_working_period.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_update_working_period.Click += new System.EventHandler(this.btn_update_working_period_Click);
+            // 
+            // btn_add_emp
+            // 
+            this.btn_add_emp.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_add_emp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_add_emp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_add_emp.BorderRadius = 0;
+            this.btn_add_emp.ButtonText = "إضافة عاملين";
+            this.btn_add_emp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add_emp.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_add_emp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_add_emp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_add_emp.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_add_emp.Iconimage = null;
+            this.btn_add_emp.Iconimage_right = null;
+            this.btn_add_emp.Iconimage_right_Selected = null;
+            this.btn_add_emp.Iconimage_Selected = null;
+            this.btn_add_emp.IconMarginLeft = 0;
+            this.btn_add_emp.IconMarginRight = 0;
+            this.btn_add_emp.IconRightVisible = true;
+            this.btn_add_emp.IconRightZoom = 0D;
+            this.btn_add_emp.IconVisible = true;
+            this.btn_add_emp.IconZoom = 40D;
+            this.btn_add_emp.IsTab = false;
+            this.btn_add_emp.Location = new System.Drawing.Point(0, 0);
+            this.btn_add_emp.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_add_emp.Name = "btn_add_emp";
+            this.btn_add_emp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_add_emp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
+            this.btn_add_emp.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_add_emp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btn_add_emp.selected = false;
+            this.btn_add_emp.Size = new System.Drawing.Size(192, 40);
+            this.btn_add_emp.TabIndex = 58;
+            this.btn_add_emp.Text = "إضافة عاملين";
+            this.btn_add_emp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_add_emp.Textcolor = System.Drawing.Color.Gainsboro;
+            this.btn_add_emp.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_add_emp.Click += new System.EventHandler(this.btn_add_emp_Click);
+            // 
+            // btn_add_working_period
+            // 
+            this.btn_add_working_period.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_add_working_period.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_add_working_period.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_add_working_period.BorderRadius = 0;
+            this.btn_add_working_period.ButtonText = "إضافة فترة عمل";
+            this.btn_add_working_period.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add_working_period.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_add_working_period.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_add_working_period.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_add_working_period.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_add_working_period.Iconimage = null;
+            this.btn_add_working_period.Iconimage_right = null;
+            this.btn_add_working_period.Iconimage_right_Selected = null;
+            this.btn_add_working_period.Iconimage_Selected = null;
+            this.btn_add_working_period.IconMarginLeft = 0;
+            this.btn_add_working_period.IconMarginRight = 0;
+            this.btn_add_working_period.IconRightVisible = true;
+            this.btn_add_working_period.IconRightZoom = 0D;
+            this.btn_add_working_period.IconVisible = true;
+            this.btn_add_working_period.IconZoom = 40D;
+            this.btn_add_working_period.IsTab = false;
+            this.btn_add_working_period.Location = new System.Drawing.Point(0, 160);
+            this.btn_add_working_period.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_add_working_period.Name = "btn_add_working_period";
+            this.btn_add_working_period.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_add_working_period.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
+            this.btn_add_working_period.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_add_working_period.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btn_add_working_period.selected = false;
+            this.btn_add_working_period.Size = new System.Drawing.Size(192, 40);
+            this.btn_add_working_period.TabIndex = 63;
+            this.btn_add_working_period.Text = "إضافة فترة عمل";
+            this.btn_add_working_period.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_add_working_period.Textcolor = System.Drawing.Color.Gainsboro;
+            this.btn_add_working_period.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_add_working_period.Click += new System.EventHandler(this.btn_add_working_period_Click);
+            // 
+            // btn_add_acount
+            // 
+            this.btn_add_acount.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_add_acount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_add_acount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_add_acount.BorderRadius = 0;
+            this.btn_add_acount.ButtonText = "إضافة حساب";
+            this.btn_add_acount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add_acount.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_add_acount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_add_acount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_add_acount.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_add_acount.Iconimage = null;
+            this.btn_add_acount.Iconimage_right = null;
+            this.btn_add_acount.Iconimage_right_Selected = null;
+            this.btn_add_acount.Iconimage_Selected = null;
+            this.btn_add_acount.IconMarginLeft = 0;
+            this.btn_add_acount.IconMarginRight = 0;
+            this.btn_add_acount.IconRightVisible = true;
+            this.btn_add_acount.IconRightZoom = 0D;
+            this.btn_add_acount.IconVisible = true;
+            this.btn_add_acount.IconZoom = 40D;
+            this.btn_add_acount.IsTab = false;
+            this.btn_add_acount.Location = new System.Drawing.Point(0, 120);
+            this.btn_add_acount.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_add_acount.Name = "btn_add_acount";
+            this.btn_add_acount.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.btn_add_acount.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
+            this.btn_add_acount.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_add_acount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btn_add_acount.selected = false;
+            this.btn_add_acount.Size = new System.Drawing.Size(192, 40);
+            this.btn_add_acount.TabIndex = 59;
+            this.btn_add_acount.Text = "إضافة حساب";
+            this.btn_add_acount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_add_acount.Textcolor = System.Drawing.Color.Gainsboro;
+            this.btn_add_acount.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_add_acount.Click += new System.EventHandler(this.btn_add_acount_Click);
             // 
             // btn_add_interval
             // 
@@ -609,44 +608,6 @@
             this.panel_form.Size = new System.Drawing.Size(932, 635);
             this.panel_form.TabIndex = 7;
             // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "إضافة عاملين";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 40D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 200);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(136)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(192, 40);
-            this.bunifuFlatButton1.TabIndex = 67;
-            this.bunifuFlatButton1.Text = "إضافة عاملين";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            // 
             // addPanel_btn
             // 
             this.addPanel_btn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -700,22 +661,6 @@
             this.panel1.Size = new System.Drawing.Size(192, 705);
             this.panel1.TabIndex = 8;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
-            this.panel2.Controls.Add(this.bunifuFlatButton1);
-            this.panel2.Controls.Add(this.btn_add_working_period);
-            this.panel2.Controls.Add(this.btn_add_acount);
-            this.panel2.Controls.Add(this.btn_add_room);
-            this.panel2.Controls.Add(this.btn_add_interval);
-            this.panel2.Controls.Add(this.btn_add_emp);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 107);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(192, 239);
-            this.panel2.TabIndex = 60;
-            this.panel2.Visible = false;
-            // 
             // viewPanle_btn
             // 
             this.viewPanle_btn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -739,7 +684,7 @@
             this.viewPanle_btn.IconVisible = true;
             this.viewPanle_btn.IconZoom = 40D;
             this.viewPanle_btn.IsTab = false;
-            this.viewPanle_btn.Location = new System.Drawing.Point(0, 346);
+            this.viewPanle_btn.Location = new System.Drawing.Point(0, 317);
             this.viewPanle_btn.Margin = new System.Windows.Forms.Padding(5);
             this.viewPanle_btn.Name = "viewPanle_btn";
             this.viewPanle_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
@@ -755,6 +700,21 @@
             this.viewPanle_btn.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.viewPanle_btn.Click += new System.EventHandler(this.viewPanle_btn_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.panel2.Controls.Add(this.btn_add_working_period);
+            this.panel2.Controls.Add(this.btn_add_acount);
+            this.panel2.Controls.Add(this.btn_add_room);
+            this.panel2.Controls.Add(this.btn_add_interval);
+            this.panel2.Controls.Add(this.btn_add_emp);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 107);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(192, 210);
+            this.panel2.TabIndex = 60;
+            this.panel2.Visible = false;
+            // 
             // Main_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,11 +727,11 @@
             this.Name = "Main_admin";
             this.Text = "Main_admin";
             this.panel_title.ResumeLayout(false);
-            this.panel_hospital_name.ResumeLayout(false);
-            this.panel_hospital_name.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minBtn)).EndInit();
+            this.panel_hospital_name.ResumeLayout(false);
+            this.panel_hospital_name.PerformLayout();
             this.panel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -802,7 +762,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_update_working_period;
         private Bunifu.Framework.UI.BunifuFlatButton btn_show_department;
         private Bunifu.Framework.UI.BunifuFlatButton addPanel_btn;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton viewPanle_btn;
         private System.Windows.Forms.Panel panel2;

@@ -38,30 +38,36 @@ namespace Final_project
         
         private void btn_add_Click(object sender, EventArgs e)
         {
-
-             int count = DB.DataTable("select * from users where username=@username",
-                 new SqlParameter("@username", txt_user_name.Text)).Rows.Count;
-             int dept = DB.DataTable("select * from users where form =@form",
-                 new SqlParameter("@form", combox_deptid.Text.ToString())).Rows.Count;
-             if (count==0)
-             {
-                if (dept == 0)
+            if (txt_password.Text!="" && txt_user_name.Text!="")
+            {
+                int count = DB.DataTable("select * from users where username=@username",
+                    new SqlParameter("@username", txt_user_name.Text)).Rows.Count;
+                int dept = DB.DataTable("select * from users where form =@form",
+                    new SqlParameter("@form", combox_deptid.Text.ToString())).Rows.Count;
+                if (count == 0)
                 {
-                    DB.Insert_Update_Delete("insert into users (username,passeword,form)values (@username,@passeword,@form)",
-                     new SqlParameter("@username", txt_user_name.Text),
-                     new SqlParameter("@passeword", txt_password.Text),
-                     new SqlParameter("@form", combox_deptid.SelectedItem.ToString()));
-                    MessageBox.Show("تمت الإضافة بنجاح");
+                    if (dept == 0)
+                    {
+                        DB.Insert_Update_Delete("insert into users (username,passeword,form)values (@username,@passeword,@form)",
+                         new SqlParameter("@username", txt_user_name.Text),
+                         new SqlParameter("@passeword", txt_password.Text),
+                         new SqlParameter("@form", combox_deptid.SelectedItem.ToString()));
+                        MessageBox.Show("تمت الإضافة بنجاح");
+                    }
+                    else
+                    {
+                        MessageBox.Show("تم إنشاء حساب خاص بهذا القسم مسبقاً");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("تم إنشاء حساب خاص بهذا القسم مسبقاً");
+                    MessageBox.Show("قم بتغيير اسم المستخدم");
                 }
-             }
-             else
-             {
-                 MessageBox.Show("قم بتغيير اسم المستخدم");
-             }
+            }
+            else
+            {
+                MessageBox.Show("يجب ادخال اسم المستخدم وكلمة المرور");
+            }
              
             
 

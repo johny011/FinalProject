@@ -44,12 +44,11 @@ namespace Final_project
 
         private void Update_room_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hospitallDataSet52.Room' table. You can move, or remove it, as needed.
-            this.roomTableAdapter1.Fill(this.hospitallDataSet52.Room);
-            // TODO: This line of code loads data into the 'hospitallDataSet7.Dept' table. You can move, or remove it, as needed.
-            this.deptTableAdapter.Fill(this.hospitallDataSet7.Dept);
-            // TODO: This line of code loads data into the 'hospitallDataSet6.Room' table. You can move, or remove it, as needed.
-            this.roomTableAdapter.Fill(this.hospitallDataSet6.Room);
+            // TODO: This line of code loads data into the 'hospitallDataSet54.Dept' table. You can move, or remove it, as needed.
+            this.deptTableAdapter.Fill(this.hospitallDataSet54.Dept);
+            // TODO: This line of code loads data into the 'hospitallDataSet53.Room' table. You can move, or remove it, as needed.
+            this.roomTableAdapter.Fill(this.hospitallDataSet53.Room);
+
 
         }
     }

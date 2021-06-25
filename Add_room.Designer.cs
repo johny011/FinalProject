@@ -86,8 +86,8 @@
             this.combox_room_type.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combox_room_type.FormattingEnabled = true;
             this.combox_room_type.Items.AddRange(new object[] {
-            "غرفة عمليات",
-            "غرفة مريض"});
+            "operations",
+            "visit"});
             this.combox_room_type.Location = new System.Drawing.Point(281, 172);
             this.combox_room_type.Name = "combox_room_type";
             this.combox_room_type.Size = new System.Drawing.Size(220, 27);

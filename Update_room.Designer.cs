@@ -31,30 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_room));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitallDataSet7 = new Final_project.hospitallDataSet7();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitallDataSet6 = new Final_project.hospitallDataSet6();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.roomTableAdapter = new Final_project.hospitallDataSet6TableAdapters.RoomTableAdapter();
-            this.deptTableAdapter = new Final_project.hospitallDataSet7TableAdapters.DeptTableAdapter();
-            this.hospitallDataSet52 = new Final_project.hospitallDataSet52();
-            this.roomBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.roomTableAdapter1 = new Final_project.hospitallDataSet52TableAdapters.RoomTableAdapter();
+            this.hospitallDataSet53 = new Final_project.hospitallDataSet53();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomTableAdapter = new Final_project.hospitallDataSet53TableAdapters.RoomTableAdapter();
+            this.hospitallDataSet54 = new Final_project.hospitallDataSet54();
+            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.deptTableAdapter = new Final_project.hospitallDataSet54TableAdapters.DeptTableAdapter();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet6)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet52)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,26 +70,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 24;
-            // 
-            // deptBindingSource
-            // 
-            this.deptBindingSource.DataMember = "Dept";
-            this.deptBindingSource.DataSource = this.hospitallDataSet7;
-            // 
-            // hospitallDataSet7
-            // 
-            this.hospitallDataSet7.DataSetName = "hospitallDataSet7";
-            this.hospitallDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.hospitallDataSet6;
-            // 
-            // hospitallDataSet6
-            // 
-            this.hospitallDataSet6.DataSetName = "hospitallDataSet6";
-            this.hospitallDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuElipse1
             // 
@@ -166,27 +141,33 @@
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
+            // hospitallDataSet53
+            // 
+            this.hospitallDataSet53.DataSetName = "hospitallDataSet53";
+            this.hospitallDataSet53.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.hospitallDataSet53;
+            // 
             // roomTableAdapter
             // 
             this.roomTableAdapter.ClearBeforeFill = true;
             // 
+            // hospitallDataSet54
+            // 
+            this.hospitallDataSet54.DataSetName = "hospitallDataSet54";
+            this.hospitallDataSet54.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // deptBindingSource
+            // 
+            this.deptBindingSource.DataMember = "Dept";
+            this.deptBindingSource.DataSource = this.hospitallDataSet54;
+            // 
             // deptTableAdapter
             // 
             this.deptTableAdapter.ClearBeforeFill = true;
-            // 
-            // hospitallDataSet52
-            // 
-            this.hospitallDataSet52.DataSetName = "hospitallDataSet52";
-            this.hospitallDataSet52.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomBindingSource1
-            // 
-            this.roomBindingSource1.DataMember = "Room";
-            this.roomBindingSource1.DataSource = this.hospitallDataSet52;
-            // 
-            // roomTableAdapter1
-            // 
-            this.roomTableAdapter1.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -200,8 +181,8 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "roomtype";
             this.dataGridViewTextBoxColumn4.HeaderText = "roomtype";
             this.dataGridViewTextBoxColumn4.Items.AddRange(new object[] {
-            "غرفة مريض",
-            "غرفة عمليات"});
+            "visit",
+            "operations"});
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -228,13 +209,11 @@
             this.Text = "Update_room";
             this.Load += new System.EventHandler(this.Update_room_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet6)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet52)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,15 +231,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewComboBoxColumn deptDataGridViewTextBoxColumn;
-        private hospitallDataSet6 hospitallDataSet6;
+        private hospitallDataSet53 hospitallDataSet53;
         private System.Windows.Forms.BindingSource roomBindingSource;
-        private hospitallDataSet6TableAdapters.RoomTableAdapter roomTableAdapter;
-        private hospitallDataSet7 hospitallDataSet7;
+        private hospitallDataSet53TableAdapters.RoomTableAdapter roomTableAdapter;
+        private hospitallDataSet54 hospitallDataSet54;
         private System.Windows.Forms.BindingSource deptBindingSource;
-        private hospitallDataSet7TableAdapters.DeptTableAdapter deptTableAdapter;
-        private hospitallDataSet52 hospitallDataSet52;
-        private System.Windows.Forms.BindingSource roomBindingSource1;
-        private hospitallDataSet52TableAdapters.RoomTableAdapter roomTableAdapter1;
+        private hospitallDataSet54TableAdapters.DeptTableAdapter deptTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;

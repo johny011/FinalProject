@@ -20,6 +20,8 @@ namespace Final_project
 
         private  void Update_working_period_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hospitallDataSet55.TheSituation' table. You can move, or remove it, as needed.
+            this.theSituationTableAdapter.Fill(this.hospitallDataSet55.TheSituation);
             // TODO: This line of code loads data into the 'hospitallDataSet11.WorkPeriods' table. You can move, or remove it, as needed.
             this.workPeriodsTableAdapter.Fill(this.hospitallDataSet11.WorkPeriods);
 
@@ -55,6 +57,7 @@ namespace Final_project
             {
                 Edit_Work_period edit = new Edit_Work_period(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()), int.Parse(dataGridView1.CurrentRow.Cells[1].Value.ToString()));
                 edit.Show();
+                
 
             }
         }

@@ -89,6 +89,13 @@ namespace Final_project
                 return ms.ToArray();
             }
         }
+        public static bool Isnumber(char c)
+        {
+            if (c >= 48 && c <= 57 || c == 8)
+                return true;
+            else
+                return false;
+        }
 
     }
 }

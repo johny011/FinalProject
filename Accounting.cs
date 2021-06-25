@@ -69,6 +69,30 @@ namespace Final_project
             move = 0;
         }
 
+        private void textBox1_OnValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if(!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
+
         private void label6_Click(object sender, EventArgs e)
         {
 
