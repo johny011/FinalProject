@@ -105,6 +105,7 @@
             this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
             this.txt_Admissionid.TabIndex = 36;
             this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Admissionid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Admissionid_KeyPress);
             // 
             // pictureBox1
             // 

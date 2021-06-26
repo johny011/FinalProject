@@ -40,5 +40,29 @@ namespace Final_project
                 MessageBox.Show("تمت اضافة هذا المريض مسبقاً");
             }
         }
+
+        private void txt_name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txt_father_name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txt_mother_name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txt_NO_number_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
     }
 }

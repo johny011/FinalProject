@@ -25,5 +25,14 @@ namespace Final_project
                 new SqlParameter("@price", int.Parse(txt_price_picture.Text)),
                 new SqlParameter("@processing",txt_processing.Text));
         }
+
+        private void txt_price_picture_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
     }
 }

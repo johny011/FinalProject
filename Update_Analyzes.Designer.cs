@@ -32,18 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_Analyzes));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_Edit = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.hospitallDataSet51 = new Final_project.hospitallDataSet51();
-            this.analyzesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.analyzesTableAdapter = new Final_project.hospitallDataSet51TableAdapters.AnalyzesTableAdapter();
             this.analysisnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.analysisnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.processingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.analyzesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet51 = new Final_project.hospitallDataSet51();
+            this.btn_Edit = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.analyzesTableAdapter = new Final_project.hospitallDataSet51TableAdapters.AnalyzesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.analyzesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet51)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -69,6 +69,41 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // analysisnumberDataGridViewTextBoxColumn
+            // 
+            this.analysisnumberDataGridViewTextBoxColumn.DataPropertyName = "Analysisnumber";
+            this.analysisnumberDataGridViewTextBoxColumn.HeaderText = "Analysisnumber";
+            this.analysisnumberDataGridViewTextBoxColumn.Name = "analysisnumberDataGridViewTextBoxColumn";
+            this.analysisnumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // analysisnameDataGridViewTextBoxColumn
+            // 
+            this.analysisnameDataGridViewTextBoxColumn.DataPropertyName = "Analysisname";
+            this.analysisnameDataGridViewTextBoxColumn.HeaderText = "Analysisname";
+            this.analysisnameDataGridViewTextBoxColumn.Name = "analysisnameDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // processingDataGridViewTextBoxColumn
+            // 
+            this.processingDataGridViewTextBoxColumn.DataPropertyName = "processing";
+            this.processingDataGridViewTextBoxColumn.HeaderText = "processing";
+            this.processingDataGridViewTextBoxColumn.Name = "processingDataGridViewTextBoxColumn";
+            // 
+            // analyzesBindingSource
+            // 
+            this.analyzesBindingSource.DataMember = "Analyzes";
+            this.analyzesBindingSource.DataSource = this.hospitallDataSet51;
+            // 
+            // hospitallDataSet51
+            // 
+            this.hospitallDataSet51.DataSetName = "hospitallDataSet51";
+            this.hospitallDataSet51.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_Edit
             // 
@@ -124,44 +159,9 @@
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
-            // hospitallDataSet51
-            // 
-            this.hospitallDataSet51.DataSetName = "hospitallDataSet51";
-            this.hospitallDataSet51.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // analyzesBindingSource
-            // 
-            this.analyzesBindingSource.DataMember = "Analyzes";
-            this.analyzesBindingSource.DataSource = this.hospitallDataSet51;
-            // 
             // analyzesTableAdapter
             // 
             this.analyzesTableAdapter.ClearBeforeFill = true;
-            // 
-            // analysisnumberDataGridViewTextBoxColumn
-            // 
-            this.analysisnumberDataGridViewTextBoxColumn.DataPropertyName = "Analysisnumber";
-            this.analysisnumberDataGridViewTextBoxColumn.HeaderText = "Analysisnumber";
-            this.analysisnumberDataGridViewTextBoxColumn.Name = "analysisnumberDataGridViewTextBoxColumn";
-            this.analysisnumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // analysisnameDataGridViewTextBoxColumn
-            // 
-            this.analysisnameDataGridViewTextBoxColumn.DataPropertyName = "Analysisname";
-            this.analysisnameDataGridViewTextBoxColumn.HeaderText = "Analysisname";
-            this.analysisnameDataGridViewTextBoxColumn.Name = "analysisnameDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // processingDataGridViewTextBoxColumn
-            // 
-            this.processingDataGridViewTextBoxColumn.DataPropertyName = "processing";
-            this.processingDataGridViewTextBoxColumn.HeaderText = "processing";
-            this.processingDataGridViewTextBoxColumn.Name = "processingDataGridViewTextBoxColumn";
             // 
             // Update_Analyzes
             // 
@@ -176,8 +176,8 @@
             this.Text = "Update_Analyzes";
             this.Load += new System.EventHandler(this.Update_Analyzes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.analyzesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet51)).EndInit();
             this.ResumeLayout(false);
 
         }

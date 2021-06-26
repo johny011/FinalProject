@@ -40,10 +40,10 @@
             this.hospitallDataSet48 = new Final_project.hospitallDataSet48();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_Admissionid = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btn_Request = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.picturesTableAdapter = new Final_project.hospitallDataSet48TableAdapters.picturesTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Request = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txt_Admissionid = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.picturesTableAdapter = new Final_project.hospitallDataSet48TableAdapters.picturesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet48)).BeginInit();
@@ -125,27 +125,16 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 4;
             // 
-            // txt_Admissionid
+            // panel2
             // 
-            this.txt_Admissionid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Admissionid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Admissionid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Admissionid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_Admissionid.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_Admissionid.HintText = "رقم دخولية المريض";
-            this.txt_Admissionid.isPassword = false;
-            this.txt_Admissionid.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_Admissionid.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_Admissionid.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_Admissionid.LineThickness = 4;
-            this.txt_Admissionid.Location = new System.Drawing.Point(430, 7);
-            this.txt_Admissionid.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_Admissionid.Name = "txt_Admissionid";
-            this.txt_Admissionid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
-            this.txt_Admissionid.TabIndex = 27;
-            this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_Admissionid.OnValueChanged += new System.EventHandler(this.txt_Admissionid_OnValueChanged);
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btn_Request);
+            this.panel2.Controls.Add(this.txt_Admissionid);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 372);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 78);
+            this.panel2.TabIndex = 31;
             // 
             // btn_Request
             // 
@@ -174,20 +163,31 @@
             this.btn_Request.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Request.Click += new System.EventHandler(this.btn_add_Click);
             // 
+            // txt_Admissionid
+            // 
+            this.txt_Admissionid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Admissionid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Admissionid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Admissionid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Admissionid.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_Admissionid.HintText = "رقم دخولية المريض";
+            this.txt_Admissionid.isPassword = false;
+            this.txt_Admissionid.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_Admissionid.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_Admissionid.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_Admissionid.LineThickness = 4;
+            this.txt_Admissionid.Location = new System.Drawing.Point(430, 7);
+            this.txt_Admissionid.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_Admissionid.Name = "txt_Admissionid";
+            this.txt_Admissionid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
+            this.txt_Admissionid.TabIndex = 27;
+            this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Admissionid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Admissionid_KeyPress);
+            // 
             // picturesTableAdapter
             // 
             this.picturesTableAdapter.ClearBeforeFill = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btn_Request);
-            this.panel2.Controls.Add(this.txt_Admissionid);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 372);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 78);
-            this.panel2.TabIndex = 31;
             // 
             // Request_X_ray
             // 

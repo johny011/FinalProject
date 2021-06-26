@@ -23,6 +23,8 @@ namespace Final_project
         
         private void btn_add_Click(object sender, EventArgs e)
         {
+            try
+            {
                 DataGridViewRow gr = dataGridView1.CurrentRow;
 
                 DB.Insert_Update_Delete("update TheStaff set Sname=@Sname, Fathername =@Fathername , mothername =@mothername , TheIdNumber =@TheIdNumber, typeid =@typeid ,  deptid=@deptid where id=@id",
@@ -33,7 +35,12 @@ namespace Final_project
                                new SqlParameter("@typeid", int.Parse(gr.Cells[5].Value.ToString())),
                                new SqlParameter("@deptid", int.Parse(gr.Cells[6].Value.ToString())),
                                new SqlParameter("@id", int.Parse(gr.Cells[0].Value.ToString())));
-            MessageBox.Show("تم التعديل");
+                MessageBox.Show("تم التعديل");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             Update_staff_Load(sender, e);
 
 

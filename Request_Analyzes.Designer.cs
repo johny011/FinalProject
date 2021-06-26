@@ -32,20 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Request_Analyzes));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txt_Admissionid = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btn_Request = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.hospitallDataSet50 = new Final_project.hospitallDataSet50();
-            this.analyzesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.analyzesTableAdapter = new Final_project.hospitallDataSet50TableAdapters.AnalyzesTableAdapter();
             this.analysisnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.analysisnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.processingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.selectAnalyzes = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.analyzesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet50 = new Final_project.hospitallDataSet50();
+            this.txt_Admissionid = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btn_Request = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.analyzesTableAdapter = new Final_project.hospitallDataSet50TableAdapters.AnalyzesTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet50)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.analyzesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet50)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,68 +72,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // txt_Admissionid
-            // 
-            this.txt_Admissionid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Admissionid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Admissionid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Admissionid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_Admissionid.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_Admissionid.HintText = "رقم دخولية المريض";
-            this.txt_Admissionid.isPassword = false;
-            this.txt_Admissionid.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_Admissionid.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_Admissionid.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txt_Admissionid.LineThickness = 4;
-            this.txt_Admissionid.Location = new System.Drawing.Point(418, 13);
-            this.txt_Admissionid.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txt_Admissionid.Name = "txt_Admissionid";
-            this.txt_Admissionid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
-            this.txt_Admissionid.TabIndex = 29;
-            this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btn_Request
-            // 
-            this.btn_Request.ActiveBorderThickness = 1;
-            this.btn_Request.ActiveCornerRadius = 20;
-            this.btn_Request.ActiveFillColor = System.Drawing.Color.White;
-            this.btn_Request.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_Request.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_Request.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Request.BackColor = System.Drawing.Color.White;
-            this.btn_Request.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Request.BackgroundImage")));
-            this.btn_Request.ButtonText = "طلب";
-            this.btn_Request.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Request.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Request.ForeColor = System.Drawing.Color.Black;
-            this.btn_Request.IdleBorderThickness = 1;
-            this.btn_Request.IdleCornerRadius = 20;
-            this.btn_Request.IdleFillColor = System.Drawing.Color.White;
-            this.btn_Request.IdleForecolor = System.Drawing.Color.Black;
-            this.btn_Request.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_Request.Location = new System.Drawing.Point(163, 10);
-            this.btn_Request.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_Request.Name = "btn_Request";
-            this.btn_Request.Size = new System.Drawing.Size(220, 66);
-            this.btn_Request.TabIndex = 28;
-            this.btn_Request.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Request.Click += new System.EventHandler(this.btn_Request_Click);
-            // 
-            // hospitallDataSet50
-            // 
-            this.hospitallDataSet50.DataSetName = "hospitallDataSet50";
-            this.hospitallDataSet50.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // analyzesBindingSource
-            // 
-            this.analyzesBindingSource.DataMember = "Analyzes";
-            this.analyzesBindingSource.DataSource = this.hospitallDataSet50;
-            // 
-            // analyzesTableAdapter
-            // 
-            this.analyzesTableAdapter.ClearBeforeFill = true;
             // 
             // analysisnumberDataGridViewTextBoxColumn
             // 
@@ -167,6 +105,69 @@
             this.selectAnalyzes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.selectAnalyzes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // analyzesBindingSource
+            // 
+            this.analyzesBindingSource.DataMember = "Analyzes";
+            this.analyzesBindingSource.DataSource = this.hospitallDataSet50;
+            // 
+            // hospitallDataSet50
+            // 
+            this.hospitallDataSet50.DataSetName = "hospitallDataSet50";
+            this.hospitallDataSet50.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txt_Admissionid
+            // 
+            this.txt_Admissionid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Admissionid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Admissionid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Admissionid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Admissionid.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_Admissionid.HintText = "رقم دخولية المريض";
+            this.txt_Admissionid.isPassword = false;
+            this.txt_Admissionid.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_Admissionid.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_Admissionid.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_Admissionid.LineThickness = 4;
+            this.txt_Admissionid.Location = new System.Drawing.Point(418, 13);
+            this.txt_Admissionid.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_Admissionid.Name = "txt_Admissionid";
+            this.txt_Admissionid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
+            this.txt_Admissionid.TabIndex = 29;
+            this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Admissionid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Admissionid_KeyPress);
+            // 
+            // btn_Request
+            // 
+            this.btn_Request.ActiveBorderThickness = 1;
+            this.btn_Request.ActiveCornerRadius = 20;
+            this.btn_Request.ActiveFillColor = System.Drawing.Color.White;
+            this.btn_Request.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_Request.ActiveLineColor = System.Drawing.Color.White;
+            this.btn_Request.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Request.BackColor = System.Drawing.Color.White;
+            this.btn_Request.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Request.BackgroundImage")));
+            this.btn_Request.ButtonText = "طلب";
+            this.btn_Request.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Request.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_Request.ForeColor = System.Drawing.Color.Black;
+            this.btn_Request.IdleBorderThickness = 1;
+            this.btn_Request.IdleCornerRadius = 20;
+            this.btn_Request.IdleFillColor = System.Drawing.Color.White;
+            this.btn_Request.IdleForecolor = System.Drawing.Color.Black;
+            this.btn_Request.IdleLineColor = System.Drawing.Color.Black;
+            this.btn_Request.Location = new System.Drawing.Point(163, 10);
+            this.btn_Request.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Request.Name = "btn_Request";
+            this.btn_Request.Size = new System.Drawing.Size(220, 66);
+            this.btn_Request.TabIndex = 28;
+            this.btn_Request.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Request.Click += new System.EventHandler(this.btn_Request_Click);
+            // 
+            // analyzesTableAdapter
+            // 
+            this.analyzesTableAdapter.ClearBeforeFill = true;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -190,8 +191,8 @@
             this.Text = "Request_Analyzes";
             this.Load += new System.EventHandler(this.Request_Analyzes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet50)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.analyzesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet50)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

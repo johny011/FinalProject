@@ -248,6 +248,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(220, 52);
             this.bunifuThinButton21.TabIndex = 54;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // btn_refresh
             // 
@@ -635,7 +636,6 @@
             this.textBox1.Size = new System.Drawing.Size(220, 51);
             this.textBox1.TabIndex = 19;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.OnValueChanged += new System.EventHandler(this.textBox1_OnValueChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // Accounting

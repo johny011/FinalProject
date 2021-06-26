@@ -19,23 +19,24 @@ namespace Final_project
             InitializeComponent();
         }
 
-        private void txt_Admissionid_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_sendpicture_Click(object sender, EventArgs e)
         {
-            
-            int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=@Admissionid", new SqlParameter("@", int.Parse(txt_Admissionid.Text))));
-            
-            SqlConnection con = new SqlConnection(DB.con);
-            con.Open();
-            SqlCommand command = new SqlCommand("insert into celendarRP (Requiredpicturesid,AcalendarP) values( @Requiredpicturesid , @img )", con);
-            command.Parameters.AddWithValue("@Requiredpicturesid", Requiredpicturesid);
-            command.Parameters.AddWithValue("@img", DB.convertToByte(pictureBox1.Image));
-            command.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=@Admissionid", new SqlParameter("@", int.Parse(txt_Admissionid.Text))));
+
+                SqlConnection con = new SqlConnection(DB.con);
+                con.Open();
+                SqlCommand command = new SqlCommand("insert into celendarRP (Requiredpicturesid,AcalendarP) values( @Requiredpicturesid , @img )", con);
+                command.Parameters.AddWithValue("@Requiredpicturesid", Requiredpicturesid);
+                command.Parameters.AddWithValue("@img", DB.convertToByte(pictureBox1.Image));
+                command.ExecuteNonQuery();
+                con.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void btn_ٍSelectpicture_Click(object sender, EventArgs e)
         {
@@ -49,6 +50,15 @@ namespace Final_project
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_Admissionid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
         }
     }
 }

@@ -91,5 +91,23 @@ namespace Final_project
                 lockControl(true);
             }
         }
+
+        private void txt_numberpatient_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
+
+        private void txt_payment_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
     }
 }

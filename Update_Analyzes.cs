@@ -28,14 +28,20 @@ namespace Final_project
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            DataGridViewRow gr = dataGridView1.CurrentRow;
+            try
+            {
+                DataGridViewRow gr = dataGridView1.CurrentRow;
                 DB.Insert_Update_Delete("update Analyzes set Analysisname=@Analysisname,price=@price ,processing =@processing  where Analysisnumber=@Analysisnumber",
                     new SqlParameter("@Analysisname", gr.Cells[1].Value.ToString()),
                     new SqlParameter("@price", int.Parse(gr.Cells[2].Value.ToString())),
                     new SqlParameter("@processing", gr.Cells[3].Value.ToString()),
                     new SqlParameter("@Analysisnumber", int.Parse(gr.Cells[0].Value.ToString())));
-            MessageBox.Show("تم التعديل");
-            Update_Analyzes_Load(sender, e);
+                MessageBox.Show("تم التعديل");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -45,7 +51,7 @@ namespace Final_project
             DB.Insert_Update_Delete("delet from Analyzes where  Analysisnumber=@Analysisnumber" ,
                 new SqlParameter("@Analysisnumber", int.Parse(gr.Cells[0].Value.ToString())));
             MessageBox.Show("تم الحذف");
-            Update_Analyzes_Load(sender, e);
+            
         }
     }
 }

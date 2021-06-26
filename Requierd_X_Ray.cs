@@ -32,14 +32,18 @@ namespace Final_project
                 new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text)));
         }
 
-        private void txt_Admissionid_OnValueChanged(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void txt_Admissionid_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
         }
     }
 }

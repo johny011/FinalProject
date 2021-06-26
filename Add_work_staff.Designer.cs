@@ -34,24 +34,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitallDataSet18 = new Final_project.hospitallDataSet18();
+            this.combox_typeid = new System.Windows.Forms.ComboBox();
             this.typeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hospitallDataSet17 = new Final_project.hospitallDataSet17();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.combox_deptid = new System.Windows.Forms.ComboBox();
+            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet18 = new Final_project.hospitallDataSet18();
             this.txt_NO_number = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_father_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_mother_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_name = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.typeeTableAdapter = new Final_project.hospitallDataSet17TableAdapters.TypeeTableAdapter();
             this.deptTableAdapter = new Final_project.hospitallDataSet18TableAdapters.DeptTableAdapter();
-            this.combox_typeid = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet18)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -97,15 +97,20 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "القسم";
             // 
-            // deptBindingSource
+            // combox_typeid
             // 
-            this.deptBindingSource.DataMember = "Dept";
-            this.deptBindingSource.DataSource = this.hospitallDataSet18;
-            // 
-            // hospitallDataSet18
-            // 
-            this.hospitallDataSet18.DataSetName = "hospitallDataSet18";
-            this.hospitallDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.combox_typeid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.combox_typeid.BackColor = System.Drawing.Color.White;
+            this.combox_typeid.DataSource = this.typeeBindingSource;
+            this.combox_typeid.DisplayMember = "typename";
+            this.combox_typeid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_typeid.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combox_typeid.FormattingEnabled = true;
+            this.combox_typeid.Location = new System.Drawing.Point(149, 273);
+            this.combox_typeid.Name = "combox_typeid";
+            this.combox_typeid.Size = new System.Drawing.Size(220, 27);
+            this.combox_typeid.TabIndex = 23;
+            this.combox_typeid.ValueMember = "typeid";
             // 
             // typeeBindingSource
             // 
@@ -159,6 +164,16 @@
             this.combox_deptid.Size = new System.Drawing.Size(220, 27);
             this.combox_deptid.TabIndex = 21;
             this.combox_deptid.ValueMember = "deptid";
+            // 
+            // deptBindingSource
+            // 
+            this.deptBindingSource.DataMember = "Dept";
+            this.deptBindingSource.DataSource = this.hospitallDataSet18;
+            // 
+            // hospitallDataSet18
+            // 
+            this.hospitallDataSet18.DataSetName = "hospitallDataSet18";
+            this.hospitallDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txt_NO_number
             // 
@@ -253,21 +268,6 @@
             // 
             this.deptTableAdapter.ClearBeforeFill = true;
             // 
-            // combox_typeid
-            // 
-            this.combox_typeid.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combox_typeid.BackColor = System.Drawing.Color.White;
-            this.combox_typeid.DataSource = this.typeeBindingSource;
-            this.combox_typeid.DisplayMember = "typename";
-            this.combox_typeid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combox_typeid.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combox_typeid.FormattingEnabled = true;
-            this.combox_typeid.Location = new System.Drawing.Point(149, 273);
-            this.combox_typeid.Name = "combox_typeid";
-            this.combox_typeid.Size = new System.Drawing.Size(220, 27);
-            this.combox_typeid.TabIndex = 23;
-            this.combox_typeid.ValueMember = "typeid";
-            // 
             // Add_work_staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,10 +280,10 @@
             this.Load += new System.EventHandler(this.Add_work_staff_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet18)).EndInit();
             this.ResumeLayout(false);
 
         }

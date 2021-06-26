@@ -74,7 +74,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(25, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(315, 189);
+            this.pictureBox1.Size = new System.Drawing.Size(486, 302);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
@@ -99,6 +99,7 @@
             this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
             this.txt_Admissionid.TabIndex = 35;
             this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Admissionid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Admissionid_KeyPress);
             // 
             // btn_ٍSelectpicture
             // 

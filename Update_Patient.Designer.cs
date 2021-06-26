@@ -136,6 +136,7 @@
             this.txt_NO_number.Size = new System.Drawing.Size(220, 60);
             this.txt_NO_number.TabIndex = 32;
             this.txt_NO_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_NO_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NO_number_KeyPress);
             // 
             // txt_father_name
             // 
@@ -220,6 +221,7 @@
             this.txt_panumber.Size = new System.Drawing.Size(220, 60);
             this.txt_panumber.TabIndex = 37;
             this.txt_panumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_panumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_panumber_KeyPress);
             // 
             // Update_Patient
             // 

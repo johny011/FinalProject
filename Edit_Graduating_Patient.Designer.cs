@@ -99,6 +99,7 @@
             this.txt_payment.Size = new System.Drawing.Size(220, 60);
             this.txt_payment.TabIndex = 54;
             this.txt_payment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_payment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_payment_KeyPress);
             // 
             // label3
             // 
@@ -210,6 +211,7 @@
             this.txt_numberpatient.Size = new System.Drawing.Size(220, 60);
             this.txt_numberpatient.TabIndex = 46;
             this.txt_numberpatient.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_numberpatient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numberpatient_KeyPress);
             // 
             // dateOut
             // 

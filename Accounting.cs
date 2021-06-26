@@ -71,17 +71,18 @@ namespace Final_project
 
         private void textBox1_OnValueChanged(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            if(!DB.Isnumber(e.KeyChar))
+            
+            if (!DB.Isnumber(e.KeyChar))
             {
                 MessageBox.Show("يجب ادخال ارقام فقط");
                 e.Handled = true;
             }
+            
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -95,7 +96,7 @@ namespace Final_project
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!DB.Isnumber(e.KeyChar) && e.KeyChar!='.')
+            if (!DB.Isnumber(e.KeyChar)  && e.KeyChar!='.')
             {
                 MessageBox.Show("يجب ادخال ارقام فقط");
                 e.Handled = true;
@@ -109,6 +110,11 @@ namespace Final_project
                 MessageBox.Show("يجب ادخال ارقام فقط");
                 e.Handled = true;
             }
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -128,6 +134,7 @@ namespace Final_project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 int RowAnalyzes = DB.DataTable("select celendarRAid,price, Analysisname from Analyzes A,celendarRA CRA ,RequiredAnalysis RA where A.Analysisnumber = RA.Analysisnumber and RA.RequiredAnalysisid = CRA.RequiredAnalysisid and RA.Admissionid = @Admissionid ",

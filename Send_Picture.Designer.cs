@@ -64,7 +64,7 @@
             this.txt_Admissionid.Size = new System.Drawing.Size(220, 60);
             this.txt_Admissionid.TabIndex = 31;
             this.txt_Admissionid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_Admissionid.OnValueChanged += new System.EventHandler(this.txt_Admissionid_OnValueChanged);
+            this.txt_Admissionid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Admissionid_KeyPress);
             // 
             // btn_ٍSelectpicture
             // 
@@ -97,7 +97,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(315, 189);
+            this.pictureBox1.Size = new System.Drawing.Size(506, 277);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -122,7 +122,7 @@
             this.btn_sendpicture.IdleFillColor = System.Drawing.Color.White;
             this.btn_sendpicture.IdleForecolor = System.Drawing.Color.Black;
             this.btn_sendpicture.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_sendpicture.Location = new System.Drawing.Point(167, 354);
+            this.btn_sendpicture.Location = new System.Drawing.Point(159, 317);
             this.btn_sendpicture.Margin = new System.Windows.Forms.Padding(5);
             this.btn_sendpicture.Name = "btn_sendpicture";
             this.btn_sendpicture.Size = new System.Drawing.Size(220, 66);

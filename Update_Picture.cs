@@ -29,14 +29,21 @@ namespace Final_project
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            DataGridViewRow gr = dataGridView1.CurrentRow;
-           
+            try
+            {
+                DataGridViewRow gr = dataGridView1.CurrentRow;
+
                 DB.Insert_Update_Delete("update pictures set picturesname=@picturesname ,price=@price  ,processing =@processing  where picturesid=@picturesid",
                     new SqlParameter("@picturesname", gr.Cells[1].Value.ToString()),
                     new SqlParameter("@price", int.Parse(gr.Cells[2].Value.ToString())),
                     new SqlParameter("@processing", gr.Cells[3].Value.ToString()),
                     new SqlParameter("@picturesid", int.Parse(gr.Cells[0].Value.ToString())));
-            MessageBox.Show("تم التعديل");
+                MessageBox.Show("تم التعديل");
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
             Update_Picture_Load(sender, e);
 
         }

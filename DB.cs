@@ -91,11 +91,12 @@ namespace Final_project
         }
         public static bool Isnumber(char c)
         {
-            if (c >= 48 && c <= 57 || c == 8)
+            if (c >= 48 && c <= 57 || c!=8 || c!=13)
                 return true;
             else
                 return false;
         }
+        
 
     }
 }

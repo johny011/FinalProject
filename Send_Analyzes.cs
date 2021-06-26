@@ -57,5 +57,14 @@ namespace Final_project
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void txt_Admissionid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
     }
 }

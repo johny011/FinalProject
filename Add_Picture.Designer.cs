@@ -110,6 +110,7 @@
             this.txt_price_picture.Size = new System.Drawing.Size(220, 60);
             this.txt_price_picture.TabIndex = 30;
             this.txt_price_picture.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_price_picture.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_price_picture_KeyPress);
             // 
             // txt_name_picture
             // 

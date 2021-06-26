@@ -110,6 +110,7 @@
             this.txt_price_analyze.Size = new System.Drawing.Size(220, 60);
             this.txt_price_analyze.TabIndex = 26;
             this.txt_price_analyze.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_price_analyze.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_price_analyze_KeyPress);
             // 
             // txt_name_analyze
             // 

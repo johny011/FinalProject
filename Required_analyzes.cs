@@ -24,5 +24,14 @@ namespace Final_project
                 "and R.Admissionid=PA.Admissionid",
                 new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text))); 
         }
+
+        private void txt_Admissionid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -20,10 +20,40 @@ namespace Final_project
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            DB.Insert_Update_Delete("insert into Analyzes (Analysisname,price,processing) values (@Analysisname,@price, @processing)",
-                new SqlParameter("@Analysisname", txt_name_analyze.Text),
-                new SqlParameter("@price", int.Parse(txt_price_analyze.Text)),
-                new SqlParameter("@processing", txt_processing.Text));
+            if (txt_name_analyze.Text != "" && txt_price_analyze.Text != "" && txt_processing.Text != "")
+            {
+                
+                 try
+                 {
+                     DB.Insert_Update_Delete("insert into Analyzes (Analysisname,price,processing) values (@Analysisname,@price, @processing)",
+                            new SqlParameter("@Analysisname", txt_name_analyze.Text),
+                            new SqlParameter("@price", int.Parse(txt_price_analyze.Text)),
+                            new SqlParameter("@processing", txt_processing.Text));
+                        MessageBox.Show("تمت الإضافة بنجاح");
+                    txt_name_analyze.Text = "";
+                    txt_price_analyze.Text = "";
+                    txt_processing.Text = "";
+
+                 }
+                 catch (Exception ex)
+                 {
+                     MessageBox.Show(ex.Message);
+                 }
+                
+            }
+            else
+            {
+                MessageBox.Show("يجب ادخال جميع المعلومات");
+            }
+        }
+
+        private void txt_price_analyze_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
         }
     }
 }

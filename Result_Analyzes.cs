@@ -52,5 +52,14 @@ namespace Final_project
                     pictureBox1.Image.Save(sfd.FileName);
             } 
         }
+
+        private void txt_Admissionid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!DB.Isnumber(e.KeyChar))
+            {
+                MessageBox.Show("يجب ادخال ارقام فقط");
+                e.Handled = true;
+            }
+        }
     }
 }

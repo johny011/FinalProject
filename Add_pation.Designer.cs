@@ -148,6 +148,7 @@
             this.txt_NO_number.Size = new System.Drawing.Size(220, 60);
             this.txt_NO_number.TabIndex = 20;
             this.txt_NO_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_NO_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NO_number_KeyPress);
             // 
             // txt_father_name
             // 
