@@ -23,7 +23,7 @@ namespace Final_project
         {
             try
             {
-                int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=@Admissionid", new SqlParameter("@", int.Parse(txt_Admissionid.Text))));
+                int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=@Admissionid", new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text))));
 
                 SqlConnection con = new SqlConnection(DB.con);
                 con.Open();

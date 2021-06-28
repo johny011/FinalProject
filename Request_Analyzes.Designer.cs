@@ -58,6 +58,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.analysisnumberDataGridViewTextBoxColumn,
@@ -141,11 +143,11 @@
             // 
             this.btn_Request.ActiveBorderThickness = 1;
             this.btn_Request.ActiveCornerRadius = 20;
-            this.btn_Request.ActiveFillColor = System.Drawing.Color.White;
+            this.btn_Request.ActiveFillColor = System.Drawing.SystemColors.Control;
             this.btn_Request.ActiveForecolor = System.Drawing.Color.White;
             this.btn_Request.ActiveLineColor = System.Drawing.Color.White;
             this.btn_Request.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Request.BackColor = System.Drawing.Color.White;
+            this.btn_Request.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Request.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Request.BackgroundImage")));
             this.btn_Request.ButtonText = "طلب";
             this.btn_Request.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -170,7 +172,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.btn_Request);
             this.panel1.Controls.Add(this.txt_Admissionid);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;

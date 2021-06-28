@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Final_project
 {
@@ -59,6 +60,29 @@ namespace Final_project
             {
                 MessageBox.Show("يجب ادخال ارقام فقط");
                 e.Handled = true;
+            }
+        }
+        Image convert(byte[] img)
+        {
+            using (MemoryStream ms = new MemoryStream(img))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataTable dt = dataGridView1.DataSource as DataTable;
+            if (dt != null)
+            {
+                try
+                {
+                    DataRow row = dt.Rows[e.RowIndex];
+                    pictureBox1.Image = convert((byte[])row["Acalendar"]);
+                }
+                catch (Exception masseage)
+                {
+                    MessageBox.Show(masseage.Message);
+                }
             }
         }
     }

@@ -35,8 +35,10 @@
             this.txt_Admissionid = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btn_Request = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -46,9 +48,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txt_Admissionid);
-            this.panel1.Controls.Add(this.btn_Request);
             this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -68,7 +69,7 @@
             this.txt_Admissionid.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_Admissionid.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Admissionid.LineThickness = 4;
-            this.txt_Admissionid.Location = new System.Drawing.Point(459, 11);
+            this.txt_Admissionid.Location = new System.Drawing.Point(406, 17);
             this.txt_Admissionid.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_Admissionid.Name = "txt_Admissionid";
             this.txt_Admissionid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -96,7 +97,7 @@
             this.btn_Request.IdleFillColor = System.Drawing.Color.White;
             this.btn_Request.IdleForecolor = System.Drawing.Color.Black;
             this.btn_Request.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_Request.Location = new System.Drawing.Point(133, 5);
+            this.btn_Request.Location = new System.Drawing.Point(164, 13);
             this.btn_Request.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Request.Name = "btn_Request";
             this.btn_Request.Size = new System.Drawing.Size(220, 66);
@@ -108,11 +109,21 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 79);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 100);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 371);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 350);
             this.dataGridView1.TabIndex = 30;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txt_Admissionid);
+            this.panel2.Controls.Add(this.btn_Request);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 100);
+            this.panel2.TabIndex = 33;
             // 
             // Required_analyzes
             // 
@@ -125,6 +136,7 @@
             this.Text = "Required_analyzes";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -135,5 +147,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_Admissionid;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_Request;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

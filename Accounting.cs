@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Drawing;
 
 
 namespace Final_project
@@ -111,10 +112,40 @@ namespace Final_project
                 e.Handled = true;
             }
         }
-
+        Bitmap bt;
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                try
+                {
+                    //ارسال المعلومات للجدول
+                    string s = Convert.ToDateTime(dateTimePicker1.Value).ToShortDateString();
+                    DB.Insert_Update_Delete("insert into Accounting values ('" + s + "'," + t + "," + da + "," + label16.Text + "," + textBox2.Text + "," + textBox1.Text + "," + (AP + t) + ")");
+                    //كود الارسال للطابعة
+                    MessageBox.Show("تم بنجاح");
+                    Graphics graphics = this.CreateGraphics();
+                    bt = new Bitmap(this.Size.Width, this.Size.Height, graphics);
+                    Graphics mg = Graphics.FromImage(bt);
+                    mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+                    printPreviewDialog1.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("يجب ادخال جميع المعلومات");
+            }
+            
+            
+        }
 
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bt, 0, 0);
         }
 
         private void label6_Click(object sender, EventArgs e)

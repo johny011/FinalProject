@@ -32,26 +32,28 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_working_period));
             this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.periodnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.situationidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.theSituationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitallDataSet55 = new Final_project.hospitallDataSet55();
+            this.dayAndDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.workPeriodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hospitallDataSet11 = new Final_project.hospitallDataSet11();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.workPeriodsTableAdapter = new Final_project.hospitallDataSet11TableAdapters.WorkPeriodsTableAdapter();
-            this.hospitallDataSet55 = new Final_project.hospitallDataSet55();
-            this.theSituationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.theSituationTableAdapter = new Final_project.hospitallDataSet55TableAdapters.TheSituationTableAdapter();
-            this.periodnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situationidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dayAndDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workPeriodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet11)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet55)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_delete
@@ -73,7 +75,7 @@
             this.btn_delete.IdleFillColor = System.Drawing.Color.White;
             this.btn_delete.IdleForecolor = System.Drawing.Color.Black;
             this.btn_delete.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_delete.Location = new System.Drawing.Point(13, 380);
+            this.btn_delete.Location = new System.Drawing.Point(178, 12);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(211, 66);
@@ -103,6 +105,55 @@
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // periodnumberDataGridViewTextBoxColumn
+            // 
+            this.periodnumberDataGridViewTextBoxColumn.DataPropertyName = "periodnumber";
+            this.periodnumberDataGridViewTextBoxColumn.HeaderText = "periodnumber";
+            this.periodnumberDataGridViewTextBoxColumn.Name = "periodnumberDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // situationidDataGridViewTextBoxColumn
+            // 
+            this.situationidDataGridViewTextBoxColumn.DataPropertyName = "Situationid";
+            this.situationidDataGridViewTextBoxColumn.DataSource = this.theSituationBindingSource;
+            this.situationidDataGridViewTextBoxColumn.DisplayMember = "TheSituation";
+            this.situationidDataGridViewTextBoxColumn.HeaderText = "Situationid";
+            this.situationidDataGridViewTextBoxColumn.Name = "situationidDataGridViewTextBoxColumn";
+            this.situationidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.situationidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.situationidDataGridViewTextBoxColumn.ValueMember = "Situationid";
+            // 
+            // theSituationBindingSource
+            // 
+            this.theSituationBindingSource.DataMember = "TheSituation";
+            this.theSituationBindingSource.DataSource = this.hospitallDataSet55;
+            // 
+            // hospitallDataSet55
+            // 
+            this.hospitallDataSet55.DataSetName = "hospitallDataSet55";
+            this.hospitallDataSet55.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dayAndDateDataGridViewTextBoxColumn
+            // 
+            this.dayAndDateDataGridViewTextBoxColumn.DataPropertyName = "DayAndDate";
+            this.dayAndDateDataGridViewTextBoxColumn.HeaderText = "DayAndDate";
+            this.dayAndDateDataGridViewTextBoxColumn.Name = "dayAndDateDataGridViewTextBoxColumn";
+            // 
+            // Edit
+            // 
+            this.Edit.DataPropertyName = "periodnumber";
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            // 
             // workPeriodsBindingSource
             // 
             this.workPeriodsBindingSource.DataMember = "WorkPeriods";
@@ -120,8 +171,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btn_delete);
-            this.panel1.Controls.Add(this.btn_add);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -148,7 +198,7 @@
             this.btn_add.IdleFillColor = System.Drawing.Color.White;
             this.btn_add.IdleForecolor = System.Drawing.Color.Black;
             this.btn_add.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_add.Location = new System.Drawing.Point(233, 379);
+            this.btn_add.Location = new System.Drawing.Point(412, 12);
             this.btn_add.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(211, 66);
@@ -160,58 +210,19 @@
             // 
             this.workPeriodsTableAdapter.ClearBeforeFill = true;
             // 
-            // hospitallDataSet55
-            // 
-            this.hospitallDataSet55.DataSetName = "hospitallDataSet55";
-            this.hospitallDataSet55.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // theSituationBindingSource
-            // 
-            this.theSituationBindingSource.DataMember = "TheSituation";
-            this.theSituationBindingSource.DataSource = this.hospitallDataSet55;
-            // 
             // theSituationTableAdapter
             // 
             this.theSituationTableAdapter.ClearBeforeFill = true;
             // 
-            // periodnumberDataGridViewTextBoxColumn
+            // panel2
             // 
-            this.periodnumberDataGridViewTextBoxColumn.DataPropertyName = "periodnumber";
-            this.periodnumberDataGridViewTextBoxColumn.HeaderText = "periodnumber";
-            this.periodnumberDataGridViewTextBoxColumn.Name = "periodnumberDataGridViewTextBoxColumn";
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // situationidDataGridViewTextBoxColumn
-            // 
-            this.situationidDataGridViewTextBoxColumn.DataPropertyName = "Situationid";
-            this.situationidDataGridViewTextBoxColumn.DataSource = this.theSituationBindingSource;
-            this.situationidDataGridViewTextBoxColumn.DisplayMember = "TheSituation";
-            this.situationidDataGridViewTextBoxColumn.HeaderText = "Situationid";
-            this.situationidDataGridViewTextBoxColumn.Name = "situationidDataGridViewTextBoxColumn";
-            this.situationidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.situationidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.situationidDataGridViewTextBoxColumn.ValueMember = "Situationid";
-            // 
-            // dayAndDateDataGridViewTextBoxColumn
-            // 
-            this.dayAndDateDataGridViewTextBoxColumn.DataPropertyName = "DayAndDate";
-            this.dayAndDateDataGridViewTextBoxColumn.HeaderText = "DayAndDate";
-            this.dayAndDateDataGridViewTextBoxColumn.Name = "dayAndDateDataGridViewTextBoxColumn";
-            // 
-            // Edit
-            // 
-            this.Edit.DataPropertyName = "periodnumber";
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Edit.Text = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
+            this.panel2.Controls.Add(this.btn_add);
+            this.panel2.Controls.Add(this.btn_delete);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 360);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 90);
+            this.panel2.TabIndex = 27;
             // 
             // Update_working_period
             // 
@@ -224,11 +235,12 @@
             this.Text = "Update_working_period";
             this.Load += new System.EventHandler(this.Update_working_period_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workPeriodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet11)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet55)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.theSituationBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -251,5 +263,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn situationidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dayAndDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.Panel panel2;
     }
 }

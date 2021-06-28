@@ -41,9 +41,11 @@
             this.btn_Edit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
             this.picturesTableAdapter = new Final_project.hospitallDataSet47TableAdapters.picturesTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet47)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -112,7 +114,7 @@
             this.btn_Edit.ActiveFillColor = System.Drawing.Color.Silver;
             this.btn_Edit.ActiveForecolor = System.Drawing.Color.White;
             this.btn_Edit.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_Edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Edit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Edit.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Edit.BackgroundImage")));
             this.btn_Edit.ButtonText = "تعديل";
@@ -124,7 +126,7 @@
             this.btn_Edit.IdleFillColor = System.Drawing.Color.White;
             this.btn_Edit.IdleForecolor = System.Drawing.Color.Black;
             this.btn_Edit.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_Edit.Location = new System.Drawing.Point(264, 370);
+            this.btn_Edit.Location = new System.Drawing.Point(415, 17);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(220, 66);
@@ -139,7 +141,7 @@
             this.btn_delete.ActiveFillColor = System.Drawing.Color.Silver;
             this.btn_delete.ActiveForecolor = System.Drawing.Color.White;
             this.btn_delete.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_delete.BackColor = System.Drawing.SystemColors.Control;
             this.btn_delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_delete.BackgroundImage")));
             this.btn_delete.ButtonText = "حذف";
@@ -151,7 +153,7 @@
             this.btn_delete.IdleFillColor = System.Drawing.Color.White;
             this.btn_delete.IdleForecolor = System.Drawing.Color.Black;
             this.btn_delete.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_delete.Location = new System.Drawing.Point(14, 370);
+            this.btn_delete.Location = new System.Drawing.Point(165, 17);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(5);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(220, 66);
@@ -163,13 +165,22 @@
             // 
             this.picturesTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_Edit);
+            this.panel1.Controls.Add(this.btn_delete);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 350);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.TabIndex = 32;
+            // 
             // Update_Picture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_Edit);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Update_Picture";
@@ -178,6 +189,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet47)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -195,5 +207,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn picturesnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn processingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -32,22 +32,29 @@ namespace Final_project
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            try
+            if (txt_place.Text != "" && txt_numberpatient.Text != "" && txt_payment.Text != "")
             {
-                int SIdd = int.Parse(DB.SelectToGetOneValue("select id from TheStaff where Sname='" + combox_doctor.Text + "'"));
-                DB.Insert_Update_Delete("insert into patientAdmission (DateOfEntry,Notes,panumber,roomid,deptid,SIdd,DownPayment)values(@DateOfEntry,@Notes,@panumber,@roomid,@deptid,@SIdd,@DownPayment)",
-                    new SqlParameter("@DateOfEntry", Convert.ToDateTime(dateTimePicker1.Value.Month.ToString() + "/" + dateTimePicker1.Value.Day.ToString() + "/" + dateTimePicker1.Value.Year.ToString()).ToShortDateString()),
-                    new SqlParameter("@Notes", txt_Notes.Text),
-                    new SqlParameter("@panumber", int.Parse(txt_numberpatient.Text)),
-                    new SqlParameter("@roomid", int.Parse(combox_room.Text)),
-                    new SqlParameter("@deptid", deptid),
-                    new SqlParameter("@SIdd", SIdd),
-                    new SqlParameter("@DownPayment", int.Parse(txt_payment.Text))
-                    );
+                try
+                {
+                    int SIdd = int.Parse(DB.SelectToGetOneValue("select id from TheStaff where Sname='" + combox_doctor.Text + "'"));
+                    DB.Insert_Update_Delete("insert into patientAdmission (DateOfEntry,Notes,panumber,roomid,deptid,SIdd,DownPayment)values(@DateOfEntry,@Notes,@panumber,@roomid,@deptid,@SIdd,@DownPayment)",
+                        new SqlParameter("@DateOfEntry", Convert.ToDateTime(dateTimePicker1.Value.Month.ToString() + "/" + dateTimePicker1.Value.Day.ToString() + "/" + dateTimePicker1.Value.Year.ToString()).ToShortDateString()),
+                        new SqlParameter("@Notes", txt_Notes.Text),
+                        new SqlParameter("@panumber", int.Parse(txt_numberpatient.Text)),
+                        new SqlParameter("@roomid", int.Parse(combox_room.Text)),
+                        new SqlParameter("@deptid", deptid),
+                        new SqlParameter("@SIdd", SIdd),
+                        new SqlParameter("@DownPayment", int.Parse(txt_payment.Text))
+                        );
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("يجب ادخال جميع المعلومات");
             }
 
         }

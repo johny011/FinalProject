@@ -90,6 +90,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePicker1.Location = new System.Drawing.Point(318, 313);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
@@ -97,6 +98,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Blue;
@@ -108,6 +110,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
@@ -119,6 +122,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
@@ -130,6 +134,7 @@
             // 
             // checkedListBox3
             // 
+            this.checkedListBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkedListBox3.FormattingEnabled = true;
             this.checkedListBox3.Location = new System.Drawing.Point(624, 193);
             this.checkedListBox3.Name = "checkedListBox3";
@@ -138,6 +143,7 @@
             // 
             // checkedListBox2
             // 
+            this.checkedListBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Location = new System.Drawing.Point(360, 193);
             this.checkedListBox2.Name = "checkedListBox2";
@@ -146,6 +152,7 @@
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(122, 193);
             this.checkedListBox1.Name = "checkedListBox1";
@@ -181,6 +188,7 @@
             // 
             // lbl_situation
             // 
+            this.lbl_situation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_situation.Location = new System.Drawing.Point(132, 23);
             this.lbl_situation.Name = "lbl_situation";
             this.lbl_situation.Size = new System.Drawing.Size(130, 56);
@@ -190,6 +198,7 @@
             // 
             // combox_situations
             // 
+            this.combox_situations.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combox_situations.BackColor = System.Drawing.Color.White;
             this.combox_situations.DataSource = this.theSituationBindingSource;
             this.combox_situations.DisplayMember = "TheSituation";
@@ -214,6 +223,7 @@
             // 
             // lbl_period
             // 
+            this.lbl_period.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_period.Location = new System.Drawing.Point(535, 23);
             this.lbl_period.Name = "lbl_period";
             this.lbl_period.Size = new System.Drawing.Size(130, 56);
@@ -223,6 +233,7 @@
             // 
             // combox_period
             // 
+            this.combox_period.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combox_period.BackColor = System.Drawing.Color.White;
             this.combox_period.DataSource = this.timePeriodsBindingSource;
             this.combox_period.DisplayMember = "ThePeriod";

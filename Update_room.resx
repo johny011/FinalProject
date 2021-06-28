@@ -120,31 +120,19 @@
   <metadata name="deptBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>763, 17</value>
   </metadata>
+  <metadata name="hospitallDataSet54.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>609, 17</value>
+  </metadata>
   <metadata name="roomBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>295, 17</value>
+  </metadata>
+  <metadata name="hospitallDataSet53.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 17</value>
   </metadata>
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_delete.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANMAAABCCAYAAADNPeM/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALISURBVHhe7d2hr3FxHMdxURPF02g07UwyxabYBMHfoGkk
-        /gPNJFNsik0QRJtiU0wyiUYTv8++P+c5D7uuOZ5v835tn+3uum7ynnN+925il8tFGGP/P2JizGjExJjR
-        iIkxoxETY0YjJsaM9jKm0+kk/X5fKpWK+L4vnudJLBZj7Gumr3l97ZdKJen1enI4HJ62ovs1pvF47H5R
-        tVqV0Wgki8VC9vu9AN9EX/P62p9MJlKv110TGtWzZn7EpOXVajUpFotyPB6DXwlAnc9nF1WhUJDdbvfQ
-        zkNMGlImk5HBYBA8FcAzs9lMcrmcbDab5zHpOxIhAe/Ryz+9n/oRk94j6aUdgPc1m01pt9v/YtJTO72x
-        4h4JiOZ6vUo2m5XVanWLSU8n9KYKQHTdblcajcYtJj1D16M/ANGt12t3cOdiSqVSst1ug4cARKGXevF4
-        /BZTIpFw5+cAPuP+Y0Jj0i8AfI6YACPEBBghJsAIMQFGiAkwQkyAEWICjBATYISYACPEBBghJsAIMQFG
-        iAkwQkyAEWICjBATYISYACPEBBghJsAIMQFGiAkwQkyAEWICjBATYISYACPEBBghJsAIMQFGiAkwQkyA
-        EWICjBATYCSMST9CUD9KEMBnwpg8z5P9fh98G0BUYUyFQkFms1nwbQBR6Ier64esu5harZY0m83gIQBR
-        DAYDqdVqt5g2m42k02num4APlMtlGQ6Ht5h0+s6k71AA3jcajaRSqbiGwphOp5P4vi/L5TL4MQCvHI9H
-        d0V3OBweY9KtVivJZrPuhgrA7zSkfD4v0+k07OchJt18PpdMJiOdTid4GoB7k8nEvSPdh6T7EZNOL/ka
-        jYYrT08qtELgm53PZ3d/VK1WpVQqhZd293sa099peXrkl0wmb3+UYuxLl0gk3EFDv99/2oruZUyMsfdH
-        TIwZjZgYMxoxMWY0YmLMZBf5A+X+OcLvLk6AAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btn_add.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANMAAABCCAYAAADNPeM/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -163,14 +151,26 @@
         TIwZjZgYMxoxMWY0YmLMZBf5A+X+OcLvLk6AAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="hospitallDataSet53.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>141, 17</value>
-  </metadata>
+  <data name="btn_delete.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANMAAABCCAYAAADNPeM/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALISURBVHhe7d2hr3FxHMdxURPF02g07UwyxabYBMHfoGkk
+        /gPNJFNsik0QRJtiU0wyiUYTv8++P+c5D7uuOZ5v835tn+3uum7ynnN+925il8tFGGP/P2JizGjExJjR
+        iIkxoxETY0YjJsaM9jKm0+kk/X5fKpWK+L4vnudJLBZj7Gumr3l97ZdKJen1enI4HJ62ovs1pvF47H5R
+        tVqV0Wgki8VC9vu9AN9EX/P62p9MJlKv110TGtWzZn7EpOXVajUpFotyPB6DXwlAnc9nF1WhUJDdbvfQ
+        zkNMGlImk5HBYBA8FcAzs9lMcrmcbDab5zHpOxIhAe/Ryz+9n/oRk94j6aUdgPc1m01pt9v/YtJTO72x
+        4h4JiOZ6vUo2m5XVanWLSU8n9KYKQHTdblcajcYtJj1D16M/ANGt12t3cOdiSqVSst1ug4cARKGXevF4
+        /BZTIpFw5+cAPuP+Y0Jj0i8AfI6YACPEBBghJsAIMQFGiAkwQkyAEWICjBATYISYACPEBBghJsAIMQFG
+        iAkwQkyAEWICjBATYISYACPEBBghJsAIMQFGiAkwQkyAEWICjBATYISYACPEBBghJsAIMQFGiAkwQkyA
+        EWICjBATYCSMST9CUD9KEMBnwpg8z5P9fh98G0BUYUyFQkFms1nwbQBR6Ier64esu5harZY0m83gIQBR
+        DAYDqdVqt5g2m42k02num4APlMtlGQ6Ht5h0+s6k71AA3jcajaRSqbiGwphOp5P4vi/L5TL4MQCvHI9H
+        d0V3OBweY9KtVivJZrPuhgrA7zSkfD4v0+k07OchJt18PpdMJiOdTid4GoB7k8nEvSPdh6T7EZNOL/ka
+        jYYrT08qtELgm53PZ3d/VK1WpVQqhZd293sa099peXrkl0wmb3+UYuxLl0gk3EFDv99/2oruZUyMsfdH
+        TIwZjZgYMxoxMWY0YmLMZBf5A+X+OcLvLk6AAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="roomTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>455, 17</value>
-  </metadata>
-  <metadata name="hospitallDataSet54.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>609, 17</value>
   </metadata>
   <metadata name="deptTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>919, 17</value>

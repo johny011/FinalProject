@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Final_project
 {
@@ -16,6 +17,7 @@ namespace Final_project
         int move;
         int movex;
         int movey;
+        bool checkClick = false;
        
         public Main_admin()
         {
@@ -92,9 +94,52 @@ namespace Final_project
             }
 
         }
-        public void ActiveBtn(object btnsender)
+        public void DisplayBtn(object btnsender,Panel p)
         {
-            DisplayBtn(btnsender);
+           if(panel2.Visible==true)
+            {
+                foreach (Bunifu.Framework.UI.BunifuFlatButton previousBtn in panel2.Controls)
+                {
+                    if (previousBtn.GetType() == typeof(Bunifu.Framework.UI.BunifuFlatButton))
+                    {
+                        previousBtn.Normalcolor = Color.FromArgb(51, 51, 76);
+                        previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                        previousBtn.ForeColor = Color.Gainsboro;
+
+                    }
+                }
+
+            }
+           if(panel.Visible)
+            {
+                foreach (Bunifu.Framework.UI.BunifuFlatButton previousBtn in panel.Controls)
+                {
+                    if (previousBtn.GetType() == typeof(Bunifu.Framework.UI.BunifuFlatButton))
+                    {
+                        previousBtn.Normalcolor = Color.FromArgb(51, 51, 76);
+                        previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                        previousBtn.ForeColor = Color.Gainsboro;
+
+                    }
+                }
+
+            }
+            foreach (Bunifu.Framework.UI.BunifuFlatButton previousBtn in p.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Bunifu.Framework.UI.BunifuFlatButton))
+                {
+                    previousBtn.Normalcolor = Color.FromArgb(51, 51, 76);
+                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.ForeColor = Color.Gainsboro;
+
+                }
+            }
+
+        }
+       
+        public void ActiveBtn(object btnsender,Panel p )
+        {
+            DisplayBtn(btnsender,p);
             currentButton = (Bunifu.Framework.UI.BunifuFlatButton)btnsender;
             currentButton.Normalcolor = panel_title.BackColor;
             currentButton.BackColor = panel_title.BackColor;
@@ -103,25 +148,25 @@ namespace Final_project
 
         private void btn_add_emp_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel2);
             ChildForm(new Add_work_staff());
         }
 
         private void btn_add_acount_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel2);
             ChildForm(new Add_account());
         }
 
         private void btn_add_interval_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel2);
             ChildForm(new Add_period ());
         }
 
         private void btn_add_room_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel2);
             ChildForm(new Add_room());
         }
 
@@ -129,37 +174,37 @@ namespace Final_project
 
         private void btn_add_working_period_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel2);
             ChildForm(new Add_working_period());
         }
 
         private void btn_update_emp_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel);
             ChildForm(new Update_staff());
         }
 
         private void btn_update_acount_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel);
             ChildForm(new Update_account());
         }
 
         private void btn_update_interval_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel);
             ChildForm(new Update_period());
         }
 
         private void btn_update_room_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel);
             ChildForm(new Update_room());
         }
 
         private void btn_update_working_period_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel);
             ChildForm(new Update_working_period());
         }
 
@@ -167,7 +212,7 @@ namespace Final_project
 
         private void btn_show_department_Click(object sender, EventArgs e)
         {
-            ActiveBtn(sender);
+            ActiveBtn(sender,panel);
             ChildForm(new View_department());
         }
 
@@ -180,14 +225,23 @@ namespace Final_project
 
         private void viewPanle_btn_Click(object sender, EventArgs e)
         {
-            if (panel.Visible == true) panel.Visible = false;
+
+            viewPanle_btn.Normalcolor = Color.FromArgb(119, 119, 132);
+            addPanel_btn.Normalcolor = panel1.BackColor;
+            if (panel.Visible == true) { panel.Visible = false; }
             else { panel.Visible = true; }
+            DisplayBtn(sender, panel);
+            panel2.Visible = false;
         }
 
         private void addPanel_btn_Click(object sender, EventArgs e)
         {
-            if (panel2.Visible == true) panel2.Visible = false;
+           addPanel_btn.Normalcolor= Color.FromArgb(119, 119, 132);
+            viewPanle_btn.Normalcolor = panel1.BackColor;
+            if (panel2.Visible == true) { panel2.Visible = false;  }
             else panel2.Visible = true;
+            DisplayBtn(sender, panel2);
+            panel.Visible = false;
         }
     }
 }

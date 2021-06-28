@@ -31,7 +31,7 @@ namespace Final_project
                    new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text))));
                 if (value == deptid)
                 {
-                    int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=@Admissionid",new SqlParameter("@", int.Parse(txt_Admissionid.Text))));
+                    int Requiredpicturesid = int.Parse(DB.SelectToGetOneValue("select Requiredpicturesid from Requiredpictures where Admissionid=@Admissionid",new SqlParameter("@Admissionid", int.Parse(txt_Admissionid.Text))));
                     dataGridView1.DataSource = DB.DataTable("select * from celendarRP where Requiredpicturesid=@Requiredpicturesid",new SqlParameter("@Requiredpicturesid", Requiredpicturesid));
                 }
                 else

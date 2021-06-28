@@ -20,10 +20,13 @@ namespace Final_project
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            DB.Insert_Update_Delete("insert into pictures (picturesname,price,processing) values (@picturesname,@price,@processing)",
-                new SqlParameter("@picturesname", txt_name_picture.Text),
-                new SqlParameter("@price", int.Parse(txt_price_picture.Text)),
-                new SqlParameter("@processing",txt_processing.Text));
+            if (txt_name_picture.Text != "" && txt_price_picture.Text != "" && txt_processing.Text != "")
+                DB.Insert_Update_Delete("insert into pictures (picturesname,price,processing) values (@picturesname,@price,@processing)",
+                    new SqlParameter("@picturesname", txt_name_picture.Text),
+                    new SqlParameter("@price", int.Parse(txt_price_picture.Text)),
+                    new SqlParameter("@processing", txt_processing.Text));
+            else
+                MessageBox.Show("يجب ادخال جميع الحقول");
         }
 
         private void txt_price_picture_KeyPress(object sender, KeyPressEventArgs e)

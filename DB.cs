@@ -8,12 +8,15 @@ using System.Windows.Forms;
 using System.Data;
 using System.IO;
 using System.Drawing;
+using System.Configuration;
+
 
 namespace Final_project
 {
     class DB
     {
         public static string con = "Data Source=DESKTOP-U91N0A8;Initial Catalog=hospitall;Integrated Security=True";
+        
         public static void Insert_Update_Delete(string query, params SqlParameter[] parameters)
         {
             SqlConnection connection = new SqlConnection(con);
@@ -91,7 +94,7 @@ namespace Final_project
         }
         public static bool Isnumber(char c)
         {
-            if (c >= 48 && c <= 57 || c!=8 || c!=13)
+            if (c >= 48 && c <= 57 || c==8 || c==13)
                 return true;
             else
                 return false;

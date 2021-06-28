@@ -40,10 +40,12 @@
             this.DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_edit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.timePeriodsTableAdapter = new Final_project.hospitallDataSet5TableAdapters.TimePeriodsTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timePeriodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet5)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -94,8 +96,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.DeleteBtn);
-            this.panel1.Controls.Add(this.btn_edit);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -122,7 +123,7 @@
             this.DeleteBtn.IdleFillColor = System.Drawing.Color.White;
             this.DeleteBtn.IdleForecolor = System.Drawing.Color.Black;
             this.DeleteBtn.IdleLineColor = System.Drawing.Color.Black;
-            this.DeleteBtn.Location = new System.Drawing.Point(13, 380);
+            this.DeleteBtn.Location = new System.Drawing.Point(185, 8);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(211, 66);
@@ -149,7 +150,7 @@
             this.btn_edit.IdleFillColor = System.Drawing.Color.White;
             this.btn_edit.IdleForecolor = System.Drawing.Color.Black;
             this.btn_edit.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_edit.Location = new System.Drawing.Point(233, 379);
+            this.btn_edit.Location = new System.Drawing.Point(405, 7);
             this.btn_edit.Margin = new System.Windows.Forms.Padding(5);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(211, 66);
@@ -160,6 +161,16 @@
             // timePeriodsTableAdapter
             // 
             this.timePeriodsTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_edit);
+            this.panel2.Controls.Add(this.DeleteBtn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 370);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 80);
+            this.panel2.TabIndex = 27;
             // 
             // Update_period
             // 
@@ -175,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.timePeriodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet5)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -191,5 +203,6 @@
         private hospitallDataSet5TableAdapters.TimePeriodsTableAdapter timePeriodsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn periodnumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thePeriodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel2;
     }
 }

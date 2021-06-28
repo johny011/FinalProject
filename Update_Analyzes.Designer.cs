@@ -41,9 +41,11 @@
             this.btn_Edit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_delete = new Bunifu.Framework.UI.BunifuThinButton2();
             this.analyzesTableAdapter = new Final_project.hospitallDataSet51TableAdapters.AnalyzesTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.analyzesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet51)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -67,7 +69,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 350);
             this.dataGridView1.TabIndex = 0;
             // 
             // analysisnumberDataGridViewTextBoxColumn
@@ -124,7 +126,7 @@
             this.btn_Edit.IdleFillColor = System.Drawing.Color.White;
             this.btn_Edit.IdleForecolor = System.Drawing.Color.Black;
             this.btn_Edit.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_Edit.Location = new System.Drawing.Point(236, 370);
+            this.btn_Edit.Location = new System.Drawing.Point(405, 17);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(220, 66);
@@ -151,7 +153,7 @@
             this.btn_delete.IdleFillColor = System.Drawing.Color.White;
             this.btn_delete.IdleForecolor = System.Drawing.Color.Black;
             this.btn_delete.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_delete.Location = new System.Drawing.Point(6, 370);
+            this.btn_delete.Location = new System.Drawing.Point(175, 17);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(5);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(220, 66);
@@ -163,14 +165,23 @@
             // 
             this.analyzesTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_delete);
+            this.panel1.Controls.Add(this.btn_Edit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 350);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.TabIndex = 31;
+            // 
             // Update_Analyzes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Update_Analyzes";
             this.Text = "Update_Analyzes";
@@ -178,6 +189,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.analyzesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet51)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -195,5 +207,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn analysisnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn processingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

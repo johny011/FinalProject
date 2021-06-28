@@ -51,6 +51,7 @@
             this.theStaffTableAdapter = new Final_project.hospitallDataSet8TableAdapters.TheStaffTableAdapter();
             this.typeeTableAdapter = new Final_project.hospitallDataSet9TableAdapters.TypeeTableAdapter();
             this.deptTableAdapter = new Final_project.hospitallDataSet10TableAdapters.DeptTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet9)).BeginInit();
@@ -59,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.theStaffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet8)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -174,8 +176,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btn_delete);
-            this.panel1.Controls.Add(this.btn_add);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -202,7 +203,7 @@
             this.btn_delete.IdleFillColor = System.Drawing.Color.White;
             this.btn_delete.IdleForecolor = System.Drawing.Color.Black;
             this.btn_delete.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_delete.Location = new System.Drawing.Point(13, 380);
+            this.btn_delete.Location = new System.Drawing.Point(185, 7);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(211, 66);
@@ -229,7 +230,7 @@
             this.btn_add.IdleFillColor = System.Drawing.Color.White;
             this.btn_add.IdleForecolor = System.Drawing.Color.Black;
             this.btn_add.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_add.Location = new System.Drawing.Point(233, 379);
+            this.btn_add.Location = new System.Drawing.Point(405, 7);
             this.btn_add.Margin = new System.Windows.Forms.Padding(5);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(211, 66);
@@ -249,6 +250,16 @@
             // 
             this.deptTableAdapter.ClearBeforeFill = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_add);
+            this.panel2.Controls.Add(this.btn_delete);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 369);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 81);
+            this.panel2.TabIndex = 27;
+            // 
             // Update_staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +278,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.theStaffBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitallDataSet8)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -301,5 +313,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.Panel panel2;
     }
 }

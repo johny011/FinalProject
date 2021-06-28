@@ -26,30 +26,43 @@ namespace Final_project
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-             if (editRadio.Checked)
-             {
-                int SIdd =int.Parse( DB.SelectToGetOneValue("select id from TheStaff where Sname='" + combox_doctor.SelectedItem.ToString() + "'"));
-                 DB.Insert_Update_Delete("update patientAdmission set DateOfEntry=@DateOfEntry,panumber=@panumber ,roomid=@roomid ,SIdd=@SIdd ,DownPayment=@DownPayment where panumber=@panumber",
-                     new SqlParameter("@DateOfEntry", Convert.ToDateTime(dateIn.Value).ToShortDateString()),
-                     new SqlParameter("@panumber", int.Parse(txt_numberpatient.Text)),
-                     new SqlParameter("@roomid", int.Parse(combox_room.SelectedItem.ToString())),
-                     new SqlParameter("@SIdd", SIdd),
-                     new SqlParameter("@DownPayment",int.Parse(txt_payment.Text)),
-                     new SqlParameter("@panumber", int.Parse(txt_numberpatient.Text))
-                     );
-             }
-             else if(GraduatingRadio.Checked)
-             {
+            try
+            {
+                if (editRadio.Checked)
+                {
+                    if (txt_numberpatient.Text != "" && txt_payment.Text != "")
+                    {
+                        int SIdd = int.Parse(DB.SelectToGetOneValue("select id from TheStaff where Sname='" + combox_doctor.SelectedItem.ToString() + "'"));
+                        DB.Insert_Update_Delete("update patientAdmission set DateOfEntry=@DateOfEntry ,roomid=@roomid ,SIdd=@SIdd ,DownPayment=@DownPayment where panumber=@panumber",
+                            new SqlParameter("@DateOfEntry", Convert.ToDateTime(dateIn.Value).ToShortDateString()),
+                         new SqlParameter("@roomid", int.Parse(combox_room.SelectedItem.ToString())),
+                         new SqlParameter("@SIdd", SIdd),
+                         new SqlParameter("@DownPayment", int.Parse(txt_payment.Text)),
+                         new SqlParameter("@panumber", int.Parse(txt_numberpatient.Text))
+                         );
+                    }
+                    else
+                    {
+                        MessageBox.Show("يجب ادخال جميع المعلومات");
+                    }
+                }
+                else if (GraduatingRadio.Checked)
+                {
 
-                 if (validate(int.Parse(txt_numberpatient.Text)))
-                     DB.Insert_Update_Delete("update patientAdmission set checkoutDate=@checkoutDate where Admissionid=@Admissionid",
-                         new SqlParameter("@checkoutDate", Convert.ToDateTime(dateIn.Value).ToShortDateString()),
-                         new SqlParameter("@", int.Parse(txt_numberpatient.Text)));
-                 else
-                 {
-                     MessageBox.Show("error");
-                 }
-             }
+                    if (validate(int.Parse(txt_numberpatient.Text)))
+                        DB.Insert_Update_Delete("update patientAdmission set checkoutDate=@checkoutDate where Admissionid=@Admissionid",
+                            new SqlParameter("@checkoutDate", Convert.ToDateTime(dateIn.Value).ToShortDateString()),
+                            new SqlParameter("@", int.Parse(txt_numberpatient.Text)));
+                    else
+                    {
+                        MessageBox.Show("error");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private bool validate(int admissionid)

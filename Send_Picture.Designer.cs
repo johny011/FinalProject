@@ -36,7 +36,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_sendpicture = new Bunifu.Framework.UI.BunifuThinButton2();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -46,7 +48,7 @@
             // 
             // txt_Admissionid
             // 
-            this.txt_Admissionid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Admissionid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_Admissionid.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Admissionid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Admissionid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -57,7 +59,7 @@
             this.txt_Admissionid.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_Admissionid.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Admissionid.LineThickness = 4;
-            this.txt_Admissionid.Location = new System.Drawing.Point(542, 31);
+            this.txt_Admissionid.Location = new System.Drawing.Point(539, 19);
             this.txt_Admissionid.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_Admissionid.Name = "txt_Admissionid";
             this.txt_Admissionid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -73,7 +75,7 @@
             this.btn_ٍSelectpicture.ActiveFillColor = System.Drawing.Color.Silver;
             this.btn_ٍSelectpicture.ActiveForecolor = System.Drawing.Color.White;
             this.btn_ٍSelectpicture.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_ٍSelectpicture.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_ٍSelectpicture.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_ٍSelectpicture.BackColor = System.Drawing.SystemColors.Control;
             this.btn_ٍSelectpicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ٍSelectpicture.BackgroundImage")));
             this.btn_ٍSelectpicture.ButtonText = "اختيار الصورة";
@@ -85,7 +87,7 @@
             this.btn_ٍSelectpicture.IdleFillColor = System.Drawing.Color.White;
             this.btn_ٍSelectpicture.IdleForecolor = System.Drawing.Color.Black;
             this.btn_ٍSelectpicture.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_ٍSelectpicture.Location = new System.Drawing.Point(542, 193);
+            this.btn_ٍSelectpicture.Location = new System.Drawing.Point(291, 17);
             this.btn_ٍSelectpicture.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ٍSelectpicture.Name = "btn_ٍSelectpicture";
             this.btn_ٍSelectpicture.Size = new System.Drawing.Size(220, 66);
@@ -95,9 +97,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 100);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(506, 277);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 350);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -110,7 +114,7 @@
             this.btn_sendpicture.ActiveFillColor = System.Drawing.Color.Silver;
             this.btn_sendpicture.ActiveForecolor = System.Drawing.Color.White;
             this.btn_sendpicture.ActiveLineColor = System.Drawing.Color.White;
-            this.btn_sendpicture.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_sendpicture.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_sendpicture.BackColor = System.Drawing.SystemColors.Control;
             this.btn_sendpicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sendpicture.BackgroundImage")));
             this.btn_sendpicture.ButtonText = "إرسال النتيجة";
@@ -122,7 +126,7 @@
             this.btn_sendpicture.IdleFillColor = System.Drawing.Color.White;
             this.btn_sendpicture.IdleForecolor = System.Drawing.Color.Black;
             this.btn_sendpicture.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_sendpicture.Location = new System.Drawing.Point(159, 317);
+            this.btn_sendpicture.Location = new System.Drawing.Point(40, 17);
             this.btn_sendpicture.Margin = new System.Windows.Forms.Padding(5);
             this.btn_sendpicture.Name = "btn_sendpicture";
             this.btn_sendpicture.Size = new System.Drawing.Size(220, 66);
@@ -134,19 +138,29 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_sendpicture);
+            this.panel1.Controls.Add(this.btn_ٍSelectpicture);
+            this.panel1.Controls.Add(this.txt_Admissionid);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.TabIndex = 34;
+            // 
             // Send_Picture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_sendpicture);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txt_Admissionid);
-            this.Controls.Add(this.btn_ٍSelectpicture);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Send_Picture";
             this.Text = "Sen_Picture";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -159,5 +173,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btn_sendpicture;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

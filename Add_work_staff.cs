@@ -91,11 +91,7 @@ namespace Final_project
 
         private void txt_name_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (DB.Isnumber(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("لا يمكن ادخال ارقام");
-            }
+            
         }
 
         private void txt_father_name_KeyPress(object sender, KeyPressEventArgs e)

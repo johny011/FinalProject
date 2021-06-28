@@ -152,7 +152,11 @@ namespace Final_project
             ChildForm(new Result_Analyzes(dept));
         }
 
-        
+        private void btn_view_rooms_Click(object sender, EventArgs e)
+        {
+            ActiveBtn(sender);
+            ChildForm(new Update_room());
+        }
     }
 
 }

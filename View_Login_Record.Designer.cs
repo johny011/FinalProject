@@ -34,7 +34,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_search = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_id_admission = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -61,6 +63,7 @@
             this.btn_search.ActiveFillColor = System.Drawing.Color.Silver;
             this.btn_search.ActiveForecolor = System.Drawing.Color.White;
             this.btn_search.ActiveLineColor = System.Drawing.Color.White;
+            this.btn_search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_search.BackColor = System.Drawing.SystemColors.Control;
             this.btn_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_search.BackgroundImage")));
             this.btn_search.ButtonText = "بحث";
@@ -72,7 +75,7 @@
             this.btn_search.IdleFillColor = System.Drawing.Color.White;
             this.btn_search.IdleForecolor = System.Drawing.Color.Black;
             this.btn_search.IdleLineColor = System.Drawing.Color.Black;
-            this.btn_search.Location = new System.Drawing.Point(91, 376);
+            this.btn_search.Location = new System.Drawing.Point(167, 8);
             this.btn_search.Margin = new System.Windows.Forms.Padding(5);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(213, 60);
@@ -82,6 +85,7 @@
             // 
             // txt_id_admission
             // 
+            this.txt_id_admission.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_id_admission.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_id_admission.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id_admission.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -92,7 +96,7 @@
             this.txt_id_admission.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_id_admission.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_id_admission.LineThickness = 4;
-            this.txt_id_admission.Location = new System.Drawing.Point(468, 376);
+            this.txt_id_admission.Location = new System.Drawing.Point(418, 8);
             this.txt_id_admission.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_id_admission.Name = "txt_id_admission";
             this.txt_id_admission.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -101,19 +105,29 @@
             this.txt_id_admission.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_id_admission.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_admission_KeyPress);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txt_id_admission);
+            this.panel1.Controls.Add(this.btn_search);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 373);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 77);
+            this.panel1.TabIndex = 28;
+            // 
             // View_Login_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.txt_id_admission);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "View_Login_Record";
             this.Text = "l";
             this.Load += new System.EventHandler(this.View_Login_Record_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -124,5 +138,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_search;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_id_admission;
+        private System.Windows.Forms.Panel panel1;
     }
 }
